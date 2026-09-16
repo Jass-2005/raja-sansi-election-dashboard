@@ -80,8 +80,8 @@ export default function BoothGrid({
 
       {/* View Mode: Table List */}
       {viewMode === 'LIST' ? (
-        <div className="table-responsive">
-          <table className="booth-table">
+        <div className="clean-table-wrap">
+          <table className="clean-table">
             <thead>
               {isAllMode ? (
                 /* Complete List Headers */
@@ -319,7 +319,7 @@ export default function BoothGrid({
         </div>
       ) : (
         /* View Mode: Card Grid */
-        <div className="booth-cards-grid">
+        <div className="grid-cards-layout">
           {booths.map((b) => {
             const w22 = b.data_2022.winner_party;
             const w24 = b.data_2024.winner_party;

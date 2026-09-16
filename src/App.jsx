@@ -383,10 +383,15 @@ export default function App() {
           {/* Master Booth Registry Card */}
           <section className="dsidein-registry-card">
             <div className="registry-card-header">
-              <div>
-                <h2 className="registry-title">
-                  {language === 'pa' ? 'ਬੂਥ ਤੁਲਨਾ ਮੈਟ੍ਰਿਕਸ' : 'Booth Comparison Matrix'}
-                </h2>
+              <div className="registry-title-group">
+                <div className="registry-title-row">
+                  <h2 className="registry-title">
+                    {language === 'pa' ? 'ਬੂਥ ਕਾਰਗੁਜ਼ਾਰੀ ਰਜਿਸਟਰੀ' : 'Booth Performance Registry'}
+                  </h2>
+                  <span className="registry-booth-count">
+                    {filteredBooths.length} {language === 'pa' ? 'ਬੂਥ' : 'Booths'}
+                  </span>
+                </div>
                 <p className="registry-subtitle">
                   {language === 'pa' 
                     ? `ਹਲਕਾ ${currentConst.name_pa} ਦੇ ਹਰੇਕ ਬੂਥ ਦੀ ਵੋਟ ਗਿਣਤੀ, ਵੋਟਿੰਗ ਫ਼ਰਕ, ਜੇਤੂ ਅਤੇ ਲੀਡ`

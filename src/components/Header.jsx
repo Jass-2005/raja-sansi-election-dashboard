@@ -90,8 +90,8 @@ export default function Header({
 
           {/* Quick Master Excel Download */}
           <a
-            href={currentConst.excelFile}
-            download={currentConst.excelName}
+            href={currentConst?.excelFile || '#'}
+            download={currentConst?.excelName || 'Master_Excel.xlsx'}
             className="btn-header-download"
             title={language === 'pa' ? 'ਮਾਸਟਰ ਐਕਸਲ ਸ਼ੀਟ ਡਾਊਨਲੋਡ ਕਰੋ (.xlsx)' : 'Download Master Excel Sheet (.xlsx)'}
           >
