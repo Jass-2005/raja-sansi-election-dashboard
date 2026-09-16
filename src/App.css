@@ -1983,7 +1983,9 @@
   background: var(--bg-surface);
   border: none;
   border-radius: 0;
+  width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .clean-table {
@@ -2165,11 +2167,53 @@
 .cat-pill.weak { background: rgba(234, 179, 8, 0.12); color: var(--status-weak); }
 .cat-pill.neutral { background: var(--border-subtle); color: var(--text-muted); }
 
-/* Grid Cards Layout */
+/* Booth Container — root wrapper for both list table and card grid */
+.booth-container {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Grid Cards Layout — Responsive 5 → 4 → 3 → 2 columns */
 .grid-cards-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
+  padding: 20px 24px;
+}
+
+/* Large tablet (~1100px) → 4 columns */
+@media (max-width: 1100px) {
+  .grid-cards-layout {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+  }
+}
+
+/* Tablet / fold (~900px) → 3 columns */
+@media (max-width: 900px) {
+  .grid-cards-layout {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 16px 18px;
+  }
+}
+
+/* Mobile (~540px) → 2 columns */
+@media (max-width: 540px) {
+  .grid-cards-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 12px 14px;
+  }
+}
+
+/* Very small phones (<360px) → 1 column */
+@media (max-width: 360px) {
+  .grid-cards-layout {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px 12px;
+  }
 }
 
 .booth-card {
@@ -2272,11 +2316,12 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
-  max-width: 600px;
+  max-width: 640px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 92vh;
   overflow-y: auto;
-  padding: 20px;
+  padding: 24px;
+  position: relative;
 }
 
 .modal-header {
@@ -2284,19 +2329,127 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 16px;
-  padding-bottom: 12px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--border-subtle);
 }
 
-.modal-close {
-  color: var(--text-muted);
-  padding: 4px;
-  border-radius: var(--radius-sm);
+/* Booth Modal: Village Title */
+.modal-village-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 6px 0 2px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
-.modal-close:hover {
-  color: var(--text-primary);
+.modal-village-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Modal Close Button */
+.modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
   background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.modal-close-btn:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+}
+
+/* Brand / Status Badges in Modal */
+.brand-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.status-badge.retained {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--status-won);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status-badge.flipped {
+  background: rgba(244, 63, 94, 0.12);
+  color: var(--status-lost);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+}
+
+/* Modal Comparison Grid: 2 columns (2022 | 2024) */
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 480px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Shift Metric Tiles Row */
+.modal-shift-box {
+  margin-top: 16px;
+}
+
+.shift-metric-tile {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shift-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.shift-val {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.shift-val.gain { color: var(--status-won); }
+.shift-val.loss { color: var(--status-lost); }
+
+/* Print Dossier Banner (visible only in print) */
+.print-dossier-banner {
+  display: none;
 }
 
 /* Compare in Modal */
@@ -3172,11 +3325,11 @@
     font-size: 0.6875rem;
   }
 
-  /* Grid cards layout on mobile */
+  /* Grid cards layout on mobile — handled by standalone breakpoints above */
   .grid-cards-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 12px;
+    padding: 10px 12px;
   }
 
   .booth-card {
