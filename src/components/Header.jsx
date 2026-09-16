@@ -1,7 +1,8 @@
-import React from 'react';
-import { Sun, Moon, Menu, ChevronDown, Search, MapPin, Globe, Download, FileSpreadsheet } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Sun, Moon, Menu, ChevronDown, Search, Globe, FileSpreadsheet, ExternalLink } from 'lucide-react';
 import { CONSTITUENCIES } from '../data/constituencies';
 import { t } from '../utils/translations';
+import ConstituencyDropdown from './ConstituencyDropdown';
 
 export default function Header({ 
   theme, 
@@ -14,12 +15,25 @@ export default function Header({
   language,
   setLanguage
 }) {
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef(null);
+
   const currentConst = CONSTITUENCIES[constituencyId] || CONSTITUENCIES.RAJA_SANSI;
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setProfileOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <header className="app-header no-print">
       <div className="header-container">
-        {/* Left: Hamburger, Constituency Switcher & Crumb */}
+        {/* Left: Hamburger, Section title & Custom Constituency Dropdown */}
         <div className="header-left">
           <button 
             className="btn-icon header-hamburger" 
@@ -30,26 +44,15 @@ export default function Header({
           </button>
           
           <div className="header-section-label">
-            <span className="section-title-text">{t('dashboard', language)}</span>
-            <span className="header-separator">/</span>
+            <span className="section-title-text hide-mobile">{t('dashboard', language)}</span>
+            <span className="header-separator hide-mobile">/</span>
             
-            {/* Constituency Switcher Dropdown */}
-            <div className="constituency-switcher-wrap" title={t('select_constituency', language)}>
-              <MapPin size={14} className="constituency-pin-icon" />
-              <select 
-                className="constituency-select" 
-                value={constituencyId} 
-                onChange={(e) => setConstituencyId(e.target.value)}
-                aria-label="Switch Constituency"
-              >
-                <option value="RAJA_SANSI">
-                  {language === 'pa' ? '12 - ਰਾਜਾ ਸਾਂਸੀ (222 ਬੂਥ)' : '12 - Raja Sansi (222 Booths)'}
-                </option>
-                <option value="QADIAN">
-                  {language === 'pa' ? '18 - ਕਾਦੀਆਂ (223 ਬੂਥ)' : '18 - Qadian (223 Booths)'}
-                </option>
-              </select>
-            </div>
+            {/* Custom Interactive Constituency Dropdown */}
+            <ConstituencyDropdown 
+              constituencyId={constituencyId} 
+              setConstituencyId={setConstituencyId} 
+              language={language} 
+            />
           </div>
         </div>
 
@@ -109,16 +112,78 @@ export default function Header({
             {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
           </button>
 
-          {/* Dsidein User Profile Dropdown */}
-          <div className="dsidein-user-profile" title="Dsidein Command Center User">
-            <div className="user-avatar-circle">
-              <img 
-                src="./dsidein_logo_transparent.png" 
-                alt="Dsidein" 
-                className="user-avatar-img" 
-              />
-            </div>
-            <span className="user-profile-name">Dsidein</span>
+          {/* Dsidein Interactive Profile Dropdown */}
+          <div className="dsidein-profile-dropdown-wrap" ref={profileRef}>
+            <button 
+              type="button"
+              className={`dsidein-user-profile ${profileOpen ? 'open' : ''}`}
+              onClick={() => setProfileOpen(prev => !prev)}
+              aria-haspopup="menu"
+              aria-expanded={profileOpen}
+              title="Dsidein Command Center Telemetry"
+            >
+              <div className="user-avatar-circle">
+                <img 
+                  src="./dsidein_logo_transparent.png" 
+                  alt="Dsidein" 
+                  className="user-avatar-img" 
+                />
+              </div>
+              <span className="user-profile-name">Dsidein</span>
+              <ChevronDown size={13} className={`profile-chevron ${profileOpen ? 'rotate' : ''}`} />
+            </button>
+
+            {profileOpen && (
+              <div className="dsidein-profile-menu">
+                <div className="profile-menu-top">
+                  <div className="profile-status-indicator online">
+                    <span className="status-dot"></span>
+                    <span>{language === 'pa' ? 'ਲਾਈਵ ਟੈਲੀਮੈਟਰੀ ਸਰਗਰਮ' : 'Live Telemetry Active'}</span>
+                  </div>
+                  <div className="profile-system-title">DSIDEIN COMMAND CENTER</div>
+                  <div className="profile-system-subtitle">
+                    {language === 'pa' ? 'ਚੋਣ ਵਿਸ਼ਲੇਸ਼ਣ ਅਤੇ ਬੂਥ ਇੰਟੈਲੀਜੈਂਸ' : 'Election Analytics & Telemetry'}
+                  </div>
+                </div>
+                <div className="profile-menu-divider"></div>
+                <div className="profile-menu-details">
+                  <div className="profile-detail-row">
+                    <span className="profile-detail-lbl">{language === 'pa' ? 'ਹਲਕਾ' : 'Constituency'}:</span>
+                    <span className="profile-detail-val">{language === 'pa' ? currentConst.name_pa : currentConst.name_en}</span>
+                  </div>
+                  <div className="profile-detail-row">
+                    <span className="profile-detail-lbl">{language === 'pa' ? 'ਕੁੱਲ ਬੂਥ' : 'Booths'}:</span>
+                    <span className="profile-detail-val">{currentConst.total_booths}</span>
+                  </div>
+                  <div className="profile-detail-row">
+                    <span className="profile-detail-lbl">{language === 'pa' ? 'ਸਥਿਤੀ' : 'Status'}:</span>
+                    <span className="profile-detail-val status-verified">● 100% Verified</span>
+                  </div>
+                </div>
+                <div className="profile-menu-divider"></div>
+                <div className="profile-menu-actions">
+                  <a
+                    href={currentConst?.excelFile || '#'}
+                    download={currentConst?.excelName}
+                    className="profile-action-link"
+                    onClick={() => setProfileOpen(false)}
+                  >
+                    <FileSpreadsheet size={14} />
+                    <span>{language === 'pa' ? 'ਮਾਸਟਰ ਐਕਸਲ ਸ਼ੀਟ' : 'Master Excel Sheet'}</span>
+                  </a>
+                  <a
+                    href={`https://dsidein.com/${constituencyId === 'QADIAN' ? 'qadian' : 'raja-sansi'}-2022-2024`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="profile-action-link"
+                    onClick={() => setProfileOpen(false)}
+                  >
+                    <ExternalLink size={14} />
+                    <span>dsidein.com</span>
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
