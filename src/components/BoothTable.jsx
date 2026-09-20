@@ -40,8 +40,19 @@ export default function BoothTable({ booths, onSelectBooth }) {
                 title={`Click to inspect detailed breakdown for Booth #${b.booth_no}`}
               >
                 {/* Booth No */}
-                <td style={{ textAlign: 'center', fontWeight: 700, color: 'var(--text-secondary)' }}>
-                  #{b.booth_no}
+                <td style={{ textAlign: 'center' }}>
+                  {b.is_rearranged || (b.booth_no_2022 && b.booth_no_2024 && b.booth_no_2022 !== b.booth_no_2024) ? (
+                    <div className="dual-booth-badge-table rearranged" title={`2022 Booth #${b.booth_no_2022} ➔ 2024 Booth #${b.booth_no_2024}`}>
+                      <span className="badge-22">’22 #{b.booth_no_2022}</span>
+                      <span className="badge-arrow">➔</span>
+                      <span className="badge-24">’24 #{b.booth_no_2024}</span>
+                    </div>
+                  ) : (
+                    <div className="booth-avatar-badge-wrap" title={`Booth #${b.booth_no} (2022 & 2024 matched)`}>
+                      <span className="booth-avatar-badge">{b.booth_no}</span>
+                      <span className="booth-match-sub">22 & 24</span>
+                    </div>
+                  )}
                 </td>
 
                 {/* Village / Polling Station */}

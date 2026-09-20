@@ -15,6 +15,44 @@ export default function BoothGrid({
   const isAllMode = selectedParty === 'ALL';
   const pKey = selectedParty.toLowerCase(); // 'aap', 'inc', 'sad', 'bjp'
 
+  const renderBoothBadge = (b) => {
+    const isRearranged = b.is_rearranged || (b.booth_no_2022 && b.booth_no_2024 && b.booth_no_2022 !== b.booth_no_2024);
+    if (isRearranged) {
+      return (
+        <div className="dual-booth-badge rearranged" title={`2022 Booth #${b.booth_no_2022} rearranged to 2024 Booth #${b.booth_no_2024}`}>
+          <span className="booth-tag-22">’22 #{b.booth_no_2022}</span>
+          <span className="booth-tag-sep">➔</span>
+          <span className="booth-tag-24">’24 #{b.booth_no_2024}</span>
+        </div>
+      );
+    }
+    return (
+      <div className="dual-booth-badge matched" title={`Booth #${b.booth_no} (Identical in 2022 & 2024)`}>
+        <span className="card-booth-badge">#{b.booth_no}</span>
+        <span className="booth-match-tag">’22 & ’24</span>
+      </div>
+    );
+  };
+
+  const renderTableBoothBadge = (b) => {
+    const isRearranged = b.is_rearranged || (b.booth_no_2022 && b.booth_no_2024 && b.booth_no_2022 !== b.booth_no_2024);
+    if (isRearranged) {
+      return (
+        <div className="dual-booth-badge-table rearranged" title={`2022 Booth #${b.booth_no_2022} ➔ 2024 Booth #${b.booth_no_2024}`}>
+          <span className="badge-22">’22 #{b.booth_no_2022}</span>
+          <span className="badge-arrow">➔</span>
+          <span className="badge-24">’24 #{b.booth_no_2024}</span>
+        </div>
+      );
+    }
+    return (
+      <div className="booth-avatar-badge-wrap" title={`Booth #${b.booth_no} (2022 & 2024 matched)`}>
+        <span className="booth-avatar-badge">{b.booth_no}</span>
+        <span className="booth-match-sub">22 & 24</span>
+      </div>
+    );
+  };
+
   if (booths.length === 0) {
     return (
       <div className="empty-state">
@@ -125,7 +163,7 @@ export default function BoothGrid({
                       title={`Click to inspect Booth #${b.booth_no}`}
                     >
                       <td style={{ textAlign: 'center' }}>
-                        <span className="booth-avatar-badge">{b.booth_no}</span>
+                        {renderTableBoothBadge(b)}
                       </td>
 
                       <td>
@@ -236,7 +274,7 @@ export default function BoothGrid({
                     title={`Click to inspect Booth #${b.booth_no}`}
                   >
                     <td style={{ textAlign: 'center' }}>
-                      <span className="booth-avatar-badge">{b.booth_no}</span>
+                      {renderTableBoothBadge(b)}
                     </td>
 
                     <td>
@@ -333,7 +371,7 @@ export default function BoothGrid({
                   onClick={() => onSelectBooth(b)}
                 >
                   <div className="card-top-row">
-                    <span className="card-booth-badge">#{b.booth_no}</span>
+                    {renderBoothBadge(b)}
                     <span className={`cat-pill ${b.comparison.is_flip ? 'lost' : 'won'}`}>
                       {b.comparison.status_label}
                     </span>
@@ -428,7 +466,7 @@ export default function BoothGrid({
                 onClick={() => onSelectBooth(b)}
               >
                 <div className="card-top-row">
-                  <span className="card-booth-badge">#{b.booth_no}</span>
+                  {renderBoothBadge(b)}
                   <span className={`cat-pill ${catClass}`}>{catLabel}</span>
                 </div>
 

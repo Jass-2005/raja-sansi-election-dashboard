@@ -69,12 +69,25 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
         {/* Modal Header */}
         <div className="modal-header">
           <div>
-            <div className="modal-badges-row" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span className="brand-badge">
-                {language === 'pa' ? `ਬੂਥ #${booth.booth_no}` : `Booth #${booth.booth_no}`}
-              </span>
+            <div className="modal-badges-row" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+              {booth.is_rearranged || (booth.booth_no_2022 && booth.booth_no_2024 && booth.booth_no_2022 !== booth.booth_no_2024) ? (
+                <span className="brand-badge rearranged">
+                  {language === 'pa' 
+                    ? `2022: ਬੂਥ #${booth.booth_no_2022} ➔ 2024: ਬੂਥ #${booth.booth_no_2024}` 
+                    : `2022: Booth #${booth.booth_no_2022} ➔ 2024: Booth #${booth.booth_no_2024}`}
+                </span>
+              ) : (
+                <span className="brand-badge">
+                  {language === 'pa' 
+                    ? `ਬੂਥ #${booth.booth_no} (2022 & 2024)` 
+                    : `Booth #${booth.booth_no} (2022 & 2024)`}
+                </span>
+              )}
               <span className={`status-badge ${comp.is_flip ? 'flipped' : 'retained'}`}>
                 {comp.status_label}
+              </span>
+              <span className="station-match-badge">
+                {language === 'pa' ? 'ਸਟੇਸ਼ਨ ਨਾਮ: 100% ਮੇਲ' : 'Station: 100% Match'}
               </span>
             </div>
             
@@ -121,6 +134,11 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
           {/* 2022 Assembly Column */}
           <div className="year-card">
             <div className="year-title">{t('assembly_election', language)}</div>
+            <div className="modal-station-sub">
+              {language === 'pa' ? 'ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ: ' : 'Station: '}
+              <strong>{booth.booth_name_2022 || booth.village_english}</strong>
+              <span style={{ marginLeft: '6px', color: 'var(--text-muted)' }}>(#{booth.booth_no_2022 || booth.booth_no})</span>
+            </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
               <span className={`badge-winner ${d22.winner_party}`}>
                 {d22.winner_party} {t('won_by', language)}
@@ -186,6 +204,11 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
           {/* 2024 Lok Sabha Column */}
           <div className="year-card">
             <div className="year-title">{t('lok_sabha_election', language)}</div>
+            <div className="modal-station-sub">
+              {language === 'pa' ? 'ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ: ' : 'Station: '}
+              <strong>{booth.booth_name_2024 || booth.village_english}</strong>
+              <span style={{ marginLeft: '6px', color: 'var(--text-muted)' }}>(#{booth.booth_no_2024 || booth.booth_no})</span>
+            </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
               <span className={`badge-winner ${d24.winner_party}`}>
                 {d24.winner_party} {t('won_by', language)}

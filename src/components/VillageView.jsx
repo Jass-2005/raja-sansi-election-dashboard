@@ -17,12 +17,16 @@ export default function VillageView({ booths, onSelectBooth }) {
         name = 'Dhariwal (Town & Suburbs)';
       } else if (name.startsWith('Kahnuwan')) {
         name = 'Kahnuwan';
+      } else if (name.startsWith('Harsha Chhina')) {
+        name = 'Harsha Chhina (All Abadis)';
       }
+
+      const pName = name === 'Harsha Chhina (All Abadis)' ? 'ਹਰਸ਼ਾ ਛੀਨਾ (ਸਾਰੀਆਂ ਅਬਾਦੀਆਂ)' : b.village_punjabi;
 
       if (!groups[name]) {
         groups[name] = {
           name: name,
-          punjabi: b.village_punjabi,
+          punjabi: pName,
           booths: [],
           inc_22: 0,
           aap_22: 0,
