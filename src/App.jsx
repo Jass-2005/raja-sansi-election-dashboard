@@ -27,6 +27,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('DASHBOARD');
   const [selectedParty, setSelectedParty] = useState('ALL'); // 'ALL', 'AAP', 'INC', 'SAD', 'BJP'
   const [partyFilter, setPartyFilter] = useState('ALL'); 
+  const [selectedYears, setSelectedYears] = useState([]); // e.g. [2017, 2019, 2024]
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('BOOTH_ASC');
   const [selectedBooth, setSelectedBooth] = useState(null);
@@ -46,6 +47,7 @@ export default function App() {
   useEffect(() => {
     setSelectedParty('ALL');
     setPartyFilter('ALL');
+    setSelectedYears([]);
     setSearchQuery('');
     setSortBy('BOOTH_ASC');
     setSelectedBooth(null);
@@ -307,7 +309,21 @@ export default function App() {
       }
     }
 
-    // 3. Sorting
+    // 3. Multi-Election Trajectory & Combination Filter (e.g. '17+'19+'24)
+    if (selectedYears.length > 0) {
+      if (selectedParty === 'ALL') {
+        result = result.filter(b => {
+          const winners = selectedYears.map(yr => (b[`data_${yr}`] || {}).winner_party).filter(Boolean);
+          return winners.length === selectedYears.length && winners.every(w => w === winners[0]);
+        });
+      } else {
+        result = result.filter(b => {
+          return selectedYears.every(yr => (b[`data_${yr}`] || {}).winner_party === selectedParty);
+        });
+      }
+    }
+
+    // 4. Sorting
     result.sort((a, b) => {
       const pKey = selectedParty === 'ALL' ? 'inc' : selectedParty.toLowerCase();
       switch (sortBy) {
@@ -328,7 +344,7 @@ export default function App() {
     });
 
     return result;
-  }, [booths, selectedParty, partyFilter, searchQuery, sortBy]);
+  }, [booths, selectedParty, partyFilter, searchQuery, sortBy, selectedYears]);
 
   // Sort options for CustomDropdown
   const sortOptions = useMemo(() => {
@@ -352,6 +368,7 @@ export default function App() {
   const handleResetToCompleteList = () => {
     setSelectedParty('ALL');
     setPartyFilter('ALL');
+    setSelectedYears([]);
     setSearchQuery('');
     setSortBy('BOOTH_ASC');
   };
@@ -575,10 +592,13 @@ export default function App() {
               summary={summary}
               constituencyId={constituencyId}
               language={language}
+              booths={booths}
+              selectedYears={selectedYears}
+              setSelectedYears={setSelectedYears}
             />
 
             {/* Active Telemetry Filter Notice Banner */}
-            {(partyFilter !== 'ALL' || selectedParty !== 'ALL') && (
+            {(partyFilter !== 'ALL' || selectedParty !== 'ALL' || selectedYears.length > 0) && (
               <div className="active-filter-banner" style={{
                 margin: '0 24px 12px 24px',
                 padding: '8px 14px',
@@ -601,7 +621,15 @@ export default function App() {
                     background: selectedParty === 'INC' ? 'var(--color-inc-soft)' : selectedParty === 'AAP' ? 'var(--color-aap-soft)' : selectedParty === 'BJP' ? 'var(--color-bjp-soft)' : 'var(--border-subtle)',
                     color: selectedParty === 'INC' ? 'var(--color-inc)' : selectedParty === 'AAP' ? 'var(--color-aap)' : selectedParty === 'BJP' ? 'var(--color-bjp)' : 'var(--text-primary)'
                   }}>
-                    {selectedParty !== 'ALL' ? `${selectedParty} · ` : ''}{partyFilter.replace(/_/g, ' ')} ({filteredBooths.length} {language === 'pa' ? 'ਬੂਥ' : 'Booths'})
+                    {selectedYears.length > 0 ? (
+                      <>
+                        {selectedParty !== 'ALL' ? `${selectedParty} · ` : ''}{language === 'pa' ? 'ਜਿੱਤ' : 'Won in'} {selectedYears.map(y => "'" + y.toString().slice(-2)).join(' + ')} ({filteredBooths.length} {language === 'pa' ? 'ਬੂਥ' : 'Booths'})
+                      </>
+                    ) : (
+                      <>
+                        {selectedParty !== 'ALL' ? `${selectedParty} · ` : ''}{partyFilter.replace(/_/g, ' ')} ({filteredBooths.length} {language === 'pa' ? 'ਬੂਥ' : 'Booths'})
+                      </>
+                    )}
                   </span>
                 </div>
                 <button
@@ -669,6 +697,7 @@ export default function App() {
               booths={filteredBooths}
               selectedParty={selectedParty}
               partyFilter={partyFilter}
+              selectedYears={selectedYears}
               onSelectBooth={(b) => setSelectedBooth(b)}
               onExportBoothPdf={handleExportBoothPdf}
               language={language}

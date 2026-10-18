@@ -1,5 +1,5 @@
-import React from 'react';
-import { Layers, ShieldCheck, TrendingUp, TrendingDown, AlertTriangle, ShieldAlert, Award, Filter } from 'lucide-react';
+import React, { useMemo } from 'react';
+import { Layers, ShieldCheck, TrendingUp, TrendingDown, AlertTriangle, ShieldAlert, Award, Filter, Sparkles } from 'lucide-react';
 import { t } from '../utils/translations';
 
 export default function PartyHub({ 
@@ -10,7 +10,10 @@ export default function PartyHub({
   partyStats,
   summary,
   constituencyId,
-  language
+  language,
+  booths = [],
+  selectedYears = [],
+  setSelectedYears
 }) {
   const currentStats = partyStats[selectedParty] || partyStats.AAP;
   const bw24 = summary?.votes_2024?.booths_won || summary?.booths_won_2024 || {};
@@ -22,6 +25,58 @@ export default function PartyHub({
     INC: { en: 'INC', pa: 'ਕਾਂਗਰਸ' },
     SAD: { en: 'SAD', pa: 'ਅਕਾਲੀ ਦਲ' },
     BJP: { en: 'BJP', pa: 'ਭਾਜਪਾ' }
+  };
+
+  // Calculate booth count for any set of election years
+  const getComboCount = (comboYears) => {
+    return booths.filter(b => {
+      if (selectedParty !== 'ALL') {
+        return comboYears.every(yr => (b[`data_${yr}`]?.winner_party === selectedParty));
+      } else {
+        const winners = comboYears.map(yr => b[`data_${yr}`]?.winner_party).filter(Boolean);
+        return winners.length === comboYears.length && winners.every(w => w === winners[0]);
+      }
+    }).length;
+  };
+
+  // Pre-calculated combinations (including the requested '17+'19+'24)
+  const comboPills = useMemo(() => [
+    { id: '17_19_24', years: [2017, 2019, 2024], label: language === 'pa' ? '’17+’19+’24 ਵਿੱਚ ਜਿੱਤ' : "Won ’17+’19+’24", isPrimary: true },
+    { id: '17_19_22', years: [2017, 2019, 2022], label: language === 'pa' ? '’17+’19+’22 ਵਿੱਚ ਜਿੱਤ' : "Won ’17+’19+’22" },
+    { id: '17_22_24', years: [2017, 2022, 2024], label: language === 'pa' ? '’17+’22+’24 ਵਿੱਚ ਜਿੱਤ' : "Won ’17+’22+’24" },
+    { id: '19_22_24', years: [2019, 2022, 2024], label: language === 'pa' ? '’19+’22+’24 ਵਿੱਚ ਜਿੱਤ' : "Won ’19+’22+’24" },
+    { id: '17_19', years: [2017, 2019], label: language === 'pa' ? '’17+’19 ਵਿੱਚ ਜਿੱਤ' : "Won ’17+’19" },
+    { id: '19_24', years: [2019, 2024], label: language === 'pa' ? '’19+’24 ਵਿੱਚ ਜਿੱਤ' : "Won ’19+’24" },
+    { id: '17_24', years: [2017, 2024], label: language === 'pa' ? '’17+’24 ਵਿੱਚ ਜਿੱਤ' : "Won ’17+’24" },
+    { id: '22_24', years: [2022, 2024], label: language === 'pa' ? '’22+’24 ਵਿੱਚ ਜਿੱਤ' : "Won ’22+’24" },
+    { id: 'ALL_4', years: [2017, 2019, 2022, 2024], label: language === 'pa' ? '👑 ਸਾਰੀਆਂ 4 ਚੋਣਾਂ ਵਿੱਚ ਜਿੱਤ' : "👑 All 4 (’17+’19+’22+’24)" }
+  ].map(item => ({
+    ...item,
+    count: getComboCount(item.years)
+  })), [booths, selectedParty, language]);
+
+  const handleToggleYear = (year) => {
+    if (!setSelectedYears) return;
+    const exists = selectedYears.includes(year);
+    let next;
+    if (exists) {
+      next = selectedYears.filter(y => y !== year);
+    } else {
+      next = [...selectedYears, year].sort((a, b) => a - b);
+    }
+    setSelectedYears(next);
+  };
+
+  const handleSelectCombo = (comboYears) => {
+    if (!setSelectedYears) return;
+    const isCurrentlyActive = selectedYears.length === comboYears.length && 
+      comboYears.every(y => selectedYears.includes(y));
+    
+    if (isCurrentlyActive) {
+      setSelectedYears([]);
+    } else {
+      setSelectedYears([...comboYears].sort((a, b) => a - b));
+    }
   };
 
   return (
@@ -188,6 +243,92 @@ export default function PartyHub({
               </div>
             </>
           )}
+        </div>
+      </div>
+
+      {/* Multi-Election Trajectory & Continuity Combination Hub */}
+      <div className="multi-year-trajectory-box">
+        <div className="trajectory-box-header">
+          <div className="trajectory-title-wrap">
+            <span className="trajectory-badge">
+              {language === 'pa' ? 'ਬਹੁ-ਚੋਣ ਜਿੱਤ ਫਿਲਟਰ' : 'MULTI-YEAR COMBINATIONS'}
+            </span>
+            <span className="trajectory-title">
+              {language === 'pa' ? 'ਚੋਣ ਸਫ਼ਰ ਅਤੇ ਲਗਾਤਾਰਤਾ ਫਿਲਟਰ' : 'ELECTION TRAJECTORY & CONTINUITY FILTERS'}
+            </span>
+            <span className="trajectory-hint">
+              {language === 'pa' 
+                ? 'ਕਈ ਚੋਣਾਂ ਵਿੱਚ ਲਗਾਤਾਰ ਜਿੱਤਾਂ ਵਾਲੇ ਬੂਥ ਦੇਖੋ (ਜਿਵੇਂ ’17+’19+’24, ’17+’19, ’19+’24)' 
+                : 'Filter booths won across combinations (e.g. Won in ’17+’19+’24, ’17+’19, ’19+’24)'}
+            </span>
+          </div>
+
+          {selectedYears.length > 0 && (
+            <button 
+              type="button"
+              className="btn-clear-combo"
+              onClick={() => setSelectedYears([])}
+              title="Reset multi-year filter"
+            >
+              <span>{language === 'pa' ? 'ਫਿਲਟਰ ਸਾਫ਼ ਕਰੋ' : 'Clear Filter'} ({selectedYears.map(y => "'" + y.toString().slice(-2)).join('+')})</span>
+            </button>
+          )}
+        </div>
+
+        {/* Dynamic Year Builder Strip & Quick Presets */}
+        <div className="trajectory-controls-row">
+          <div className="year-builder-group">
+            <span className="builder-label">
+              {language === 'pa' ? 'ਚੋਣ ਸਾਲ ਚੁਣੋ:' : 'CUSTOM BUILDER:'}
+            </span>
+            <div className="year-toggle-strip">
+              {[
+                { year: 2017, code: '’17 VS' },
+                { year: 2019, code: '’19 LS' },
+                { year: 2022, code: '’22 VS' },
+                { year: 2024, code: '’24 LS' }
+              ].map(({ year, code }) => {
+                const isActive = selectedYears.includes(year);
+                return (
+                  <button
+                    key={year}
+                    type="button"
+                    className={`year-toggle-btn ${isActive ? 'active' : ''}`}
+                    onClick={() => handleToggleYear(year)}
+                    title={`Toggle ${year} in trajectory filter`}
+                  >
+                    <span className="year-toggle-check">{isActive ? '✓' : '+'}</span>
+                    <span className="year-toggle-text">{code}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Quick Combinations Row */}
+          <div className="quick-combos-group">
+            <span className="builder-label">
+              {language === 'pa' ? 'ਮੁੱਖ ਚੋਣ ਮਿਸ਼ਰਨ:' : 'QUICK COMBINATIONS:'}
+            </span>
+            <div className="quick-combos-pills">
+              {comboPills.map(combo => {
+                const isActive = selectedYears.length === combo.years.length && 
+                  combo.years.every(y => selectedYears.includes(y));
+                return (
+                  <button
+                    key={combo.id}
+                    type="button"
+                    className={`quick-combo-btn ${isActive ? 'active' : ''} ${combo.isPrimary ? 'featured-combo' : ''}`}
+                    onClick={() => handleSelectCombo(combo.years)}
+                    title={`Filter booths won in ${combo.label}`}
+                  >
+                    <span className="combo-btn-label">{combo.label}</span>
+                    <span className="combo-btn-count">{combo.count}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
