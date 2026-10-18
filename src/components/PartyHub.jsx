@@ -25,7 +25,7 @@ export default function PartyHub({
   };
 
   return (
-    <div className="registry-sub-controls" aria-label="Party Analytics and Filters">
+    <div id="party-analytics-hub" className="registry-sub-controls" aria-label="Party Analytics and Filters">
       {/* 1. Main Segment Switcher Tabs & Live Summary */}
       <div className="party-pills-row">
         <div className="party-pill-tabs">
@@ -208,6 +208,42 @@ export default function PartyHub({
               <span className="cat-pill-num">{totalBooths}</span>
             </button>
             <button
+              className={`cat-pill-btn highlight-filter ${partyFilter === 'WON_THIS_YEAR' ? 'active' : ''}`}
+              onClick={() => setPartyFilter(partyFilter === 'WON_THIS_YEAR' ? 'ALL' : 'WON_THIS_YEAR')}
+              title="Booths with a clear winner in 2024"
+            >
+              <Award size={13} />
+              <span>{language === 'pa' ? 'ਇਸ ਸਾਲ ਜਿੱਤੇ (’24)' : 'Won in This Year (’24)'}</span>
+              <span className="cat-pill-num">{totalBooths}</span>
+            </button>
+            <button
+              className={`cat-pill-btn highlight-filter ${partyFilter === 'WON_ALL_ELECTIONS' ? 'active' : ''}`}
+              onClick={() => setPartyFilter(partyFilter === 'WON_ALL_ELECTIONS' ? 'ALL' : 'WON_ALL_ELECTIONS')}
+              title="Booths won in all 4 elections by the same party (Clean Sweep)"
+            >
+              <Award size={13} />
+              <span>{language === 'pa' ? 'ਸਾਰੀਆਂ ਚੋਣਾਂ ਵਿੱਚ ਜਿੱਤ' : 'All Elections Won'}</span>
+              <span className="cat-pill-num">{isRajaSansi ? 37 : 24}</span>
+            </button>
+            <button
+              className={`cat-pill-btn highlight-filter ${partyFilter === 'WON_IN_2' ? 'active' : ''}`}
+              onClick={() => setPartyFilter(partyFilter === 'WON_IN_2' ? 'ALL' : 'WON_IN_2')}
+              title="Booths won in exactly 2 elections by the 2024 winner"
+            >
+              <ShieldCheck size={13} />
+              <span>{language === 'pa' ? 'ਦੋ ਚੋਣਾਂ ਵਿੱਚ ਜਿੱਤ' : 'Won in Two (2 Elections)'}</span>
+              <span className="cat-pill-num">{isRajaSansi ? 78 : 82}</span>
+            </button>
+            <button
+              className={`cat-pill-btn highlight-filter ${partyFilter === 'WON_IN_3_PLUS' ? 'active' : ''}`}
+              onClick={() => setPartyFilter(partyFilter === 'WON_IN_3_PLUS' ? 'ALL' : 'WON_IN_3_PLUS')}
+              title="Booths won in 3 or more elections"
+            >
+              <TrendingUp size={13} />
+              <span>{language === 'pa' ? '3+ ਚੋਣਾਂ ਵਿੱਚ ਜਿੱਤ' : 'Won 3+ Elections'}</span>
+              <span className="cat-pill-num">{isRajaSansi ? 71 : 65}</span>
+            </button>
+            <button
               className={`cat-pill-btn inc-filter ${partyFilter === 'INC_WINS' ? 'active inc-active' : ''}`}
               onClick={() => setPartyFilter(partyFilter === 'INC_WINS' ? 'ALL' : 'INC_WINS')}
             >
@@ -257,6 +293,47 @@ export default function PartyHub({
               <span>{t('all_booths', language)}</span>
               <span className="cat-pill-num">{totalBooths}</span>
             </button>
+            {(currentStats.booths_won_24 > 0 || currentStats.won_this_year_count > 0) && (
+              <button
+                className={`cat-pill-btn ${partyFilter === 'WON_THIS_YEAR' || partyFilter === 'WON_24' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
+                onClick={() => setPartyFilter(partyFilter === 'WON_THIS_YEAR' || partyFilter === 'WON_24' ? 'ALL' : 'WON_24')}
+                title={`Booths won by ${selectedParty} in 2024 Lok Sabha`}
+              >
+                <Award size={13} />
+                <span>{language === 'pa' ? 'ਇਸ ਸਾਲ ਜਿੱਤੇ (’24)' : 'Won in This Year (’24)'}</span>
+                <span className="cat-pill-num">{currentStats.won_this_year_count || currentStats.booths_won_24}</span>
+              </button>
+            )}
+            {currentStats.booths_won_22 > 0 && (
+              <button
+                className={`cat-pill-btn ${partyFilter === 'WON_22' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
+                onClick={() => setPartyFilter(partyFilter === 'WON_22' ? 'ALL' : 'WON_22')}
+                title={`Booths won by ${selectedParty} in 2022 Vidhan Sabha`}
+              >
+                <span>’22 {language === 'pa' ? 'ਜਿੱਤਾਂ' : 'Wins'}</span>
+                <span className="cat-pill-num">{currentStats.booths_won_22}</span>
+              </button>
+            )}
+            {currentStats.booths_won_19 > 0 && (
+              <button
+                className={`cat-pill-btn ${partyFilter === 'WON_19' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
+                onClick={() => setPartyFilter(partyFilter === 'WON_19' ? 'ALL' : 'WON_19')}
+                title={`Booths won by ${selectedParty} in 2019 Lok Sabha`}
+              >
+                <span>’19 {language === 'pa' ? 'ਜਿੱਤਾਂ' : 'Wins'}</span>
+                <span className="cat-pill-num">{currentStats.booths_won_19}</span>
+              </button>
+            )}
+            {currentStats.booths_won_17 > 0 && (
+              <button
+                className={`cat-pill-btn ${partyFilter === 'WON_17' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
+                onClick={() => setPartyFilter(partyFilter === 'WON_17' ? 'ALL' : 'WON_17')}
+                title={`Booths won by ${selectedParty} in 2017 Vidhan Sabha`}
+              >
+                <span>’17 {language === 'pa' ? 'ਜਿੱਤਾਂ' : 'Wins'}</span>
+                <span className="cat-pill-num">{currentStats.booths_won_17}</span>
+              </button>
+            )}
             <button
               className={`cat-pill-btn won ${partyFilter === 'WON_BOTH' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
               onClick={() => setPartyFilter(partyFilter === 'WON_BOTH' ? 'ALL' : 'WON_BOTH')}
@@ -266,6 +343,39 @@ export default function PartyHub({
               <span>{t('won_both', language)}</span>
               <span className="cat-pill-num">{currentStats.won_both_count}</span>
             </button>
+            {currentStats.won_in_2_count > 0 && (
+              <button
+                className={`cat-pill-btn ${partyFilter === 'WON_IN_2' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
+                onClick={() => setPartyFilter(partyFilter === 'WON_IN_2' ? 'ALL' : 'WON_IN_2')}
+                title={`Booths won by ${selectedParty} in exactly 2 elections`}
+              >
+                <ShieldCheck size={13} />
+                <span>{language === 'pa' ? 'ਦੋ ਚੋਣਾਂ ਵਿੱਚ ਜਿੱਤ' : 'Won in Two (2 Elections)'}</span>
+                <span className="cat-pill-num">{currentStats.won_in_2_count}</span>
+              </button>
+            )}
+            {currentStats.won_in_3_count > 0 && (
+              <button
+                className={`cat-pill-btn ${partyFilter === 'WON_IN_3_PLUS' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
+                onClick={() => setPartyFilter(partyFilter === 'WON_IN_3_PLUS' ? 'ALL' : 'WON_IN_3_PLUS')}
+                title={`Booths won by ${selectedParty} in 3 or more elections`}
+              >
+                <TrendingUp size={13} />
+                <span>{language === 'pa' ? '3+ ਚੋਣਾਂ ਵਿੱਚ ਜਿੱਤ' : 'Won 3+ Elections'}</span>
+                <span className="cat-pill-num">{currentStats.won_in_3_count}</span>
+              </button>
+            )}
+            {currentStats.won_all_count > 0 && (
+              <button
+                className={`cat-pill-btn ${partyFilter === 'WON_ALL_ELECTIONS' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
+                onClick={() => setPartyFilter(partyFilter === 'WON_ALL_ELECTIONS' ? 'ALL' : 'WON_ALL_ELECTIONS')}
+                title={`Booths won by ${selectedParty} in all 4 elections (Clean Sweep)`}
+              >
+                <Award size={13} />
+                <span>{language === 'pa' ? 'ਸਾਰੀਆਂ ਚੋਣਾਂ ਵਿੱਚ ਜਿੱਤ' : 'All Elections Won'}</span>
+                <span className="cat-pill-num">{currentStats.won_all_count}</span>
+              </button>
+            )}
             <button
               className={`cat-pill-btn gained ${partyFilter === 'GAINED' ? `active ${selectedParty.toLowerCase()}-active` : ''}`}
               onClick={() => setPartyFilter(partyFilter === 'GAINED' ? 'ALL' : 'GAINED')}

@@ -3196,6 +3196,177 @@
 }
 
 /* =========================================================
+   4-ELECTION LONGITUDINAL TELEMETRY STRIP (Raja Sansi)
+========================================================= */
+.four-year-timeline-wrap {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md, 10px);
+  padding: 16px 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  margin-top: 8px;
+}
+
+.timeline-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.timeline-strip-badge {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.timeline-strip-note {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.timeline-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.timeline-year-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm, 8px);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.timeline-year-card:hover {
+  border-color: var(--border-medium);
+}
+
+.timeline-year-card.active {
+  border-color: rgba(2, 132, 199, 0.45);
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.12);
+}
+
+.ty-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ty-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.ty-winner {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ty-winner.inc {
+  background: var(--color-inc-soft);
+  color: var(--color-inc);
+}
+
+.ty-booths {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.ty-parties {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 4px 0;
+}
+
+.ty-party-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.ty-party-row.clickable {
+  cursor: pointer;
+}
+
+.ty-party-row.clickable:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.ty-party-row .party-name.inc { color: var(--color-inc); font-weight: 700; }
+.ty-party-row .party-name.aap { color: var(--color-aap); font-weight: 700; }
+.ty-party-row .party-name.sad { color: var(--color-sad); font-weight: 700; }
+.ty-party-row .party-name.bjp { color: var(--color-bjp); font-weight: 700; }
+
+.ty-lead {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+.ty-lead.inc {
+  background: var(--color-inc-soft);
+  color: var(--color-inc);
+}
+
+.ty-lead.clickable-lead {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ty-lead.clickable-lead:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.dsidein-kpi-card.clickable-kpi {
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.dsidein-kpi-card.clickable-kpi:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-medium);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dsidein-kpi-card.clickable-kpi.active-kpi {
+  outline: 2px solid currentColor;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25);
+}
+
+.click-to-filter-hint {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
    RESPONSIVE DESIGN (Mobile & Tablet Optimization)
    8px Grid, Touch-Friendly, Accessible
 ========================================================= */
@@ -3377,6 +3548,25 @@
   .dsidein-kpi-card {
     padding: 10px 12px;
     border-radius: 12px;
+  }
+
+  /* 4-Election timeline strip on mobile (Rule 5: mobile only) */
+  .timeline-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .timeline-year-card {
+    padding: 12px;
+  }
+
+  /* Active Telemetry Filter Notice on Mobile */
+  .active-filter-banner {
+    margin: 0 12px 10px 12px !important;
+    padding: 8px 10px !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 8px;
   }
 
   .kpi-top-row {
