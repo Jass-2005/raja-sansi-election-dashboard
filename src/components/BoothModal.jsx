@@ -9,6 +9,8 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
   const currentConst = CONSTITUENCIES[constituencyId] || CONSTITUENCIES.RAJA_SANSI;
   const cand = currentConst.candidates;
 
+  const d17 = booth.data_2017;
+  const d19 = booth.data_2019;
   const d22 = booth.data_2022;
   const d24 = booth.data_2024;
   const comp = booth.comparison || {
@@ -129,21 +131,182 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
           </div>
         </div>
 
-        {/* Modal Body: 2 Years Comparison Grid */}
-        <div className="modal-grid">
+        {/* 4-Election Trajectory Banner */}
+        {booth.trend_4year && (
+          <div className="modal-trajectory-bar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px', background: 'var(--bg-surface-elevated)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', marginBottom: '14px' }}>
+            <span style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-secondary)' }}>
+              {language === 'pa' ? '4-ਚੋਣ ਇਤਿਹਾਸਕ ਸਫ਼ਰ:' : '4-Election Trajectory:'}
+            </span>
+            <span style={{ fontSize: '0.875rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '0.01em' }}>
+              {booth.trend_4year}
+            </span>
+          </div>
+        )}
+
+        {/* Modal Body: Multi-Year Comparison Grid */}
+        <div className={d17 || d19 ? 'modal-grid-4' : 'modal-grid'}>
+          {/* 2017 Vidhan Sabha Column */}
+          {d17 ? (
+            <div className="year-card">
+              <div className="year-title">{language === 'pa' ? '2017 ਵਿਧਾਨ ਸਭਾ' : '2017 Vidhan Sabha'}</div>
+              <div className="modal-station-sub">
+                {language === 'pa' ? 'ਸਟੇਸ਼ਨ: ' : 'Station: '}
+                <strong>{booth.village_english}</strong>
+                <span style={{ marginLeft: '4px', color: 'var(--text-muted)' }}>(#{booth.booth_no})</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                <span className={`badge-winner ${d17.winner_party}`}>
+                  {d17.winner_party} {t('won_by', language)}
+                </span>
+                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                  +{d17.margin} {t('lead', language)}
+                </span>
+              </div>
+
+              {/* INC Bar */}
+              <div className="vote-bar-wrap">
+                <div className="vote-bar-label">
+                  <span>{cand['2017'] ? (language === 'pa' ? cand['2017'].INC.short_pa : cand['2017'].INC.short_en) : 'INC (Sarkaria)'}</span>
+                  <span><strong>{d17.inc}</strong> ({d17.inc_pct}%)</span>
+                </div>
+                <div className="vote-bar-track">
+                  <div className="vote-bar-fill" style={{ width: getWidth(d17.inc, d17.total), background: '#0F766E' }} />
+                </div>
+              </div>
+
+              {/* SAD Bar */}
+              <div className="vote-bar-wrap">
+                <div className="vote-bar-label">
+                  <span>{cand['2017'] ? (language === 'pa' ? cand['2017'].SAD.short_pa : cand['2017'].SAD.short_en) : 'SAD (Lopoke)'}</span>
+                  <span><strong>{d17.sad}</strong> ({d17.sad_pct}%)</span>
+                </div>
+                <div className="vote-bar-track">
+                  <div className="vote-bar-fill" style={{ width: getWidth(d17.sad, d17.total), background: '#EA580C' }} />
+                </div>
+              </div>
+
+              {/* AAP Bar */}
+              <div className="vote-bar-wrap">
+                <div className="vote-bar-label">
+                  <span>{cand['2017'] ? (language === 'pa' ? cand['2017'].AAP.short_pa : cand['2017'].AAP.short_en) : 'AAP (Dhillon)'}</span>
+                  <span><strong>{d17.aap}</strong> ({d17.aap_pct}%)</span>
+                </div>
+                <div className="vote-bar-track">
+                  <div className="vote-bar-fill" style={{ width: getWidth(d17.aap, d17.total), background: '#B28900' }} />
+                </div>
+              </div>
+
+              {/* BSP Bar */}
+              {d17.bsp > 0 && (
+                <div className="vote-bar-wrap">
+                  <div className="vote-bar-label">
+                    <span>BSP (Lakhbir)</span>
+                    <span><strong>{d17.bsp}</strong> ({d17.bsp_pct}%)</span>
+                  </div>
+                  <div className="vote-bar-track">
+                    <div className="vote-bar-fill" style={{ width: getWidth(d17.bsp, d17.total), background: '#2563EB' }} />
+                  </div>
+                </div>
+              )}
+
+              {/* Total 2017 */}
+              <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '6px', marginTop: '10px', fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', justifyContent: 'space-between' }}>
+                <span>{t('total_polled', language)}:</span>
+                <strong style={{ color: 'var(--text-primary)' }}>{d17.total}</strong>
+              </div>
+            </div>
+          ) : (d19 ? (
+            <div className="year-card not-established" style={{ opacity: 0.7, background: 'var(--bg-surface-elevated)' }}>
+              <div className="year-title">{language === 'pa' ? '2017 ਵਿਧਾਨ ਸਭਾ' : '2017 Vidhan Sabha'}</div>
+              <div style={{ padding: '30px 10px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.8125rem' }}>
+                {language === 'pa' 
+                  ? `ਬੂਥ #${booth.booth_no} 2017 ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਸੀ (ਕੁੱਲ 209 ਬੂਥ ਸਨ)` 
+                  : `Booth #${booth.booth_no} was not yet established in 2017 (209 total booths)`}
+              </div>
+            </div>
+          ) : null)}
+
+          {/* 2019 Lok Sabha Column */}
+          {d19 ? (
+            <div className="year-card">
+              <div className="year-title">{language === 'pa' ? '2019 ਲੋਕ ਸਭਾ' : '2019 Lok Sabha'}</div>
+              <div className="modal-station-sub">
+                {language === 'pa' ? 'ਸਟੇਸ਼ਨ: ' : 'Station: '}
+                <strong>{booth.village_english}</strong>
+                <span style={{ marginLeft: '4px', color: 'var(--text-muted)' }}>(#{booth.booth_no})</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                <span className={`badge-winner ${d19.winner_party}`}>
+                  {d19.winner_party} {t('won_by', language)}
+                </span>
+                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                  +{d19.margin} {t('lead', language)}
+                </span>
+              </div>
+
+              {/* INC Bar */}
+              <div className="vote-bar-wrap">
+                <div className="vote-bar-label">
+                  <span>{cand['2019'] ? (language === 'pa' ? cand['2019'].INC.short_pa : cand['2019'].INC.short_en) : 'INC (Aujla)'}</span>
+                  <span><strong>{d19.inc}</strong> ({d19.inc_pct}%)</span>
+                </div>
+                <div className="vote-bar-track">
+                  <div className="vote-bar-fill" style={{ width: getWidth(d19.inc, d19.total), background: '#0F766E' }} />
+                </div>
+              </div>
+
+              {/* BJP/NDA Bar */}
+              <div className="vote-bar-wrap">
+                <div className="vote-bar-label">
+                  <span>{cand['2019'] ? (language === 'pa' ? cand['2019'].BJP.short_pa : cand['2019'].BJP.short_en) : 'BJP/NDA (Puri)'}</span>
+                  <span><strong>{d19.bjp}</strong> ({d19.bjp_pct}%)</span>
+                </div>
+                <div className="vote-bar-track">
+                  <div className="vote-bar-fill" style={{ width: getWidth(d19.bjp, d19.total), background: '#D97706' }} />
+                </div>
+              </div>
+
+              {/* AAP Bar */}
+              <div className="vote-bar-wrap">
+                <div className="vote-bar-label">
+                  <span>{cand['2019'] ? (language === 'pa' ? cand['2019'].AAP.short_pa : cand['2019'].AAP.short_en) : 'AAP (Dhaliwal)'}</span>
+                  <span><strong>{d19.aap}</strong> ({d19.aap_pct}%)</span>
+                </div>
+                <div className="vote-bar-track">
+                  <div className="vote-bar-fill" style={{ width: getWidth(d19.aap, d19.total), background: '#B28900' }} />
+                </div>
+              </div>
+
+              {/* Total 2019 */}
+              <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '6px', marginTop: '10px', fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', justifyContent: 'space-between' }}>
+                <span>{t('total_polled', language)}:</span>
+                <strong style={{ color: 'var(--text-primary)' }}>{d19.total}</strong>
+              </div>
+            </div>
+          ) : (d17 ? (
+            <div className="year-card not-established" style={{ opacity: 0.7, background: 'var(--bg-surface-elevated)' }}>
+              <div className="year-title">{language === 'pa' ? '2019 ਲੋਕ ਸਭਾ' : '2019 Lok Sabha'}</div>
+              <div style={{ padding: '30px 10px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.8125rem' }}>
+                {language === 'pa' 
+                  ? `ਬੂਥ #${booth.booth_no} 2019 ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਸੀ` 
+                  : `Booth #${booth.booth_no} was established in 2022 (Expansion)`}
+              </div>
+            </div>
+          ) : null)}
+
           {/* 2022 Assembly Column */}
           <div className="year-card">
-            <div className="year-title">{t('assembly_election', language)}</div>
+            <div className="year-title">{language === 'pa' ? '2022 ਵਿਧਾਨ ਸਭਾ' : '2022 Vidhan Sabha'}</div>
             <div className="modal-station-sub">
-              {language === 'pa' ? 'ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ: ' : 'Station: '}
+              {language === 'pa' ? 'ਸਟੇਸ਼ਨ: ' : 'Station: '}
               <strong>{booth.booth_name_2022 || booth.village_english}</strong>
-              <span style={{ marginLeft: '6px', color: 'var(--text-muted)' }}>(#{booth.booth_no_2022 || booth.booth_no})</span>
+              <span style={{ marginLeft: '4px', color: 'var(--text-muted)' }}>(#{booth.booth_no_2022 || booth.booth_no})</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
               <span className={`badge-winner ${d22.winner_party}`}>
                 {d22.winner_party} {t('won_by', language)}
               </span>
-              <span style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
                 +{d22.margin} {t('lead', language)}
               </span>
             </div>
@@ -195,7 +358,7 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
             )}
 
             {/* Total 2022 */}
-            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '8px', marginTop: '12px', fontSize: '0.8125rem', color: 'var(--text-secondary)', display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '6px', marginTop: '10px', fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', justifyContent: 'space-between' }}>
               <span>{t('total_polled', language)}:</span>
               <strong style={{ color: 'var(--text-primary)' }}>{d22.total}</strong>
             </div>
@@ -203,17 +366,17 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
 
           {/* 2024 Lok Sabha Column */}
           <div className="year-card">
-            <div className="year-title">{t('lok_sabha_election', language)}</div>
+            <div className="year-title">{language === 'pa' ? '2024 ਲੋਕ ਸਭਾ' : '2024 Lok Sabha'}</div>
             <div className="modal-station-sub">
-              {language === 'pa' ? 'ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ: ' : 'Station: '}
+              {language === 'pa' ? 'ਸਟੇਸ਼ਨ: ' : 'Station: '}
               <strong>{booth.booth_name_2024 || booth.village_english}</strong>
-              <span style={{ marginLeft: '6px', color: 'var(--text-muted)' }}>(#{booth.booth_no_2024 || booth.booth_no})</span>
+              <span style={{ marginLeft: '4px', color: 'var(--text-muted)' }}>(#{booth.booth_no_2024 || booth.booth_no})</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
               <span className={`badge-winner ${d24.winner_party}`}>
                 {d24.winner_party} {t('won_by', language)}
               </span>
-              <span style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
                 +{d24.margin} {t('lead', language)}
               </span>
             </div>
@@ -262,13 +425,8 @@ export default function BoothModal({ booth, onClose, constituencyId, language })
               </div>
             </div>
 
-            {/* Others & NOTA */}
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '4px' }}>
-              SAD(A): {d24.sada || 0} | BSP: {d24.bsp || 0} | Others: {d24.other || d24.baaki || 0} | NOTA: {d24.nota || 0}
-            </div>
-
             {/* Total 2024 */}
-            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '8px', marginTop: '8px', fontSize: '0.8125rem', color: 'var(--text-secondary)', display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '6px', marginTop: '10px', fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'flex', justifyContent: 'space-between' }}>
               <span>{t('total_polled', language)}:</span>
               <strong style={{ color: 'var(--text-primary)' }}>{d24.total}</strong>
             </div>

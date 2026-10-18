@@ -16,11 +16,22 @@ export const CONSTITUENCIES = {
     csvFile: './Raja_Sansi_All_Booths_Comparison.csv',
     csvName: 'Raja_Sansi_All_Booths_Comparison.csv',
     candidates: {
+      2017: {
+        INC: { short_en: 'INC (Sarkaria)', short_pa: 'ਕਾਂਗਰਸ (ਸਰਕਾਰੀਆ)', name_en: 'Sukhbinder Singh Sarkaria', name_pa: 'ਸੁਖਬਿੰਦਰ ਸਿੰਘ ਸਰਕਾਰੀਆ' },
+        SAD: { short_en: 'SAD (Lopoke)', short_pa: 'ਅਕਾਲੀ ਦਲ (ਲੋਪੋਕੇ)', name_en: 'Vir Singh Lopoke', name_pa: 'ਵੀਰ ਸਿੰਘ ਲੋਪੋਕੇ' },
+        AAP: { short_en: 'AAP (Dhillon)', short_pa: 'ਆਪ (ਢਿੱਲੋਂ)', name_en: 'Jagjot Singh Dhillon', name_pa: 'ਜਗਜੋਤ ਸਿੰਘ ਢਿੱਲੋਂ' },
+        BSP: { short_en: 'BSP (Lakhbir)', short_pa: 'ਬਸਪਾ (ਲਖਬੀਰ)', name_en: 'Lakhbir Singh', name_pa: 'ਲਖਬੀਰ ਸਿੰਘ' }
+      },
+      2019: {
+        INC: { short_en: 'INC (Aujla)', short_pa: 'ਕਾਂਗਰਸ (ਔਜਲਾ)', name_en: 'Gurjeet Singh Aujla', name_pa: 'ਗੁਰਜੀਤ ਸਿੰਘ ਔਜਲਾ' },
+        BJP: { short_en: 'BJP/NDA (Puri)', short_pa: 'ਭਾਜਪਾ/ਗਠਜੋੜ (ਪੁਰੀ)', name_en: 'Hardeep Singh Puri', name_pa: 'ਹਰਦੀਪ ਸਿੰਘ ਪੁਰੀ' },
+        AAP: { short_en: 'AAP (Dhaliwal)', short_pa: 'ਆਪ (ਧਾਲੀਵਾਲ)', name_en: 'Kuldeep Singh Dhaliwal', name_pa: 'ਕੁਲਦੀਪ ਸਿੰਘ ਧਾਲੀਵਾਲ' }
+      },
       2022: {
         INC: { short_en: 'INC (Sarkaria)', short_pa: 'ਕਾਂਗਰਸ (ਸਰਕਾਰੀਆ)', name_en: 'Sukhbinder Singh Sarkaria', name_pa: 'ਸੁਖਬਿੰਦਰ ਸਿੰਘ ਸਰਕਾਰੀਆ' },
         AAP: { short_en: 'AAP (Miadian)', short_pa: 'ਆਪ (ਮਿਆਦੀਆਂ)', name_en: 'Baldev Singh Miadian', name_pa: 'ਬਲਦੇਵ ਸਿੰਘ ਮਿਆਦੀਆਂ' },
         SAD: { short_en: 'SAD (Lopoke)', short_pa: 'ਅਕਾਲੀ ਦਲ (ਲੋਪੋਕੇ)', name_en: 'Vir Singh Lopoke', name_pa: 'ਵੀਰ ਸਿੰਘ ਲੋਪੋਕੇ' },
-        BJP: { short_en: 'BJP (Mahal)', short_pa: 'ਭਾਜਪਾ (ਮਾਹਲ)', name_en: 'Mukhwinder Singh Mahal', name_pa: 'ਮੁਖਵਿੰਦਰ ਸਿੰਘ ਮਾਹਲ' }
+        BJP: { short_en: 'BJP (Mukhwinder Singh)', short_pa: 'ਭਾਜਪਾ (ਮੁਖਵਿੰਦਰ ਸਿੰਘ)', name_en: 'Mukhwinder Singh', name_pa: 'ਮੁਖਵਿੰਦਰ ਸਿੰਘ' }
       },
       2024: {
         INC: { short_en: 'INC (Aujla)', short_pa: 'ਕਾਂਗਰਸ (ਔਜਲਾ)', name_en: 'Gurjeet Singh Aujla', name_pa: 'ਗੁਰਜੀਤ ਸਿੰਘ ਔਜਲਾ' },

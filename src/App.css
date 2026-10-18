@@ -1182,6 +1182,158 @@
   color: #c084fc;
 }
 
+/* 4-Election Longitudinal Telemetry Strip */
+.four-year-timeline-wrap {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.timeline-strip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.timeline-strip-badge {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-strip-badge::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3b82f6;
+}
+
+.timeline-strip-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.timeline-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 960px) {
+  .timeline-strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .timeline-strip-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timeline-year-card {
+  background: var(--bg-surface-elevated, rgba(255,255,255,0.03));
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.timeline-year-card:hover {
+  border-color: var(--border-medium);
+  transform: translateY(-2px);
+}
+
+.timeline-year-card.active {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+.ty-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ty-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ty-winner {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.ty-winner.inc { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+.ty-winner.sad { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+.ty-winner.aap { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+.ty-winner.bjp { background: rgba(249, 115, 22, 0.15); color: #f97316; }
+
+.ty-booths {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.ty-parties {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ty-party-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.ty-party-row strong {
+  color: var(--text-primary);
+}
+
+.party-name {
+  font-weight: 600;
+}
+.party-name.inc { color: #10b981; }
+.party-name.sad { color: #f59e0b; }
+.party-name.aap { color: #3b82f6; }
+.party-name.bjp { color: #f97316; }
+
+.ty-lead {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding-top: 6px;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+}
+.ty-lead.inc { color: #10b981; }
+
+
 /* =========================================================
    7. UNIFIED REGISTRY CARD (Matching Dsidein 'Team Progress Today')
 ========================================================= */
@@ -2442,7 +2594,7 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
-  max-width: 640px;
+  max-width: 960px;
   width: 100%;
   max-height: 92vh;
   overflow-y: auto;
@@ -2539,6 +2691,44 @@
   .modal-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Modal 4-Year Comparison Grid */
+.modal-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .modal-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.year-card.inactive {
+  opacity: 0.65;
+  background: rgba(255, 255, 255, 0.02);
+  border-style: dashed;
+}
+
+.badge-new-booth {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Shift Metric Tiles Row */

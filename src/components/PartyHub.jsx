@@ -126,6 +126,42 @@ export default function PartyHub({
             </>
           ) : (
             <>
+              {isRajaSansi && summary?.votes_2017 && (
+                <>
+                  <div className="vital-item">
+                    <span className="vital-lbl">{language === 'pa' ? '’17 ਵੋਟਾਂ' : '’17 Votes'}</span>
+                    <span className="vital-val">
+                      {selectedParty === 'INC' ? summary.votes_2017.inc?.toLocaleString() :
+                       selectedParty === 'SAD' ? summary.votes_2017.sad?.toLocaleString() :
+                       selectedParty === 'AAP' ? summary.votes_2017.aap?.toLocaleString() :
+                       selectedParty === 'BJP' ? (language === 'pa' ? 'ਗਠਜੋੜ' : 'In NDA') : '-'}
+                    </span>
+                    <span className="vital-sub">
+                      ({selectedParty === 'INC' ? `${summary.votes_2017.inc_pct}%` :
+                        selectedParty === 'SAD' ? `${summary.votes_2017.sad_pct}%` :
+                        selectedParty === 'AAP' ? `${summary.votes_2017.aap_pct}%` :
+                        selectedParty === 'BJP' ? 'SAD Ally' : '-'})
+                    </span>
+                  </div>
+                  <span className="vital-divider" aria-hidden="true" />
+                  <div className="vital-item">
+                    <span className="vital-lbl">{language === 'pa' ? '’19 ਵੋਟਾਂ' : '’19 Votes'}</span>
+                    <span className="vital-val">
+                      {selectedParty === 'INC' ? summary.votes_2019.inc?.toLocaleString() :
+                       selectedParty === 'BJP' ? summary.votes_2019.bjp?.toLocaleString() :
+                       selectedParty === 'AAP' ? summary.votes_2019.aap?.toLocaleString() :
+                       selectedParty === 'SAD' ? (language === 'pa' ? 'ਗਠਜੋੜ' : 'In NDA') : '-'}
+                    </span>
+                    <span className="vital-sub">
+                      ({selectedParty === 'INC' ? `${summary.votes_2019.inc_pct}%` :
+                        selectedParty === 'BJP' ? `${summary.votes_2019.bjp_pct}%` :
+                        selectedParty === 'AAP' ? `${summary.votes_2019.aap_pct}%` :
+                        selectedParty === 'SAD' ? 'BJP Ally' : '-'})
+                    </span>
+                  </div>
+                  <span className="vital-divider" aria-hidden="true" />
+                </>
+              )}
               <div className="vital-item">
                 <span className="vital-lbl">{t('votes_22', language)}</span>
                 <span className="vital-val">{currentStats.votes_2022?.toLocaleString()}</span>
@@ -139,7 +175,7 @@ export default function PartyHub({
               </div>
               <span className="vital-divider" aria-hidden="true" />
               <div className="vital-item">
-                <span className="vital-lbl">{t('net_shift', language)}</span>
+                <span className="vital-lbl">{t('net_shift', language)} (’22→’24)</span>
                 <span className={`vital-val ${currentStats.vote_diff >= 0 ? 'shift-gain' : 'shift-loss'}`}>
                   {currentStats.vote_diff >= 0 ? `+${currentStats.vote_diff?.toLocaleString()}` : currentStats.vote_diff?.toLocaleString()}
                 </span>

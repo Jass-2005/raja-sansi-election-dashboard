@@ -16,39 +16,23 @@ export default function BoothGrid({
   const pKey = selectedParty.toLowerCase(); // 'aap', 'inc', 'sad', 'bjp'
 
   const renderBoothBadge = (b) => {
-    const isRearranged = b.is_rearranged || (b.booth_no_2022 && b.booth_no_2024 && b.booth_no_2022 !== b.booth_no_2024);
-    if (isRearranged) {
-      return (
-        <div className="dual-booth-badge rearranged" title={`2022 Booth #${b.booth_no_2022} rearranged to 2024 Booth #${b.booth_no_2024}`}>
-          <span className="booth-tag-22">’22 #{b.booth_no_2022}</span>
-          <span className="booth-tag-sep">➔</span>
-          <span className="booth-tag-24">’24 #{b.booth_no_2024}</span>
-        </div>
-      );
-    }
+    const est = b.created_year || (b.data_2017 ? 2017 : (b.data_2019 ? 2019 : 2022));
+    const tag = est === 2017 ? '’17–’24' : (est === 2019 ? 'New ’19' : 'New ’22');
     return (
-      <div className="dual-booth-badge matched" title={`Booth #${b.booth_no} (Identical in 2022 & 2024)`}>
+      <div className="dual-booth-badge matched" title={`Booth #${b.booth_no} (${est}–2024)`}>
         <span className="card-booth-badge">#{b.booth_no}</span>
-        <span className="booth-match-tag">’22 & ’24</span>
+        <span className="booth-match-tag">{tag}</span>
       </div>
     );
   };
 
   const renderTableBoothBadge = (b) => {
-    const isRearranged = b.is_rearranged || (b.booth_no_2022 && b.booth_no_2024 && b.booth_no_2022 !== b.booth_no_2024);
-    if (isRearranged) {
-      return (
-        <div className="dual-booth-badge-table rearranged" title={`2022 Booth #${b.booth_no_2022} ➔ 2024 Booth #${b.booth_no_2024}`}>
-          <span className="badge-22">’22 #{b.booth_no_2022}</span>
-          <span className="badge-arrow">➔</span>
-          <span className="badge-24">’24 #{b.booth_no_2024}</span>
-        </div>
-      );
-    }
+    const est = b.created_year || (b.data_2017 ? 2017 : (b.data_2019 ? 2019 : 2022));
+    const tag = est === 2017 ? '’17–’24' : (est === 2019 ? 'New ’19' : 'New ’22');
     return (
-      <div className="booth-avatar-badge-wrap" title={`Booth #${b.booth_no} (2022 & 2024 matched)`}>
+      <div className="booth-avatar-badge-wrap" title={`Booth #${b.booth_no} (${est}–2024)`}>
         <span className="booth-avatar-badge">{b.booth_no}</span>
-        <span className="booth-match-sub">22 & 24</span>
+        <span className="booth-match-sub">{tag}</span>
       </div>
     );
   };
@@ -122,13 +106,15 @@ export default function BoothGrid({
           <table className="clean-table">
             <thead>
               {isAllMode ? (
-                /* Complete List Headers */
+                /* Complete List Headers: 4 Elections */
                 <tr>
-                  <th style={{ width: '65px', textAlign: 'center' }}>{t('col_no', language)}</th>
+                  <th style={{ width: '68px', textAlign: 'center' }}>{t('col_no', language)}</th>
                   <th>{t('col_village', language)}</th>
-                  <th>{t('col_winner_22', language)}</th>
-                  <th>{t('col_winner_24', language)}</th>
-                  <th>{t('col_shift_status', language)}</th>
+                  <th>2017 VS</th>
+                  <th>2019 LS</th>
+                  <th>2022 VS</th>
+                  <th>2024 LS</th>
+                  <th>{language === 'pa' ? '4-ਚੋਣ ਸਫ਼ਰ' : '4-Year Trajectory'}</th>
                   <th style={{ textAlign: 'right' }}>{t('col_turnout_24', language)}</th>
                   <th style={{ textAlign: 'right' }}>{t('col_turnout_shift', language)}</th>
                   <th style={{ width: '84px', textAlign: 'center' }}>{t('col_action', language)}</th>
@@ -136,12 +122,13 @@ export default function BoothGrid({
               ) : (
                 /* Party-Specific Headers */
                 <tr>
-                  <th style={{ width: '65px', textAlign: 'center' }}>{t('col_no', language)}</th>
+                  <th style={{ width: '68px', textAlign: 'center' }}>{t('col_no', language)}</th>
                   <th>{t('col_village', language)}</th>
-                  <th style={{ textAlign: 'right' }}>2022 ({selectedParty})</th>
-                  <th style={{ textAlign: 'right' }}>2024 ({selectedParty})</th>
-                  <th style={{ textAlign: 'right' }}>{language === 'pa' ? 'ਫ਼ਰਕ' : 'Shift'}</th>
-                  <th>{t('col_winner_22', language)}</th>
+                  <th style={{ textAlign: 'right' }}>’17 ({selectedParty})</th>
+                  <th style={{ textAlign: 'right' }}>’19 ({selectedParty})</th>
+                  <th style={{ textAlign: 'right' }}>’22 ({selectedParty})</th>
+                  <th style={{ textAlign: 'right' }}>’24 ({selectedParty})</th>
+                  <th style={{ textAlign: 'right' }}>{language === 'pa' ? 'ਫ਼ਰਕ' : 'Shift'} (’22→’24)</th>
                   <th>{t('col_winner_24', language)}</th>
                   <th>{t('col_category', language)}</th>
                   <th style={{ width: '84px', textAlign: 'center' }}>{t('col_action', language)}</th>
@@ -150,6 +137,10 @@ export default function BoothGrid({
             </thead>
             <tbody>
               {booths.map((b) => {
+                const w17 = b.data_2017?.winner_party;
+                const m17 = b.data_2017?.margin;
+                const w19 = b.data_2019?.winner_party;
+                const m19 = b.data_2019?.margin;
                 const w22 = b.data_2022.winner_party;
                 const w24 = b.data_2024.winner_party;
                 const diff = b.comparison.turnout_diff;
@@ -184,23 +175,48 @@ export default function BoothGrid({
                         )}
                       </td>
 
+                      {/* 2017 Winner */}
+                      <td>
+                        {b.data_2017 ? (
+                          <span className={`mini-winner ${w17}`}>
+                            {w17} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '3px' }}>+{m17}</span>
+                          </span>
+                        ) : (
+                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>-</span>
+                        )}
+                      </td>
+
+                      {/* 2019 Winner */}
+                      <td>
+                        {b.data_2019 ? (
+                          <span className={`mini-winner ${w19}`}>
+                            {w19} <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '3px' }}>+{m19}</span>
+                          </span>
+                        ) : (
+                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>-</span>
+                        )}
+                      </td>
+
+                      {/* 2022 Winner */}
                       <td>
                         <span className={`mini-winner ${w22}`}>{w22}</span>
-                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '6px' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '4px' }}>
                           +{b.data_2022.margin}
                         </span>
                       </td>
 
+                      {/* 2024 Winner */}
                       <td>
                         <span className={`mini-winner ${w24}`}>{w24}</span>
-                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '6px' }}>
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '4px' }}>
                           +{b.data_2024.margin}
                         </span>
                       </td>
 
+                      {/* 4-Year Trajectory */}
                       <td>
-                        <span className={`cat-pill ${b.comparison.is_flip ? 'lost' : 'won'}`}>
-                          {b.comparison.status_label}
+                        <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)', background: 'var(--bg-surface-elevated)', padding: '2px 8px', borderRadius: '4px', border: '1px solid var(--border-subtle)', whiteSpace: 'nowrap' }}>
+                          {b.trend_4year || b.comparison.status_label}
                         </span>
                       </td>
 
@@ -242,6 +258,8 @@ export default function BoothGrid({
                 }
 
                 // Party-Specific Row
+                const v17 = b.data_2017?.[pKey] !== undefined ? b.data_2017[pKey] : (selectedParty === 'BJP' && b.data_2017 ? 'NDA' : (selectedParty === 'SAD' && b.data_2019 ? 'NDA' : '-'));
+                const v19 = b.data_2019?.[pKey] !== undefined ? b.data_2019[pKey] : (selectedParty === 'SAD' && b.data_2019 ? 'NDA' : '-');
                 const v22 = b.data_2022[pKey] || 0;
                 const pct22 = b.data_2022[`${pKey}_pct`] || 0;
                 const v24 = b.data_2024[pKey] || 0;
@@ -296,6 +314,20 @@ export default function BoothGrid({
                     </td>
 
                     <td style={{ textAlign: 'right' }}>
+                      <strong>{v17}</strong>
+                      {b.data_2017 && b.data_2017[`${pKey}_pct`] !== undefined && (
+                        <span className="pct-sub">({b.data_2017[`${pKey}_pct`]}%)</span>
+                      )}
+                    </td>
+
+                    <td style={{ textAlign: 'right' }}>
+                      <strong>{v19}</strong>
+                      {b.data_2019 && b.data_2019[`${pKey}_pct`] !== undefined && (
+                        <span className="pct-sub">({b.data_2019[`${pKey}_pct`]}%)</span>
+                      )}
+                    </td>
+
+                    <td style={{ textAlign: 'right' }}>
                       <strong>{v22}</strong>
                       <span className="pct-sub">({pct22}%)</span>
                     </td>
@@ -312,10 +344,6 @@ export default function BoothGrid({
                       <span className="pct-sub" style={{ display: 'block', fontSize: '0.6875rem' }}>
                         {swing >= 0 ? `+${swing}%` : `${swing}%`}
                       </span>
-                    </td>
-
-                    <td>
-                      <span className={`mini-winner ${w22}`}>{w22}</span>
                     </td>
 
                     <td>
@@ -359,6 +387,8 @@ export default function BoothGrid({
         /* View Mode: Card Grid */
         <div className="grid-cards-layout">
           {booths.map((b) => {
+            const w17 = b.data_2017 ? b.data_2017.winner_party : 'N/A';
+            const w19 = b.data_2019 ? b.data_2019.winner_party : 'N/A';
             const w22 = b.data_2022.winner_party;
             const w24 = b.data_2024.winner_party;
             const diff = b.comparison.turnout_diff;
@@ -372,9 +402,16 @@ export default function BoothGrid({
                 >
                   <div className="card-top-row">
                     {renderBoothBadge(b)}
-                    <span className={`cat-pill ${b.comparison.is_flip ? 'lost' : 'won'}`}>
-                      {b.comparison.status_label}
-                    </span>
+                    <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+                      {b.established_in && (
+                        <span className="badge-new-booth" style={{ fontSize: '0.65rem', padding: '2px 6px', borderRadius: '4px', background: '#3b82f6', color: '#fff', fontWeight: 600 }}>
+                          Est. {b.established_in}
+                        </span>
+                      )}
+                      <span className={`cat-pill ${b.comparison.is_flip ? 'lost' : 'won'}`}>
+                        {b.comparison.status_label}
+                      </span>
+                    </div>
                   </div>
 
                   {language === 'pa' ? (
@@ -393,23 +430,46 @@ export default function BoothGrid({
                     </>
                   )}
 
-                  <div className="card-stats-box">
+                  <div className="card-stats-box 4-year-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '6px', textAlign: 'center', background: 'var(--bg-card-alt, rgba(255,255,255,0.03))', padding: '8px 4px', borderRadius: '6px', margin: '8px 0' }}>
                     <div className="card-stat-col">
-                      <span className="card-stat-label">{t('col_winner_22', language)}</span>
-                      <span className={`mini-winner ${w22}`} style={{ marginTop: '3px' }}>
-                        {w22} (+{b.data_2022.margin})
-                      </span>
-                      <span className="pct-sub" style={{ margin: '4px 0 0 0' }}>{b.data_2022.total} polled</span>
+                      <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'17 VS</span>
+                      {b.data_2017 ? (
+                        <>
+                          <span className={`mini-winner ${w17}`} style={{ marginTop: '2px', fontSize: '0.72rem', display: 'inline-block' }}>{w17}</span>
+                          <span className="pct-sub" style={{ fontSize: '0.65rem', display: 'block', margin: '2px 0 0 0' }}>{b.data_2017.total}</span>
+                        </>
+                      ) : (
+                        <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>-</span>
+                      )}
                     </div>
-
                     <div className="card-stat-col">
-                      <span className="card-stat-label">{t('col_winner_24', language)}</span>
-                      <span className={`mini-winner ${w24}`} style={{ marginTop: '3px' }}>
-                        {w24} (+{b.data_2024.margin})
-                      </span>
-                      <span className="pct-sub" style={{ margin: '4px 0 0 0' }}>{b.data_2024.total} polled</span>
+                      <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'19 LS</span>
+                      {b.data_2019 ? (
+                        <>
+                          <span className={`mini-winner ${w19}`} style={{ marginTop: '2px', fontSize: '0.72rem', display: 'inline-block' }}>{w19}</span>
+                          <span className="pct-sub" style={{ fontSize: '0.65rem', display: 'block', margin: '2px 0 0 0' }}>{b.data_2019.total}</span>
+                        </>
+                      ) : (
+                        <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>-</span>
+                      )}
+                    </div>
+                    <div className="card-stat-col">
+                      <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'22 VS</span>
+                      <span className={`mini-winner ${w22}`} style={{ marginTop: '2px', fontSize: '0.72rem', display: 'inline-block' }}>{w22}</span>
+                      <span className="pct-sub" style={{ fontSize: '0.65rem', display: 'block', margin: '2px 0 0 0' }}>{b.data_2022.total}</span>
+                    </div>
+                    <div className="card-stat-col">
+                      <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'24 LS</span>
+                      <span className={`mini-winner ${w24}`} style={{ marginTop: '2px', fontSize: '0.72rem', display: 'inline-block' }}>{w24}</span>
+                      <span className="pct-sub" style={{ fontSize: '0.65rem', display: 'block', margin: '2px 0 0 0' }}>{b.data_2024.total}</span>
                     </div>
                   </div>
+
+                  {b.trajectory_4yr && (
+                    <div style={{ fontSize: '0.68rem', padding: '3px 6px', background: 'rgba(255,255,255,0.04)', borderRadius: '4px', textAlign: 'center', marginBottom: '8px', color: 'var(--text-secondary)' }}>
+                      <strong>{language === 'pa' ? 'ਸਫ਼ਰ:' : '4-Yr:'}</strong> {b.trajectory_4yr}
+                    </div>
+                  )}
 
                   <div className="card-footer-row">
                     <div>
@@ -435,6 +495,10 @@ export default function BoothGrid({
             }
 
             // Party-Specific Card
+            const v17 = b.data_2017 ? (b.data_2017[pKey] || 0) : null;
+            const pct17 = b.data_2017 ? (b.data_2017[`${pKey}_pct`] || 0) : null;
+            const v19 = b.data_2019 ? (b.data_2019[pKey] || 0) : null;
+            const pct19 = b.data_2019 ? (b.data_2019[`${pKey}_pct`] || 0) : null;
             const v22 = b.data_2022[pKey] || 0;
             const pct22 = b.data_2022[`${pKey}_pct`] || 0;
             const v24 = b.data_2024[pKey] || 0;
@@ -467,7 +531,14 @@ export default function BoothGrid({
               >
                 <div className="card-top-row">
                   {renderBoothBadge(b)}
-                  <span className={`cat-pill ${catClass}`}>{catLabel}</span>
+                  <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+                    {b.established_in && (
+                      <span className="badge-new-booth" style={{ fontSize: '0.65rem', padding: '2px 6px', borderRadius: '4px', background: '#3b82f6', color: '#fff', fontWeight: 600 }}>
+                        Est. {b.established_in}
+                      </span>
+                    )}
+                    <span className={`cat-pill ${catClass}`}>{catLabel}</span>
+                  </div>
                 </div>
 
                 {language === 'pa' ? (
@@ -486,17 +557,45 @@ export default function BoothGrid({
                   </>
                 )}
 
-                <div className="card-stats-box">
+                <div className="card-stats-box 4-year-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '6px', textAlign: 'center', background: 'var(--bg-card-alt, rgba(255,255,255,0.03))', padding: '8px 4px', borderRadius: '6px', margin: '8px 0' }}>
                   <div className="card-stat-col">
-                    <span className="card-stat-label">2022 Votes</span>
-                    <strong>{v22}</strong> <span className="pct-sub">({pct22}%)</span>
-                    <span className={`mini-winner ${w22}`} style={{ marginTop: '4px' }}>{w22} Won</span>
+                    <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'17 VS</span>
+                    {v17 !== null ? (
+                      <>
+                        <strong style={{ fontSize: '0.78rem', display: 'block' }}>{v17}</strong>
+                        <span className="pct-sub" style={{ fontSize: '0.65rem' }}>{pct17}%</span>
+                        <span className={`mini-winner ${w17}`} style={{ marginTop: '2px', fontSize: '0.68rem', display: 'inline-block' }}>{w17}</span>
+                      </>
+                    ) : (
+                      <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>-</span>
+                    )}
                   </div>
 
                   <div className="card-stat-col">
-                    <span className="card-stat-label">2024 Votes</span>
-                    <strong>{v24}</strong> <span className="pct-sub">({pct24}%)</span>
-                    <span className={`mini-winner ${w24}`} style={{ marginTop: '4px' }}>{w24} Won</span>
+                    <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'19 LS</span>
+                    {v19 !== null ? (
+                      <>
+                        <strong style={{ fontSize: '0.78rem', display: 'block' }}>{v19}</strong>
+                        <span className="pct-sub" style={{ fontSize: '0.65rem' }}>{pct19}%</span>
+                        <span className={`mini-winner ${w19}`} style={{ marginTop: '2px', fontSize: '0.68rem', display: 'inline-block' }}>{w19}</span>
+                      </>
+                    ) : (
+                      <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>-</span>
+                    )}
+                  </div>
+
+                  <div className="card-stat-col">
+                    <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'22 VS</span>
+                    <strong style={{ fontSize: '0.78rem', display: 'block' }}>{v22}</strong>
+                    <span className="pct-sub" style={{ fontSize: '0.65rem' }}>{pct22}%</span>
+                    <span className={`mini-winner ${w22}`} style={{ marginTop: '2px', fontSize: '0.68rem', display: 'inline-block' }}>{w22}</span>
+                  </div>
+
+                  <div className="card-stat-col">
+                    <span className="card-stat-label" style={{ fontSize: '0.68rem', color: 'var(--text-muted)' }}>'24 LS</span>
+                    <strong style={{ fontSize: '0.78rem', display: 'block' }}>{v24}</strong>
+                    <span className="pct-sub" style={{ fontSize: '0.65rem' }}>{pct24}%</span>
+                    <span className={`mini-winner ${w24}`} style={{ marginTop: '2px', fontSize: '0.68rem', display: 'inline-block' }}>{w24}</span>
                   </div>
                 </div>
 
