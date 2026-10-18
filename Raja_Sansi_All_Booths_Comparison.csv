@@ -1,223 +1,223 @@
-﻿Booth No,2022 Booth No,2024 Booth No,Village (English),Village (Punjabi),2022 Station Name,2024 Station Name,Booth Name Match,2022 Winner,2022 Margin,2022 INC Votes,2022 AAP Votes,2022 SAD Votes,2022 BJP Votes,2022 Total Polled,2024 Winner,2024 Margin,2024 INC Votes,2024 AAP Votes,2024 SAD Votes,2024 BJP Votes,2024 Total Polled,Status,AAP Category,INC Category,AAP Swing %,INC Swing %,SAD Swing %,BJP Swing %,Turnout Change
-1,1,1,Gulgarh,ਗੁਲਗੜ੍ਹ,GULGARH,GULGARH,YES,AAP,34,98,132,34,0,281,AAP,17,71,88,26,42,249,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-11.64,-6.37,-1.66,16.87,-32
-2,2,2,Awan Basau,ਅਵਾਨ ਬਸਾਊ,AWAAN BASAU,AWAAN BASAU,YES,INC,22,225,129,203,13,614,INC,17,168,151,118,54,542,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),6.85,-5.64,-11.29,7.84,-72
-3,3,3,Awan Bassau,ਅਵਾਨ ਬਸਾਊ,AWAN BASSAU,AWAN BASSAU,YES,SAD,8,184,153,192,10,566,SAD,41,103,135,176,40,500,Retained SAD,Lost Both Times (Deficit),Lost Both Times (Deficit),-0.03,-11.91,1.28,6.23,-66
-4,4,4,Tanana,ਟਨਾਣਾ,TANANA,TANANA,YES,INC,173,337,164,105,19,656,AAP,83,180,263,66,104,660,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),14.85,-24.1,-6.01,12.86,4
-5,5,5,Ghoga,ਘੋਗਾ,GHOGA,GHOGA,YES,INC,75,240,165,147,8,589,AAP,79,98,223,144,32,541,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),13.21,-22.64,1.66,4.55,-48
-6,6,6,Burj,ਬੁਰਜ,BURJ,BURJ,YES,SAD,54,225,160,279,19,707,AAP,155,126,281,104,124,712,Flipped (SAD → AAP),Gained in 2024 (New Win),Weak Booth (< 20% Share),16.84,-14.12,-24.85,14.73,5
-7,7,7,Toor,ਤੂਰ,TOOR,TOOR,YES,SAD,174,211,110,385,14,747,INC,15,152,118,132,137,597,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),5.04,-2.79,-29.43,21.08,-150
-8,8,8,Bhindi Aulakh Kalan,ਭਿੰਡੀ ਔਲਖ ਕਲਾਂ,BHINDI AULAKH KALAN,BHINDI AULAKH KALAN,YES,AAP,102,234,336,162,12,778,INC,159,289,130,87,80,697,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-24.54,11.38,-8.34,9.94,-81
-9,9,9,Bhindi Aulakh Kalan,ਭਿੰਡੀ ਔਲਖ ਕਲਾਂ,BHINDI AULAKH KALAN,BHINDI AULAKH KALAN,YES,AAP,79,180,358,279,5,888,INC,48,138,77,90,84,423,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-22.12,12.35,-10.14,19.3,-465
-10,10,10,Bhindi Aulakh Khurd,ਭਿੰਡੀ ਔਲਖ ਖੁਰਦ,BHINDI AULAKH KHURD,BHINDI AULAKH KHURD,YES,AAP,19,151,170,110,7,454,AAP,31,190,221,149,49,751,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-8.01,-7.96,-4.39,4.98,297
-11,11,11,Jasarour,ਜਸਰੌਰ,JASAROUR,JASAROUR,YES,AAP,35,194,229,193,10,653,INC,7,163,156,91,43,582,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-8.27,-1.7,-13.92,5.86,-71
-12,12,12,Jasarour,ਜਸਰੌਰ,JASAROUR,JASAROUR,YES,SAD,6,190,159,196,3,579,INC,37,216,179,24,11,476,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),10.15,12.56,-28.81,1.79,-103
-13,13,13,Kotla Suraaj Lohar,ਕੋਟਲਾ ਸੂਰਜ ਲੋਹਾਰ,KOTLA SURAAJ LOHAR,KOTLA SURAAJ LOHAR,YES,INC,26,245,205,219,6,704,INC,28,214,186,147,74,659,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-0.9,-2.33,-8.8,10.38,-45
-14,14,14,Motala,ਮੋਤਲਾ,MOTALA,MOTALA,YES,INC,145,272,127,105,8,529,INC,82,184,74,58,102,452,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-7.64,-10.71,-7.02,21.06,-77
-15,15,15,Kotli Khera,ਕੋਟਲੀ ਖੇੜਾ,KOTLI KHERA,KOTLI KHERA,YES,AAP,74,113,212,138,1,478,INC,4,140,136,86,28,453,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-14.33,7.27,-9.89,5.97,-25
-16,16,16,Panju Kalal,ਪੰਜੂ ਕਲਾਲ,PANJU KALAL,PANJU KALAL,YES,SAD,6,89,90,96,0,278,INC,44,113,69,21,32,243,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),-3.97,14.49,-25.89,13.17,-35
-17,17,17,Shahpur,ਸ਼ਾਹਪੁਰ,SHAHPUR,SHAHPUR,YES,AAP,28,199,227,194,6,645,AAP,11,142,153,132,16,512,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-5.31,-3.12,-4.3,2.19,-133
-18,18,18,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,INC,95,283,188,126,28,668,INC,86,212,105,92,126,601,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-10.67,-7.1,-3.55,16.78,-67
-19,19,19,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,AAP,21,190,211,161,43,658,BJP,42,101,131,107,173,573,Flipped (AAP → BJP),Lost in 2024 (to BJP),Weak Booth (< 20% Share),-9.21,-11.25,-5.8,23.66,-85
-20,20,20,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,SAD,29,104,112,141,14,403,SAD,18,74,85,103,56,348,Retained SAD,Lost Both Times (Deficit),Lost Both Times (Deficit),-3.36,-4.55,-5.39,12.62,-55
-21,21,21,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,AAP,42,80,132,90,22,375,INC,5,80,75,65,67,324,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-12.05,3.36,-3.94,14.81,-51
-22,22,22,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,SAD,4,161,158,165,22,552,BJP,49,80,114,81,163,515,Flipped (SAD → BJP),Lost Both Times (Deficit),Weak Booth (< 20% Share),-6.48,-13.64,-14.16,27.66,-37
-23,23,23,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,AAP,4,198,202,142,10,575,BJP,7,110,142,87,149,563,Flipped (AAP → BJP),Lost in 2024 (to BJP),Weak Booth (< 20% Share),-9.91,-14.89,-9.25,24.73,-12
-24,24,24,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,INC,21,180,119,159,30,526,BJP,37,67,90,118,155,493,Flipped (INC → BJP),Weak Booth (< 20% Share),Lost in 2024 (to BJP),-4.36,-20.63,-6.29,25.74,-33
-25,25,25,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,BHINDI SAIDAN,BHINDI SAIDAN,YES,SAD,13,145,165,178,39,583,SAD,0,78,130,131,131,534,Retained SAD,Lost Both Times (Deficit),Weak Booth (< 20% Share),-3.96,-10.26,-6.0,17.84,-49
-26,26,26,Kuttiwal,ਕੁੱਤੀਵਾਲ,KUTTIWAL,KUTTIWAL,YES,INC,59,164,62,105,1,338,INC,45,115,70,46,26,279,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),6.75,-7.3,-14.58,9.02,-59
-27,27,27,Kotli Dosandhi,ਕੋਟਲੀ ਦੁਸੰਧੀ,KOTLI DOSANDHI,KOTLI DOSANDHI,YES,SAD,30,170,150,200,12,543,INC,40,160,92,120,104,509,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-9.55,0.12,-13.25,18.22,-34
-28,28,28,Kotli Dosandhi,ਕੋਟਲੀ ਦੁਸੰਧੀ,KOTLI DOSANDHI,KOTLI DOSANDHI,YES,INC,231,283,51,52,27,432,INC,113,220,107,28,24,412,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),14.16,-12.11,-5.24,-0.42,-20
-29,29,29,Bhagupur Bet,ਭਾਗੂਪੁਰ ਬੇਟ,BHAGUPUR BET,BHAGUPUR BET,YES,INC,121,332,142,211,33,735,AAP,10,152,220,210,53,691,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),12.52,-23.17,1.68,3.18,-44
-30,30,30,Vehra,ਵੇਹੜਾ,VEHRA,VEHRA,YES,INC,14,213,199,126,3,564,AAP,40,157,197,88,41,509,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),3.42,-6.93,-5.05,7.53,-55
-31,31,31,Dugg,ਦੁੱਗ,DUGG,DUGG,YES,INC,85,162,59,77,5,317,INC,29,122,93,22,43,300,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),12.39,-10.43,-16.96,12.75,-17
-32,32,32,Dugg Dogar,ਦੁੱਗ ਡੋਗਰ,DUGG DOGAR,DUGG DOGAR,YES,INC,76,165,76,89,12,353,INC,23,130,107,13,76,361,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),8.11,-10.73,-21.61,17.65,8
-33,33,33,Saidpur Kalan,ਸੈਦਪੁਰ ਕਲਾਂ,SAIDPUR KALAN,SAIDPUR KALAN,YES,INC,42,175,56,133,1,389,INC,40,136,96,45,67,363,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),12.05,-7.52,-21.79,18.2,-26
-34,34,34,Toot,ਤੂਤ,TOOT,TOOT,YES,INC,227,352,94,125,5,598,INC,200,298,98,32,47,517,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),3.24,-1.22,-14.71,8.25,-81
-35,35,35,Chhan Kalan,ਛੰਨ ਕਲਾਂ,CHHAN KALAN,CHHAN KALAN,YES,INC,67,243,176,155,10,629,AAP,4,190,194,125,78,653,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),1.73,-9.53,-5.5,10.35,24
-36,36,36,Mohaleke,ਮੋਹਲੇਕੇ,MOHALEKE,MOHALEKE,YES,AAP,82,162,272,190,3,661,AAP,25,120,162,137,47,564,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-12.43,-3.23,-4.45,7.88,-97
-37,37,37,Mandiawala,ਮੰਡੀਆਵਾਲਾ,MANDIAWALA,MANDIAWALA,YES,SAD,89,246,134,335,12,797,INC,101,280,48,179,174,749,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-10.4,6.51,-18.13,21.72,-48
-38,38,38,Lodhi Gujjar,ਲੋਧੀ ਗੁੱਜਰ,LODHI GUJJAR,LODHI GUJJAR,YES,SAD,76,342,124,418,16,932,INC,54,276,204,222,37,858,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),10.48,-4.53,-18.98,2.59,-74
-39,39,39,Manj,ਮੰਜ,MANJ,MANJ,YES,INC,237,529,78,292,9,941,INC,290,439,149,96,81,826,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),9.75,-3.07,-19.41,8.85,-115
-40,40,40,Kakkar,ਕੱਕੜ,KAKKAR,KAKKAR,YES,INC,90,245,155,91,4,520,INC,28,158,130,17,97,452,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-1.05,-12.16,-13.74,20.69,-68
-41,41,41,Kakkar,ਕੱਕੜ,KAKKAR,KAKKAR,YES,INC,4,161,157,73,2,407,INC,114,190,76,40,4,349,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-16.79,14.88,-6.48,0.66,-58
-42,42,42,Kakkar,ਕੱਕੜ,KAKKAR,KAKKAR,YES,INC,99,259,132,160,9,590,INC,121,223,102,85,68,512,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-2.45,-0.35,-10.52,11.75,-78
-43,43,43,Kakkar,ਕੱਕੜ,KAKKAR,KAKKAR,YES,AAP,68,159,229,161,4,566,INC,6,162,156,77,15,480,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-7.96,5.66,-12.41,2.41,-86
-44,44,44,Ranian,ਰਾਣੀਆਂ,RANIAN,RANIAN,YES,INC,44,275,231,173,2,695,INC,73,272,199,33,89,637,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-2.0,3.13,-19.71,13.68,-58
-45,45,45,Chakk Alla Bakhsh,ਚੱਕ ਅੱਲਾ ਬਖ਼ਸ਼,CHAKK ALLA BAKHSH,CHAKK ALLA BAKHSH,YES,SAD,51,46,71,122,0,240,AAP,18,72,90,52,1,229,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),9.72,12.27,-28.12,0.44,-11
-46,46,46,Dhariwal,ਧਾਰੀਵਾਲ,DHARIWAL,DHARIWAL,YES,INC,37,215,89,178,2,490,INC,21,150,129,79,3,404,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),13.77,-6.75,-16.78,0.33,-86
-47,47,47,Pandori,ਪੰਡੋਰੀ,PANDORI,PANDORI,YES,INC,72,224,152,121,0,508,INC,102,235,133,61,27,475,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-1.92,5.38,-10.98,5.68,-33
-48,48,48,Rai,ਰਾਏ,RAI,RAI,YES,SAD,41,208,129,249,7,614,AAP,21,172,193,11,95,501,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),17.51,0.45,-38.35,17.82,-113
-49,49,49,Gagarmal,ਗੱਗੜਮੱਲ,GAGARMAL,GAGARMAL,YES,INC,23,131,47,108,1,299,INC,27,97,64,70,11,265,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),8.43,-7.21,-9.7,3.82,-34
-50,50,50,Sarangra,ਸਾਰੰਗੜਾ,SARANGRA,SARANGRA,YES,SAD,62,211,158,273,7,679,BJP,10,134,141,56,151,513,Flipped (SAD → BJP),Lost Both Times (Deficit),Lost Both Times (Deficit),4.22,-4.96,-29.29,28.4,-166
-51,51,51,Sarangra,ਸਾਰੰਗੜਾ,SARANGRA,SARANGRA,YES,AAP,39,180,219,169,2,594,AAP,110,101,211,28,41,435,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),11.64,-7.08,-22.01,9.09,-159
-52,52,52,Sarangra,ਸਾਰੰਗੜਾ,SARANGRA,SARANGRA,YES,AAP,83,170,262,179,3,627,AAP,16,171,187,48,6,550,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-7.79,3.98,-19.82,0.61,-77
-53,53,53,Lelian,ਲੇਲੀਅਨ,LELIAN,LELIAN,YES,SAD,16,91,76,107,2,284,AAP,13,70,84,71,10,265,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),4.94,-5.62,-10.89,3.07,-19
-54,54,54,Panju Rai,ਪੰਜੂ ਰਾਏ,PANJU RAI,PANJU RAI,YES,SAD,27,136,91,163,3,409,INC,98,176,67,78,11,380,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-4.62,13.07,-19.32,2.16,-29
-55,55,55,Hetampura,ਹੇਤਮਪੁਰਾ,HETAMPURA,HETAMPURA,YES,AAP,91,241,337,246,4,853,INC,7,241,234,80,104,721,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-7.06,5.18,-17.74,13.95,-132
-56,56,56,Kanve,ਕੰਵੈ,KANVE,KANVE,YES,SAD,17,240,167,257,7,698,INC,89,245,156,65,59,579,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),3.01,7.93,-25.59,9.19,-119
-57,57,57,Lopoke,ਲੋਪੋਕੇ,LOPOKE,LOPOKE,YES,SAD,91,249,164,340,7,776,SAD,85,189,80,274,46,681,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-9.38,-4.34,-3.58,5.85,-95
-58,58,58,Lopoke,ਲੋਪੋਕੇ,LOPOKE,LOPOKE,YES,SAD,94,171,200,294,4,688,SAD,78,150,73,228,48,550,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-15.8,2.42,-1.28,8.15,-138
-59,59,59,Lopoke,ਲੋਪੋਕੇ,LOPOKE,LOPOKE,YES,INC,0,133,66,133,3,350,SAD,21,96,46,117,18,304,Flipped (INC → SAD),Weak Booth (< 20% Share),Lost in 2024 (to SAD),-3.73,-6.42,0.49,5.06,-46
-60,60,60,Lopoke,ਲੋਪੋਕੇ,LOPOKE,LOPOKE,YES,SAD,226,156,108,382,6,679,SAD,142,129,52,271,46,526,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-6.02,1.55,-4.74,7.87,-153
-61,61,61,Lopoke,ਲੋਪੋਕੇ,LOPOKE,LOPOKE,YES,SAD,255,132,101,387,1,642,SAD,89,146,51,235,50,531,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-6.13,6.94,-16.02,9.26,-111
-62,62,62,Preet Nagar,ਪ੍ਰੀਤ ਨਗਰ,PREET NAGAR,PREET NAGAR,YES,SAD,31,115,100,146,10,405,INC,12,123,90,111,33,394,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),-1.85,2.82,-7.88,5.91,-11
-63,63,63,Veroke,ਵੇਰੋਕੇ,VEROKE,VEROKE,YES,INC,70,238,168,147,1,573,BJP,73,70,118,43,191,483,Flipped (INC → BJP),Lost Both Times (Deficit),Lost in 2024 (to BJP),-4.89,-27.05,-16.75,39.37,-90
-64,64,64,Bhilaowal Kakeji,ਭਿਲੋਵਾਲ ਕਾਕੇ ਜੀ,BHILAOWAL KAKEJI,BHILAOWAL KAKEJI,YES,SAD,35,206,203,241,10,696,AAP,14,177,191,146,27,606,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),2.35,-0.39,-10.54,3.02,-90
-65,65,65,Bhagupur Utarh,ਭਾਗੂਪੁਰ ਉਤਾੜ,BHAGUPUR UTARH,BHAGUPUR UTARH,YES,INC,34,205,116,171,2,508,AAP,15,173,188,34,5,450,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),18.95,-1.91,-26.1,0.72,-58
-66,66,66,Bhillowal Pakka,ਭਿਲੋਵਾਲ ਪੱਕਾ,BHILLOWAL PAKKA,BHILLOWAL PAKKA,YES,SAD,132,148,149,281,6,601,INC,47,205,158,141,20,551,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),3.89,12.58,-21.17,2.63,-50
-67,67,67,Mudh,ਮੁੱਢ,MUDH,MUDH,YES,SAD,140,221,81,361,5,676,INC,115,196,73,81,52,495,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),2.77,6.91,-37.04,9.77,-181
-68,68,68,Chuchakwal,ਚੂਚਕਵਾਲ,CHUCHAKWAL,CHUCHAKWAL,YES,INC,2,176,103,174,8,492,AAP,156,50,206,47,39,407,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),29.68,-23.48,-23.82,7.95,-85
-69,69,69,Awan Lakha Singh,ਅਵਾਨ ਲੱਖਾ ਸਿੰਘ,AWAAN LAKHA SINGH,AWAAN LAKHA SINGH,YES,SAD,4,176,56,180,10,426,BJP,6,93,98,63,104,376,Flipped (SAD → BJP),Lost Both Times (Deficit),Lost Both Times (Deficit),12.91,-16.58,-25.49,25.31,-50
-70,70,70,Waryah,ਵੜਿਆਹ,WARYAH,WARYAH,YES,INC,95,264,67,169,8,521,INC,154,279,125,77,21,523,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),11.04,2.68,-17.72,2.48,2
-71,71,71,Khusupura,ਖੁਸੂਪੁਰਾ,KHUSUPURA,KHUSUPURA,YES,AAP,30,143,173,119,3,449,BJP,9,67,122,98,131,457,Flipped (AAP → BJP),Lost in 2024 (to BJP),Weak Booth (< 20% Share),-11.83,-17.19,-5.06,28.0,8
-72,72,72,Tareen,ਤਰੀਨ,TAREEN,TAREEN,YES,SAD,51,169,201,252,0,653,INC,57,206,149,118,45,598,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),-5.86,8.57,-18.86,7.53,-55
-73,73,73,Saurhiyan,ਸੌੜੀਆਂ,SAURHIYAN,SAURHIYAN,YES,INC,26,295,174,269,2,758,INC,106,304,74,198,28,659,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-11.73,7.21,-5.44,3.99,-99
-74,74,74,Tallah,ਤੱਲਾ,TALLAH,TALLAH,YES,INC,42,188,79,146,3,429,SAD,2,141,102,143,3,404,Flipped (INC → SAD),Lost Both Times (Deficit),Lost in 2024 (to SAD),6.84,-8.92,1.37,0.04,-25
-75,75,75,Kot Sidhu,ਕੋਟ ਸਿੱਧੂ,KOT SIDHU,KOT SIDHU,YES,SAD,73,116,79,189,9,430,AAP,55,106,161,97,29,431,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),18.98,-2.39,-21.44,4.64,1
-76,76,76,Karyal,ਕਰਿਆਲ,KARYAL,KARYAL,YES,INC,74,271,197,185,9,681,INC,86,232,146,84,21,543,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-2.04,2.94,-11.7,2.55,-138
-77,77,77,Karyal,ਕਰਿਆਲ,KARYAL,KARYAL,YES,INC,203,357,140,154,3,676,INC,130,264,134,35,26,504,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),5.88,-0.43,-15.84,4.72,-172
-78,78,78,Miadi Kalan,ਮਿਆਦੀ ਕਲਾਂ,MIADI KALAN,MIADI KALAN,YES,AAP,151,171,322,143,3,660,AAP,126,187,313,47,23,594,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),3.9,5.57,-13.76,3.42,-66
-79,79,79,Jastarwal,ਜੱਸੜਵਾਲ,JASTARWAL,JASTARWAL,YES,INC,21,307,286,236,9,872,INC,19,219,200,99,152,727,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-5.29,-5.09,-13.44,19.88,-145
-80,80,80,Chhina Karam Singh,ਛੀਨਾ ਕਰਮ ਸਿੰਘ,CHHINA KARAM SINGH,CHHINA KARAM SINGH,YES,INC,103,389,286,146,3,848,AAP,55,195,250,77,104,703,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),1.83,-18.13,-6.27,14.44,-145
-81,81,81,Nepal,ਨੇਪਾਲ,NEPAL,NEPAL,YES,INC,244,438,108,194,8,772,INC,217,358,141,139,35,710,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),5.87,-6.32,-5.55,3.89,-62
-82,82,82,Kotli Korotana,ਕੋਟਲੀ ਕੋਰੋਟਾਣਾ,KOTLI KOROTANA,KOTLI KOROTANA,YES,AAP,26,105,154,128,2,400,AAP,60,58,149,89,4,374,Retained AAP,Won Both Times (Stronghold),Weak Booth (< 20% Share),1.34,-10.74,-8.2,0.57,-26
-83,83,83,Bohlian,ਬੋਹਲੀਆ,BOHLIAN,BOHLIAN,YES,INC,131,317,186,153,21,691,INC,4,197,193,58,80,586,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),6.02,-12.26,-12.24,10.61,-105
-84,84,84,Bohlian,ਬੋਹਲੀਆ,BOHLIAN,BOHLIAN,YES,AAP,26,166,192,78,1,465,INC,16,141,125,21,33,385,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-8.82,0.92,-11.32,8.35,-80
-85,85,85,Isapur,ਈਸਾਪੁਰ,ISAPUR,ISAPUR,YES,AAP,8,132,182,174,13,512,INC,37,148,111,79,78,441,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-10.38,7.78,-16.07,15.15,-71
-86,86,86,Raipur Khurd,ਰਾਏਪੁਰ ਖੁਰਦ,RAIPUR KHURD,RAIPUR KHURD,YES,AAP,77,106,183,91,5,442,INC,25,133,108,39,17,363,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-11.65,12.66,-9.85,3.55,-79
-87,87,87,Matiya,ਮਤੀਆ,MATIYA,MATIYA,YES,INC,82,285,128,203,7,640,AAP,295,36,359,50,64,561,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),43.99,-38.11,-22.81,10.32,-79
-88,88,88,Mohar,ਮੋਹਰ,MOHAR,MOHAR,YES,AAP,133,238,371,113,5,763,AAP,73,231,304,81,23,712,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-5.92,1.25,-3.43,2.57,-51
-89,89,89,Umarpura,ਉਮਰਪੁਰਾ,UMARPURA,UMARPURA,YES,INC,14,192,122,178,15,540,AAP,16,123,139,68,122,497,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),5.38,-10.81,-19.28,21.77,-43
-90,90,90,Umarpura,ਉਮਰਪੁਰਾ,UMARPURA,UMARPURA,YES,SAD,2,145,133,147,9,470,AAP,33,102,135,77,58,398,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),5.62,-5.22,-11.93,12.66,-72
-91,91,91,Jauns,ਜੌਂਸ,JAUNS,JAUNS,YES,SAD,77,142,279,356,22,882,INC,98,229,131,125,65,643,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),-11.26,19.51,-20.92,7.62,-239
-92,92,92,Othian,ਓਠੀਆਂ,OTHIAN,OTHIAN,YES,SAD,8,143,191,199,7,574,AAP,22,148,170,85,14,450,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),4.5,7.98,-15.78,1.89,-124
-93,93,93,Othian,ਓਠੀਆਂ,OTHIAN,OTHIAN,YES,AAP,19,184,231,212,7,663,AAP,74,139,213,78,33,514,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),6.6,-0.71,-16.8,5.36,-149
-94,94,94,Othian,ਓਠੀਆਂ,OTHIAN,OTHIAN,YES,SAD,12,186,222,234,26,760,AAP,92,157,249,130,69,661,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),8.46,-0.72,-11.12,7.02,-99
-95,95,95,Dharamkot,ਧਰਮਕੋਟ,DHARAMKOT,DHARAMKOT,YES,AAP,109,176,285,163,7,666,INC,154,264,110,88,11,577,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-23.73,19.32,-9.22,0.86,-89
-96,96,96,Chakk Kamal Khan,ਚੱਕ ਕਮਾਲ ਖ਼ਾਨ,CHAKK KAMAL KHAN,CHAKK KAMAL KHAN,YES,SAD,2,161,135,163,4,472,AAP,39,112,151,49,33,400,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),9.15,-6.11,-22.28,7.4,-72
-97,97,97,Kotli Sakka,ਕੋਟਲੀ ਸੱਕਾ,KOTLI SAKKA,KOTLI SAKKA,YES,SAD,127,203,174,330,6,740,SAD,7,121,200,207,50,664,Retained SAD,Lost Both Times (Deficit),Weak Booth (< 20% Share),6.61,-9.21,-13.42,6.72,-76
-98,98,98,Mehmadpura,ਮਹਿਮਦਪੁਰਾ,MEHMADPURA,MEHMADPURA,YES,SAD,69,140,110,209,0,467,SAD,54,53,127,181,3,399,Retained SAD,Lost Both Times (Deficit),Weak Booth (< 20% Share),8.28,-16.7,0.61,0.75,-68
-99,99,99,Jajje,ਜੱਜੇ,JAJJE,JAJJE,YES,INC,169,253,81,84,0,429,INC,39,170,131,16,12,364,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),17.11,-12.27,-15.18,3.3,-65
-100,100,100,Chakk Mishri Khan,ਚੱਕ ਮਿਸ਼ਰੀ ਖ਼ਾਨ,CHAKK MISHRI KHAN,CHAKK MISHRI KHAN,YES,SAD,14,251,179,265,8,723,INC,58,225,131,167,53,632,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),-4.03,0.88,-10.23,7.28,-91
-101,101,101,Chakk Mishri Khan,ਚੱਕ ਮਿਸ਼ਰੀ ਖ਼ਾਨ,CHAKK MISHRI KHAN,CHAKK MISHRI KHAN,YES,AAP,52,198,250,176,4,648,INC,44,199,155,96,39,541,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-9.93,6.22,-9.42,6.59,-107
-102,102,102,Maure,ਮੌੜੇ,MAURE,MAURE,YES,INC,45,220,126,175,2,537,AAP,74,90,164,52,33,414,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),16.15,-19.23,-20.03,7.6,-123
-103,103,103,Maure,ਮੌੜੇ,MAURE,MAURE,YES,INC,7,151,86,144,0,386,SAD,21,70,94,115,45,344,Flipped (INC → SAD),Lost Both Times (Deficit),Lost in 2024 (to SAD),5.05,-18.77,-3.88,13.08,-42
-104,104,104,Manawala,ਮਾਨਾਵਾਲਾ,MANAWALA,MANAWALA,YES,INC,98,374,126,276,17,815,INC,12,164,152,89,124,613,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),9.34,-19.14,-19.35,18.14,-202
-105,105,105,Manawala,ਮਾਨਾਵਾਲਾ,MANAWALA,MANAWALA,YES,INC,107,260,119,153,5,567,AAP,26,94,138,112,11,446,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),9.95,-24.78,-1.87,1.59,-121
-106,106,106,Chogawan,ਚੋਗਾਵਾਂ,CHOGAWAN,CHOGAWAN,YES,SAD,178,114,222,400,12,774,SAD,136,177,70,313,80,666,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-18.17,11.85,-4.68,10.46,-108
-107,107,107,Chogawan,ਚੋਗਾਵਾਂ,CHOGAWAN,CHOGAWAN,YES,SAD,101,176,214,315,2,723,SAD,91,168,111,259,14,602,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-11.16,3.57,-0.55,2.05,-121
-108,108,108,Chogawan,ਚੋਗਾਵਾਂ,CHOGAWAN,CHOGAWAN,YES,SAD,120,205,203,325,6,757,SAD,52,211,65,263,47,625,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-16.42,6.68,-0.85,6.73,-132
-109,109,109,Chogawan,ਚੋਗਾਵਾਂ,CHOGAWAN,CHOGAWAN,YES,SAD,31,90,154,185,3,439,SAD,78,107,64,185,32,404,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-19.24,5.99,3.65,7.24,-35
-110,110,110,Chogawan,ਚੋਗਾਵਾਂ,CHOGAWAN,CHOGAWAN,YES,SAD,13,244,49,257,5,566,SAD,57,168,17,225,44,473,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-5.07,-7.59,2.16,8.42,-93
-111,111,111,Chogawan,ਚੋਗਾਵਾਂ,CHOGAWAN,CHOGAWAN,YES,SAD,111,214,212,325,6,775,SAD,112,205,62,317,50,655,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-17.88,3.69,6.46,6.86,-120
-112,112,112,Bhullar,ਭੁੱਲਰ,BHULLAR,BHULLAR,YES,INC,88,296,208,143,1,671,INC,126,237,65,101,111,553,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-19.25,-1.25,-3.05,19.92,-118
-113,113,113,Bhullar,ਭੁੱਲਰ,BHULLAR,BHULLAR,YES,AAP,30,210,240,195,10,693,SAD,27,137,116,164,82,563,Flipped (AAP → SAD),Lost in 2024 (to SAD),Lost Both Times (Deficit),-14.03,-5.97,0.99,13.12,-130
-114,114,114,Bhullar,ਭੁੱਲਰ,BHULLAR,BHULLAR,YES,AAP,30,140,265,235,11,672,SAD,20,135,141,161,36,520,Flipped (AAP → SAD),Lost in 2024 (to SAD),Lost Both Times (Deficit),-12.31,5.13,-4.01,5.28,-152
-115,115,115,Tapiala,ਤਪਿਆਲਾ,TAPIALA,TAPIALA,YES,SAD,66,156,88,222,4,494,INC,27,176,37,149,22,407,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-8.72,11.66,-8.33,4.6,-87
-116,116,116,Tapiala,ਤਪਿਆਲਾ,TAPIALA,TAPIALA,YES,INC,23,180,84,157,3,451,INC,114,203,34,89,20,367,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-9.37,15.4,-10.56,4.78,-84
-117,117,117,Thathi,ਠੱਠੀ,THATHI,THATHI,YES,SAD,70,179,62,249,0,510,SAD,80,134,57,214,8,439,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),0.82,-4.58,-0.07,1.82,-71
-118,118,118,Thatha,ਠੱਠਾ,THATHA,THATHA,YES,INC,12,246,227,234,5,740,INC,84,234,123,87,150,669,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-12.29,1.74,-18.62,21.74,-71
-119,119,119,Bhangwan,ਭੰਗਵਾਂ,BHANGWAN,BHANGWAN,YES,SAD,14,362,149,376,4,931,INC,84,307,223,142,62,801,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),11.84,-0.55,-22.66,7.31,-130
-120,120,120,Odar,ਓਦੜ,ODAR,ODAR,YES,INC,19,265,211,246,8,779,SAD,54,142,154,208,61,625,Flipped (INC → SAD),Lost Both Times (Deficit),Lost in 2024 (to SAD),-2.45,-11.3,1.7,8.73,-154
-121,121,121,Joeke,ਜੋਏਕੇ,JOEKE,JOEKE,YES,INC,46,146,23,100,3,279,INC,65,145,22,80,3,264,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),0.09,2.59,-5.54,0.06,-15
-122,122,122,Kamaska,ਕਮਾਸਕਾ,KAMASKA,KAMASKA,YES,SAD,181,183,182,364,5,744,AAP,64,191,255,140,15,668,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),13.71,3.99,-27.96,1.58,-76
-123,123,123,Bachiwind,ਬਾਚੀਵਿੰਡ,BACHIWIND,BACHIWIND,YES,AAP,101,237,338,215,1,833,INC,18,195,148,177,56,678,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-18.75,0.31,0.3,8.14,-155
-124,124,124,Bachiwind,ਬਾਚੀਵਿੰਡ,BACHIWIND,BACHIWIND,YES,AAP,9,212,230,221,8,706,INC,4,160,115,90,156,569,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-12.37,-1.91,-15.48,26.29,-137
-125,125,125,Bachiwind,ਬਾਚੀਵਿੰਡ,BACHIWIND,BACHIWIND,YES,SAD,24,184,238,262,4,712,INC,68,236,106,168,21,587,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-15.37,14.36,-8.18,3.02,-125
-126,126,126,Dala,ਡਾਲਾ,DALA,DALA,YES,INC,98,193,95,80,2,379,INC,39,155,116,25,2,331,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),9.98,-4.09,-13.56,0.07,-48
-127,127,127,Kiralgarh,ਕਿਰਲਗੜ੍ਹ,KIRALGARH,KIRALGARH,YES,AAP,15,183,198,180,3,574,INC,72,209,137,87,11,465,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-5.03,13.07,-12.65,1.85,-109
-128,128,128,Shahura,ਸ਼ਾਹੂਰਾ,SHAHURA,SHAHURA,YES,AAP,27,172,199,105,4,515,AAP,70,107,177,54,4,402,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),5.39,-6.78,-6.96,0.22,-113
-129,129,129,Shahura,ਸ਼ਾਹੂਰਾ,SHAHURA,SHAHURA,YES,INC,189,308,119,84,6,554,INC,21,172,151,33,51,486,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),9.59,-20.21,-8.37,9.41,-68
-130,130,130,Shahura,ਸ਼ਾਹੂਰਾ,SHAHURA,SHAHURA,YES,AAP,30,123,174,144,3,490,INC,15,120,105,86,18,383,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-8.09,6.23,-6.94,4.09,-107
-131,131,131,Dalleki,ਡੱਲੇਕੇ,DALLEKI,DALLEKI,YES,SAD,141,130,139,280,5,580,AAP,2,122,165,163,10,526,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),7.4,0.78,-17.29,1.04,-54
-132,132,132,Beharwal,ਬਹਿੜਵਾਲ,BEHARWAL,BEHARWAL,YES,AAP,25,151,239,214,5,634,BJP,85,92,84,78,177,499,Flipped (AAP → BJP),Lost in 2024 (to BJP),Weak Booth (< 20% Share),-20.87,-5.38,-18.12,34.68,-135
-133,133,133,Vaineke,ਵੈਣੇਕੇ,VAINEKE,VAINEKE,YES,AAP,52,245,297,179,3,761,INC,156,300,144,81,102,691,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-18.19,11.23,-11.8,14.37,-70
-134,134,134,Vaineke,ਵੈਣੇਕੇ,VAINEKE,VAINEKE,YES,SAD,2,208,225,227,4,681,INC,98,237,139,125,59,615,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),-10.44,8.0,-13.0,9.0,-66
-135,135,135,Cheleki,ਚੇਲੇਕੇ,CHELEKI,CHELEKI,YES,INC,40,157,46,117,7,331,AAP,41,104,145,51,8,320,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),31.41,-14.93,-19.41,0.39,-11
-136,136,136,Kohala,ਕੋਹਾਲਾ,KOHALA,KOHALA,YES,INC,56,301,182,245,6,764,SAD,18,167,131,185,124,657,Flipped (INC → SAD),Weak Booth (< 20% Share),Lost in 2024 (to SAD),-3.88,-13.98,-3.91,18.08,-107
-137,137,137,Kohala,ਕੋਹਾਲਾ,KOHALA,KOHALA,YES,INC,6,212,206,187,2,639,INC,32,168,92,136,59,494,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-13.62,0.83,-1.73,11.63,-145
-138,138,138,Chawinda Kalan,ਛਵਿੰਡਾ ਕਲਾਂ,CHAWINDA KALAN,CHAWINDA KALAN,YES,AAP,133,102,235,101,2,461,AAP,66,91,157,85,12,390,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-10.72,1.2,-0.12,2.65,-71
-139,139,139,Chawinda Kalan,ਛਵਿੰਡਾ ਕਲਾਂ,CHAWINDA KALAN,CHAWINDA KALAN,YES,INC,67,218,151,70,3,474,AAP,17,125,142,41,50,385,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),5.02,-13.52,-4.12,12.36,-89
-140,140,140,Chawinda Khurd,ਛਵਿੰਡਾ ਖੁਰਦ,CHAWINDA KHURD,CHAWINDA KHURD,YES,SAD,46,203,235,281,11,756,INC,32,166,59,129,134,535,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-20.05,4.18,-13.06,23.59,-221
-141,141,141,Padhari,ਪੱਧਰੀ,PADHARI,PADHARI,YES,SAD,15,310,200,325,8,876,AAP,29,145,203,174,76,697,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),6.29,-14.59,-12.14,9.99,-179
-142,142,142,Padhari,ਪੱਧਰੀ,PADHARI,PADHARI,YES,INC,41,309,172,268,5,778,INC,58,202,126,144,61,594,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-0.9,-5.71,-10.21,9.63,-184
-143,143,143,Lanven,ਲਾਂਵੇ,LANVEN,LANVEN,YES,SAD,50,52,50,102,1,210,INC,30,91,33,61,3,193,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-6.71,22.39,-16.96,1.07,-17
-144,144,144,Nurpur,ਨੂਰਪੁਰ,NURPUR,NURPUR,YES,SAD,38,142,198,236,6,612,INC,29,168,139,112,21,507,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),-4.93,9.94,-16.47,3.16,-105
-145,145,145,Chhidan,ਛਿੱਦਣ,CHHIDAN,CHHIDAN,YES,INC,45,241,176,196,9,642,INC,41,173,132,116,37,492,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-0.58,-2.38,-6.95,6.12,-150
-146,146,146,Chhidan,ਛਿੱਦਣ,CHHIDAN,CHHIDAN,YES,INC,35,233,198,164,3,635,INC,25,164,139,110,24,498,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-3.27,-3.76,-3.74,4.35,-137
-147,147,147,Bopa Rai Kalan,ਬੋਪਾਰਾਏ ਕਲਾਂ,BOPA RAI KALAN,BOPA RAI KALAN,YES,INC,95,272,113,177,4,581,INC,159,257,98,74,14,474,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),1.23,7.4,-14.85,2.26,-107
-148,148,148,Bopa Rai Kalan,ਬੋਪਾਰਾਏ ਕਲਾਂ,BOPA RAI KALAN,BOPA RAI KALAN,YES,INC,138,268,103,130,4,524,INC,33,156,123,47,40,404,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),10.79,-12.54,-13.18,9.14,-120
-149,149,149,Bopa Rai Khurd,ਬੋਪਾਰਾਏ ਖੁਰਦ,BOPA RAI KHURD,BOPA RAI KHURD,YES,INC,88,292,93,204,2,607,SAD,34,122,140,174,41,517,Flipped (INC → SAD),Lost Both Times (Deficit),Lost in 2024 (to SAD),11.76,-24.51,0.05,7.6,-90
-150,150,150,Bopa Rai Khurd,ਬੋਪਾਰਾਏ ਖੁਰਦ,BOPA RAI KHURD,BOPA RAI KHURD,YES,SAD,47,183,137,230,6,568,INC,10,126,116,106,17,437,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),2.42,-3.39,-16.23,2.83,-131
-151,151,151,Kolowal,ਕੋਲੋਵਾਲ,KOLOWAL,KOLOWAL,YES,SAD,120,170,228,348,6,787,AAP,134,102,289,106,19,720,Flipped (SAD → AAP),Gained in 2024 (New Win),Weak Booth (< 20% Share),11.17,-7.43,-29.5,1.88,-67
-152,152,152,Brar,ਬਰਾੜ,BRAR,BRAR,YES,INC,27,240,213,210,9,699,SAD-A,17,101,155,77,40,592,Flipped (INC → SAD-A),Lost Both Times (Deficit),Lost in 2024 (to SAD-A),-4.29,-17.27,-17.03,5.47,-107
-153,153,153,Brar,ਬਰਾੜ,BRAR,BRAR,YES,INC,81,272,191,171,11,665,AAP,83,77,206,72,123,626,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),4.19,-28.6,-14.21,18.0,-39
-154,154,154,Madhoke,ਮੱਧੋਕੇ,MADHOKE,MADHOKE,YES,INC,169,365,196,142,4,726,INC,180,315,69,135,51,608,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-15.65,1.53,2.64,7.84,-118
-155,155,155,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,KHIALA KALAN,KHIALA KALAN,YES,INC,97,339,199,242,10,817,INC,53,228,69,144,175,677,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-14.17,-7.81,-8.35,24.63,-140
-156,156,156,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,KHIALA KALAN,KHIALA KALAN,YES,AAP,45,154,269,224,1,680,INC,47,189,142,127,7,519,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-12.2,13.77,-8.47,1.2,-161
-157,157,157,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,KHIALA KALAN,KHIALA KALAN,YES,AAP,73,178,309,236,7,772,SAD,3,184,147,187,8,593,Flipped (AAP → SAD),Lost in 2024 (to SAD),Lost Both Times (Deficit),-15.24,7.97,0.96,0.44,-179
-158,158,158,Bopa Rai Baj Singh,ਬੋਪਾਰਾਏ ਬਾਜ ਸਿੰਘ,BOPA RAI BAJ SINGH,BOPA RAI BAJ SINGH,YES,INC,182,309,88,127,6,547,AAP,83,154,237,54,10,479,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),33.39,-24.34,-11.95,0.99,-68
-159,159,159,Bopa Rai Baj Singh,ਬੋਪਾਰਾਏ ਬਾਜ ਸਿੰਘ,BOPA RAI BAJ SINGH,BOPA RAI BAJ SINGH,YES,INC,93,232,50,139,0,432,INC,120,197,77,77,8,379,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),8.75,-1.72,-11.86,2.11,-53
-160,160,160,Kaler,ਕਲੇਰ,KALER,KALER,YES,INC,148,348,151,200,7,730,AAP,106,166,272,107,12,590,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),25.42,-19.53,-9.26,1.07,-140
-161,161,161,Kaler,ਕਲੇਰ,KALER,KALER,YES,SAD,21,116,118,139,0,381,AAP,45,70,119,74,11,298,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),8.96,-6.96,-11.65,3.69,-83
-162,162,162,Baba Mike Shah Colony,ਬਾਬਾ ਮਾਈਕ ਸ਼ਾਹ ਕਾਲੋਨੀ,BABA MIKE SHAH COLONY,BABA MIKE SHAH COLONY,YES,INC,141,244,92,103,7,459,INC,14,168,154,24,36,402,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),18.27,-11.37,-16.47,7.43,-57
-163,163,163,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,KHIALA KALAN,KHIALA KALAN,YES,SAD,4,279,240,283,4,829,INC,61,295,234,128,27,748,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),2.33,5.78,-17.03,3.13,-81
-164,164,164,Kohali,ਕੋਹਾਲੀ,KOHALI,KOHALI,YES,AAP,84,218,302,205,4,758,INC,131,228,75,97,29,524,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-25.53,14.75,-8.53,5.0,-234
-165,165,165,Kohali,ਕੋਹਾਲੀ,KOHALI,KOHALI,YES,AAP,65,211,276,128,6,654,INC,192,254,49,62,34,458,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-31.5,23.2,-6.03,6.5,-196
-166,166,166,Kohali,ਕੋਹਾਲੀ,KOHALI,KOHALI,YES,AAP,100,222,322,183,13,771,INC,164,255,67,91,30,529,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-29.09,19.41,-6.54,3.98,-242
-167,167,167,Kohali,ਕੋਹਾਲੀ,KOHALI,KOHALI,YES,AAP,156,237,393,174,14,852,INC,136,246,110,71,11,565,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-26.66,15.72,-7.85,0.31,-287
-168,168,168,Bhittewad,ਭਿੱਟੇਵੱਡ,BHITTEWAD,BHITTEWAD,YES,SAD,6,221,77,227,10,549,SAD,80,139,57,219,44,505,Retained SAD,Weak Booth (< 20% Share),Lost Both Times (Deficit),-2.74,-12.74,2.02,6.89,-44
-169,169,169,Bhittewad,ਭਿੱਟੇਵੱਡ,BHITTEWAD,BHITTEWAD,YES,INC,75,273,123,198,3,614,INC,7,211,85,204,20,563,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-4.93,-6.98,3.98,3.06,-51
-170,170,170,Bhittewad,ਭਿੱਟੇਵੱਡ,BHITTEWAD,BHITTEWAD,YES,INC,208,442,85,234,9,811,INC,35,245,96,210,68,687,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),3.49,-18.84,1.72,8.79,-124
-171,171,171,Bagga Khurd,ਬੱਗਾ ਖੁਰਦ,BAGGA KHURD,BAGGA KHURD,YES,AAP,33,100,163,130,4,422,AAP,2,102,104,77,8,336,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-7.68,6.66,-7.89,1.43,-86
-172,172,172,Bagga Kalan,ਬੱਗਾ ਕਲਾਂ,BAGGA KALAN,BAGGA KALAN,YES,INC,92,304,124,212,12,677,AAP,164,41,285,121,19,548,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),33.69,-37.42,-9.23,1.7,-129
-173,173,173,Bagga Kalan,ਬੱਗਾ ਕਲਾਂ,BAGGA KALAN,BAGGA KALAN,YES,INC,183,333,119,150,27,662,AAP,110,70,198,88,68,486,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),22.76,-35.9,-4.55,9.91,-176
-174,174,174,Dhariwal,ਧਾਰੀਵਾਲ,DHARIWAL,DHARIWAL,YES,INC,76,341,222,265,39,906,AAP,91,196,287,170,47,755,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),13.51,-11.68,-6.73,1.93,-151
-175,175,175,Lalla Afgana,ਲੱਲਾ ਅਫ਼ਗ਼ਾਨਾ,LALLA AFGANA,LALLA AFGANA,YES,AAP,51,107,185,134,4,436,AAP,71,45,155,84,10,325,Retained AAP,Won Both Times (Stronghold),Weak Booth (< 20% Share),5.26,-10.69,-4.88,2.16,-111
-176,176,176,Harsha Chhina (Abadi Ucha Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਉੱਚਾ ਕਿਲ੍ਹਾ),HARSHA CHHINA (ABADI UCHA QILA),HARSHA CHHINA (ABADI UCHA QILA),YES,AAP,10,168,178,151,9,526,AAP,90,102,192,89,46,452,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),8.64,-9.37,-9.02,8.47,-74
-177,177,177,Harsha Chhina (Abadi Ucha Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਉੱਚਾ ਕਿਲ੍ਹਾ),HARSHA CHHINA (ABADI UCHA QILA),HARSHA CHHINA (ABADI UCHA QILA),YES,SAD,7,167,158,174,11,537,AAP,52,90,159,107,68,457,Flipped (SAD → AAP),Gained in 2024 (New Win),Weak Booth (< 20% Share),5.37,-11.41,-8.99,12.83,-80
-178,178,178,Harsha Chhina (Abadi Vichla Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਵਿਚਲਾ ਕਿਲ੍ਹਾ),HARSHA CHHINA (ABADI VICHLA QILA),HARSHA CHHINA (ABADI VICHLA QILA),YES,INC,33,134,101,93,2,341,AAP,44,112,156,16,9,300,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),22.38,-1.97,-21.94,2.41,-41
-179,179,179,Harsha Chhina (Abadi Vichla Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਵਿਚਲਾ ਕਿਲ੍ਹਾ),HARSHA CHHINA (ABADI VICHLA QILA),HARSHA CHHINA (ABADI VICHLA QILA),YES,AAP,88,212,300,174,6,723,AAP,62,182,244,10,8,480,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),9.34,8.6,-21.99,0.84,-243
-180,180,180,Harsha Chhina (Abadi Vichla Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਵਿਚਲਾ ਕਿਲ੍ਹਾ),HARSHA CHHINA (ABADI VICHLA QILA),HARSHA CHHINA (ABADI VICHLA QILA),YES,INC,82,232,127,150,3,527,AAP,22,172,194,6,16,417,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),22.42,-2.77,-27.02,3.27,-110
-181,181,181,Harsha Chhina (Abadi Kukkranwala),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਕੁੱਕੜਾਂਵਾਲਾ),HARSHA CHHINA (ABADI KUKKRANWALA),HARSHA CHHINA (ABADI KUKKRANWALA),YES,INC,138,252,89,114,4,477,INC,195,326,131,59,64,620,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),2.47,-0.25,-14.38,9.48,143
-182,182,182,Harsha Chhina (Abadi Sabajpur),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਸਬਾਜਪੁਰ),HARSHA CHHINA (ABADI SABAJPUR),HARSHA CHHINA (ABADI SABAJPUR),YES,SAD,58,191,173,249,3,631,AAP,67,173,240,66,14,513,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),19.36,3.45,-26.59,2.25,-118
-183,183,183,Harsha Chhina (Abadi Sabajpur),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਸਬਾਜਪੁਰ),HARSHA CHHINA (ABADI SABAJPUR),HARSHA CHHINA (ABADI SABAJPUR),YES,INC,3,184,48,181,1,432,INC,25,139,114,71,18,355,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),21.0,-3.44,-21.9,4.84,-77
-184,184,184,Nangal Tola,ਨੰਗਲ ਤੋਲਾ,NANGAL TOLA,NANGAL TOLA,YES,INC,98,303,150,205,4,686,AAP,61,148,217,156,11,567,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),16.4,-18.07,-2.37,1.36,-119
-185,185,185,Nangal Tola,ਨੰਗਲ ਤੋਲਾ,NANGAL TOLA,NANGAL TOLA,YES,INC,94,310,200,216,9,757,INC,4,180,176,176,9,602,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),2.82,-11.05,0.71,0.31,-155
-186,186,186,Jhanjoti,ਝੰਜੋਟੀ,JHANJOTI,JHANJOTI,YES,SAD,23,313,130,336,4,810,INC,3,260,92,257,10,672,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-2.36,0.05,-3.24,1.0,-138
-187,187,187,Jhanjoti,ਝੰਜੋਟੀ,JHANJOTI,JHANJOTI,YES,INC,151,283,102,132,6,532,INC,49,191,50,142,12,427,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-7.46,-8.47,8.45,1.68,-105
-188,188,188,Jhanjoti,ਝੰਜੋਟੀ,JHANJOTI,JHANJOTI,YES,INC,127,278,110,151,8,558,INC,33,170,89,137,36,465,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-0.57,-13.26,2.4,6.31,-93
-189,189,189,Chainpur,ਚੈਨਪੁਰ,CHAINPUR,CHAINPUR,YES,SAD,17,295,179,312,1,801,INC,217,354,129,137,10,690,Flipped (SAD → INC),Weak Booth (< 20% Share),Gained in 2024 (New Win),-3.65,14.47,-19.09,1.33,-111
-190,190,190,Balagan,ਬਲਾਗਣ,BALAGAN,BALAGAN,YES,INC,203,382,117,179,31,723,INC,65,302,237,32,17,613,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),22.48,-3.57,-19.54,-1.52,-110
-191,191,191,Balagan Sidhu,ਬਲਾਗਣ ਸਿੱਧੂ,BALAGAN SIDHU,BALAGAN SIDHU,YES,INC,183,233,31,50,1,316,INC,36,185,149,2,0,354,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),32.28,-21.47,-15.26,-0.32,38
-192,192,192,Kotla Doom,ਕੋਟਲਾ ਡੂਮ,KOTLA DOOM,KOTLA DOOM,YES,INC,200,355,35,155,7,561,AAP,256,92,348,51,15,524,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),60.17,-45.72,-17.9,1.61,-37
-193,193,193,Kotla Doom,ਕੋਟਲਾ ਡੂਮ,KOTLA DOOM,KOTLA DOOM,YES,INC,25,255,32,230,0,525,AAP,193,72,309,116,9,523,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),52.98,-34.8,-21.63,1.72,-2
-194,194,194,Saidpur,ਸੈਦਪੁਰ,SAIDPUR,SAIDPUR,YES,SAD,14,223,98,237,18,594,INC,72,200,128,71,116,539,Flipped (SAD → INC),Lost Both Times (Deficit),Gained in 2024 (New Win),7.25,-0.43,-26.73,18.49,-55
-195,195,195,Radala,ਰਡਾਲਾ,RADALA,RADALA,YES,INC,88,315,226,227,9,792,INC,29,226,176,197,107,769,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-5.65,-10.38,-3.04,12.77,-23
-196,196,196,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,INC,85,193,73,108,34,434,INC,81,173,84,23,92,412,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),3.57,-2.48,-19.3,14.5,-22
-197,197,197,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,INC,125,263,112,138,21,560,INC,45,175,130,39,91,480,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),7.08,-10.5,-16.52,15.21,-80
-198,198,198,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,INC,33,213,180,141,27,600,INC,91,190,99,85,90,505,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-10.4,2.12,-6.67,13.32,-95
-199,199,199,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,INC,43,178,135,96,23,447,INC,123,205,70,27,82,396,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-12.52,11.95,-14.66,15.56,-51
-200,200,200,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,AAP,176,105,281,95,33,524,AAP,6,109,115,81,69,421,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-26.31,5.85,1.11,10.09,-103
-201,201,201,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,AAP,87,89,248,161,29,549,BJP,43,88,120,33,163,448,Flipped (AAP → BJP),Lost in 2024 (to BJP),Weak Booth (< 20% Share),-18.38,3.43,-21.96,31.1,-101
-202,202,202,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,AAP,64,118,241,177,25,576,SAD,36,131,98,167,76,499,Flipped (AAP → SAD),Lost in 2024 (to SAD),Lost Both Times (Deficit),-22.2,5.76,2.74,10.89,-77
-203,203,203,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,AAP,66,95,282,216,39,657,SAD,23,111,112,137,114,523,Flipped (AAP → SAD),Lost in 2024 (to SAD),Lost Both Times (Deficit),-21.51,6.76,-6.68,15.86,-134
-204,204,204,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,BJP,111,93,221,19,332,685,BJP,179,110,86,20,289,531,Retained BJP,Weak Booth (< 20% Share),Lost Both Times (Deficit),-16.06,7.14,1.0,5.96,-154
-205,205,205,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,AAP,69,116,185,43,45,400,INC,58,156,78,23,98,368,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-25.05,13.39,-4.5,15.38,-32
-206,206,206,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,INC,24,197,173,91,81,564,AAP,80,93,217,8,137,488,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),13.8,-15.87,-14.49,13.71,-76
-207,207,207,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,INC,32,114,82,37,15,253,INC,51,112,61,21,39,247,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),-7.71,0.28,-6.12,9.86,-6
-208,208,208,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,INC,24,180,156,140,27,513,INC,129,222,93,56,66,468,Retained INC,Weak Booth (< 20% Share),Won Both Times (Stronghold),-10.54,12.35,-15.32,8.84,-45
-209,209,209,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,RAJA SANSI,RAJA SANSI,YES,SAD,21,82,128,149,16,385,AAP,68,122,190,12,58,410,Flipped (SAD → AAP),Gained in 2024 (New Win),Lost Both Times (Deficit),13.09,8.46,-35.77,9.99,25
-210,210,210,Ladeh,ਲੱਧੇਹ,LADEH,LADEH,YES,SAD,225,91,46,316,3,464,SAD,291,53,20,344,14,438,Retained SAD,Weak Booth (< 20% Share),Weak Booth (< 20% Share),-5.34,-7.51,10.44,2.55,-26
-211,211,211,Ranewali,ਰਾਣੇਵਾਲੀ,RANEWALI,RANEWALI,YES,INC,72,254,94,182,66,613,INC,73,189,114,103,116,549,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),5.44,-7.01,-10.93,10.36,-64
-212,212,212,Muglani Kot,ਮੁਗਲਾਨੀ ਕੋਟ,MUGLANI KOT,MUGLANI KOT,YES,INC,34,100,66,65,1,237,AAP,1,56,57,47,32,213,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),-1.09,-15.9,-5.36,14.6,-24
-213,213,213,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,JAGDEV KALAN,JAGDEV KALAN,YES,AAP,59,158,261,202,6,648,AAP,222,33,314,92,11,491,Retained AAP,Won Both Times (Stronghold),Weak Booth (< 20% Share),23.67,-17.66,-12.43,1.31,-157
-214,214,214,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,JAGDEV KALAN,JAGDEV KALAN,YES,AAP,85,257,342,149,3,776,AAP,405,56,473,68,12,648,Retained AAP,Won Both Times (Stronghold),Weak Booth (< 20% Share),28.92,-24.48,-8.71,1.46,-128
-215,215,215,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,JAGDEV KALAN,JAGDEV KALAN,YES,AAP,59,174,233,146,8,587,AAP,246,62,314,68,13,494,Retained AAP,Won Both Times (Stronghold),Weak Booth (< 20% Share),23.87,-17.09,-11.1,1.27,-93
-216,216,216,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,JAGDEV KALAN,JAGDEV KALAN,YES,INC,73,293,220,124,24,676,AAP,233,88,321,81,27,563,Flipped (INC → AAP),Gained in 2024 (New Win),Lost in 2024 (to AAP),24.48,-27.71,-3.95,1.25,-113
-217,217,217,Mallu Nangal,ਮੱਲੂ ਨੰਗਲ,MALLU NANGAL,MALLU NANGAL,YES,AAP,81,151,238,157,7,772,INC,207,346,139,99,30,692,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-10.74,30.44,-6.03,3.43,-80
-218,218,218,Mallu Nangal,ਮੱਲੂ ਨੰਗਲ,MALLU NANGAL,MALLU NANGAL,YES,AAP,198,79,344,146,2,650,INC,15,168,153,109,14,495,Flipped (AAP → INC),Lost in 2024 (to INC),Gained in 2024 (New Win),-22.01,21.79,-0.44,2.52,-155
-219,219,219,Adli Wala,ਅਦਲੀ ਵਾਲਾ,ADLI WALA,ADLI WALA,YES,AAP,29,282,311,162,5,803,AAP,15,228,243,90,16,649,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-1.29,0.01,-6.3,1.85,-154
-220,220,220,Adli Wala,ਅਦਲੀ ਵਾਲਾ,ADLI WALA,ADLI WALA,YES,AAP,63,198,270,207,35,738,AAP,27,132,196,169,25,581,Retained AAP,Won Both Times (Stronghold),Lost Both Times (Deficit),-2.86,-4.11,1.04,-0.44,-157
-221,221,221,Adli Wala,ਅਦਲੀ ਵਾਲਾ,ADLI WALA,ADLI WALA,YES,AAP,103,179,323,220,9,752,AAP,85,135,263,178,30,706,Retained AAP,Won Both Times (Stronghold),Weak Booth (< 20% Share),-5.7,-4.68,-4.05,3.05,-46
-222,222,222,Bua Nangali,ਬੂਆ ਨੰਗਲੀ,BUA NANGALI,BUA NANGALI,YES,INC,149,343,161,194,5,735,INC,114,269,155,145,8,616,Retained INC,Lost Both Times (Deficit),Won Both Times (Stronghold),3.26,-3.0,-2.85,0.62,-119
+﻿Booth No,Village (English),Village (Punjabi),Establishment Year,2017 Turnout,2017 Winner,2017 Margin,2017 INC Votes,2017 SAD Votes,2017 AAP Votes,2017 BSP Votes,2019 Turnout,2019 Winner,2019 Margin,2019 INC Votes,2019 BJP (NDA) Votes,2019 AAP Votes,2022 Turnout,2022 Winner,2022 Margin,2022 INC Votes,2022 AAP Votes,2022 SAD Votes,2022 BJP Votes,2024 Turnout,2024 Winner,2024 Margin,2024 INC Votes,2024 AAP Votes,2024 SAD Votes,2024 BJP Votes,2022 to 2024 Status,4-Election Trajectory
+1,Gulgarh,ਗੁਲਗੜ੍ਹ,2017,233,INC,8,93,85,47,0,236,INC,90,155,65,0,281,AAP,34,98,132,34,0,249,AAP,17,71,88,26,42,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+2,Awan Basau,ਅਵਾਨ ਬਸਾਊ,2017,565,INC,75,302,227,15,0,560,INC,183,342,159,9,614,INC,22,225,129,203,13,542,INC,17,168,151,118,54,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+3,Awan Bassau,ਅਵਾਨ ਬਸਾਊ,2017,611,INC,62,316,254,20,4,510,INC,75,257,182,23,566,SAD,8,184,153,192,10,500,SAD,41,103,135,176,40,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+4,Tanana,ਟਨਾਣਾ,2017,664,INC,11,293,282,22,5,520,INC,82,269,187,23,656,INC,173,337,164,105,19,660,AAP,83,180,263,66,104,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+5,Ghoga,ਘੋਗਾ,2017,571,SAD,112,219,331,2,0,512,INC,104,287,183,0,589,INC,75,240,165,147,8,541,AAP,79,98,223,144,32,Flipped (INC → AAP),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+6,Burj,ਬੁਰਜ,2017,760,SAD,75,322,397,17,10,688,INC,132,392,260,3,707,SAD,54,225,160,279,19,712,AAP,155,126,281,104,124,Flipped (SAD → AAP),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+7,Toor,ਤੂਰ,2017,728,SAD,87,280,367,39,10,631,INC,23,296,273,8,747,SAD,174,211,110,385,14,597,INC,15,152,118,132,137,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+8,Bhindi Aulakh Kalan,ਭਿੰਡੀ ਔਲਖ ਕਲਾਂ,2017,794,INC,88,402,314,26,1,615,INC,184,360,176,17,778,AAP,102,234,336,162,12,697,INC,159,289,130,87,80,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+9,Bhindi Aulakh Kalan,ਭਿੰਡੀ ਔਲਖ ਕਲਾਂ,2017,950,INC,293,579,286,36,5,685,INC,132,385,253,18,888,AAP,79,180,358,279,5,423,INC,48,138,77,90,84,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+10,Bhindi Aulakh Khurd,ਭਿੰਡੀ ਔਲਖ ਖੁਰਦ,2017,387,SAD,58,126,184,46,2,373,BJP,20,145,165,11,454,AAP,19,151,170,110,7,751,AAP,31,190,221,149,49,Retained AAP,’17:SAD ➔ ’19:BJP ➔ ’22:AAP ➔ ’24:AAP
+11,Jasarour,ਜਸਰੌਰ,2017,660,INC,156,364,208,79,1,509,INC,206,322,116,25,653,AAP,35,194,229,193,10,582,INC,7,163,156,91,43,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+12,Jasarour,ਜਸਰੌਰ,2017,584,INC,123,327,204,36,3,432,INC,125,263,138,11,579,SAD,6,190,159,196,3,476,INC,37,216,179,24,11,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+13,Kotla Suraaj Lohar,ਕੋਟਲਾ ਸੂਰਜ ਲੋਹਾਰ,2017,615,SAD,9,285,294,16,3,570,BJP,2,262,264,7,704,INC,26,245,205,219,6,659,INC,28,214,186,147,74,Retained INC,’17:SAD ➔ ’19:BJP ➔ ’22:INC ➔ ’24:INC
+14,Motala,ਮੋਤਲਾ,2017,506,INC,89,277,188,19,2,456,INC,95,261,166,5,529,INC,145,272,127,105,8,452,INC,82,184,74,58,102,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+15,Kotli Khera,ਕੋਟਲੀ ਖੇੜਾ,2017,479,SAD,34,185,219,55,2,432,INC,50,229,179,8,478,AAP,74,113,212,138,1,453,INC,4,140,136,86,28,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+16,Panju Kalal,ਪੰਜੂ ਕਲਾਲ,2017,275,INC,26,139,113,14,0,271,INC,73,168,95,0,278,SAD,6,89,90,96,0,243,INC,44,113,69,21,32,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+17,Shahpur,ਸ਼ਾਹਪੁਰ,2017,638,SAD,43,251,294,63,1,554,INC,72,287,215,4,645,AAP,28,199,227,194,6,512,AAP,11,142,153,132,16,Retained AAP,’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+18,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,672,INC,250,433,183,22,5,534,INC,75,263,188,10,668,INC,95,283,188,126,28,601,INC,86,212,105,92,126,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+19,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,613,INC,51,298,247,40,3,542,BJP,120,166,286,5,658,AAP,21,190,211,161,43,573,BJP,42,101,131,107,173,Flipped (AAP → BJP),’17:INC ➔ ’19:BJP ➔ ’22:AAP ➔ ’24:BJP
+20,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,853,SAD,60,336,396,40,15,636,BJP,193,144,337,5,403,SAD,29,104,112,141,14,348,SAD,18,74,85,103,56,Retained SAD,’17:SAD ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:SAD
+21,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,884,INC,79,418,339,49,12,609,BJP,36,223,259,6,375,AAP,42,80,132,90,22,324,INC,5,80,75,65,67,Flipped (AAP → INC),’17:INC ➔ ’19:BJP ➔ ’22:AAP ➔ ’24:INC
+22,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,650,SAD,36,242,278,42,13,589,BJP,201,136,337,9,552,SAD,4,161,158,165,22,515,BJP,49,80,114,81,163,Flipped (SAD → BJP),’17:SAD ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:BJP
+23,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,776,SAD,13,323,336,55,9,614,BJP,145,192,337,10,575,AAP,4,198,202,142,10,563,BJP,7,110,142,87,149,Flipped (AAP → BJP),’17:SAD ➔ ’19:BJP ➔ ’22:AAP ➔ ’24:BJP
+24,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,343,INC,87,206,119,14,1,303,INC,77,177,100,5,526,INC,21,180,119,159,30,493,BJP,37,67,90,118,155,Flipped (INC → BJP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:BJP
+25,Bhindi Saidan,ਭਿੰਡੀ ਸੈਦਾਂ,2017,835,INC,96,416,320,51,14,789,INC,174,418,244,22,583,SAD,13,145,165,178,39,534,SAD,0,78,130,131,131,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+26,Kuttiwal,ਕੁੱਤੀਵਾਲ,2017,749,SAD,63,305,368,40,4,572,INC,40,261,221,37,338,INC,59,164,62,105,1,279,INC,45,115,70,46,26,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+27,Kotli Dosandhi,ਕੋਟਲੀ ਦੁਸੰਧੀ,2017,585,INC,61,273,212,52,9,528,INC,12,256,244,11,543,SAD,30,170,150,200,12,509,INC,40,160,92,120,104,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+28,Kotli Dosandhi,ਕੋਟਲੀ ਦੁਸੰਧੀ,2017,628,SAD,30,273,303,25,3,251,INC,63,153,90,1,432,INC,231,283,51,52,27,412,INC,113,220,107,28,24,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+29,Bhagupur Bet,ਭਾਗੂਪੁਰ ਬੇਟ,2017,380,INC,0,172,172,16,3,306,INC,42,162,120,4,735,INC,121,332,142,211,33,691,AAP,10,152,220,210,53,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+30,Vehra,ਵੇਹੜਾ,2017,630,SAD,49,262,311,34,9,331,INC,79,191,112,5,564,INC,14,213,199,126,3,509,AAP,40,157,197,88,41,Flipped (INC → AAP),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+31,Dugg,ਦੁੱਗ,2017,581,SAD,106,186,292,51,4,571,INC,379,470,91,6,317,INC,85,162,59,77,5,300,INC,29,122,93,22,43,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+32,Dugg Dogar,ਦੁੱਗ ਡੋਗਰ,2017,649,INC,86,315,229,85,4,479,INC,69,236,167,11,353,INC,76,165,76,89,12,361,INC,23,130,107,13,76,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+33,Saidpur Kalan,ਸੈਦਪੁਰ ਕਲਾਂ,2017,835,SAD,216,265,481,37,8,585,INC,172,342,170,50,389,INC,42,175,56,133,1,363,INC,40,136,96,45,67,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+34,Toot,ਤੂਤ,2017,917,SAD,512,180,692,12,2,692,INC,207,436,229,3,598,INC,227,352,94,125,5,517,INC,200,298,98,32,47,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+35,Chhan Kalan,ਛੰਨ ਕਲਾਂ,2017,893,INC,42,439,397,21,2,828,BJP,216,271,487,11,629,INC,67,243,176,155,10,653,AAP,4,190,194,125,78,Flipped (INC → AAP),’17:INC ➔ ’19:BJP ➔ ’22:INC ➔ ’24:AAP
+36,Mohaleke,ਮੋਹਲੇਕੇ,2017,513,INC,152,302,150,33,8,694,INC,204,426,222,10,661,AAP,82,162,272,190,3,564,AAP,25,120,162,137,47,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+37,Mandiawala,ਮੰਡੀਆਵਾਲਾ,2017,419,INC,50,195,145,51,4,397,INC,166,266,100,6,797,SAD,89,246,134,335,12,749,INC,101,280,48,179,174,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+38,Lodhi Gujjar,ਲੋਧੀ ਗੁੱਜਰ,2017,579,SAD,51,214,265,46,5,316,INC,174,237,63,4,932,SAD,76,342,124,418,16,858,INC,54,276,204,222,37,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+39,Manj,ਮੰਜ,2017,511,INC,77,262,185,43,4,478,INC,145,286,141,4,941,INC,237,529,78,292,9,826,INC,290,439,149,96,81,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+40,Kakkar,ਕੱਕੜ,2017,735,INC,31,362,331,26,3,406,INC,117,245,128,8,520,INC,90,245,155,91,4,452,INC,28,158,130,17,97,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+41,Kakkar,ਕੱਕੜ,2017,244,SAD,37,99,136,7,0,631,INC,198,376,178,5,407,INC,4,161,157,73,2,349,INC,114,190,76,40,4,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+42,Kakkar,ਕੱਕੜ,2017,511,INC,53,252,199,48,1,221,INC,30,121,91,0,590,INC,99,259,132,160,9,512,INC,121,223,102,85,68,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+43,Kakkar,ਕੱਕੜ,2017,509,SAD,63,220,283,1,1,460,INC,159,260,101,1,566,AAP,68,159,229,161,4,480,INC,6,162,156,77,15,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+44,Ranian,ਰਾਣੀਆਂ,2017,660,SAD,38,298,336,18,1,417,INC,286,350,64,0,695,INC,44,275,231,173,2,637,INC,73,272,199,33,89,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+45,Chakk Alla Bakhsh,ਚੱਕ ਅੱਲਾ ਬਖ਼ਸ਼,2017,297,SAD,89,101,190,4,0,494,BJP,3,219,222,3,240,SAD,51,46,71,122,0,229,AAP,18,72,90,52,1,Flipped (SAD → AAP),’17:SAD ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:AAP
+46,Dhariwal,ਧਾਰੀਵਾਲ,2017,679,SAD,81,252,333,55,10,264,INC,53,154,101,1,490,INC,37,215,89,178,2,404,INC,21,150,129,79,3,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+47,Pandori,ਪੰਡੋਰੀ,2017,619,INC,3,264,261,67,4,533,INC,83,279,196,5,508,INC,72,224,152,121,0,475,INC,102,235,133,61,27,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+48,Rai,ਰਾਏ,2017,691,SAD,10,290,300,80,3,471,INC,204,316,112,24,614,SAD,41,208,129,249,7,501,AAP,21,172,193,11,95,Flipped (SAD → AAP),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+49,Gagarmal,ਗੱਗੜਮੱਲ,2017,275,SAD,38,112,150,10,2,493,INC,160,317,157,5,299,INC,23,131,47,108,1,265,INC,27,97,64,70,11,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+50,Sarangra,ਸਾਰੰਗੜਾ,2017,474,INC,14,230,216,19,0,276,INC,67,167,100,5,679,SAD,62,211,158,273,7,513,BJP,10,134,141,56,151,Flipped (SAD → BJP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:BJP
+51,Sarangra,ਸਾਰੰਗੜਾ,2017,836,INC,30,399,369,38,7,405,INC,72,226,154,10,594,AAP,39,180,219,169,2,435,AAP,110,101,211,28,41,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+52,Sarangra,ਸਾਰੰਗੜਾ,2017,722,INC,53,372,319,25,0,763,INC,382,559,177,14,627,AAP,83,170,262,179,3,550,AAP,16,171,187,48,6,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+53,Lelian,ਲੇਲੀਅਨ,2017,773,SAD,77,317,394,40,4,602,INC,176,379,203,5,284,SAD,16,91,76,107,2,265,AAP,13,70,84,71,10,Flipped (SAD → AAP),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+54,Panju Rai,ਪੰਜੂ ਰਾਏ,2017,723,SAD,57,297,354,44,8,659,INC,44,318,274,13,409,SAD,27,136,91,163,3,380,INC,98,176,67,78,11,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+55,Hetampura,ਹੇਤਮਪੁਰਾ,2017,684,SAD,123,241,364,40,5,564,INC,87,305,218,12,853,AAP,91,241,337,246,4,721,INC,7,241,234,80,104,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+56,Kanve,ਕੰਵੈ,2017,685,SAD,212,199,411,40,3,289,INC,3,131,128,9,698,SAD,17,240,167,257,7,579,INC,89,245,156,65,59,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+57,Lopoke,ਲੋਪੋਕੇ,2017,641,SAD,178,209,387,35,2,603,BJP,56,245,301,5,776,SAD,91,249,164,340,7,681,SAD,85,189,80,274,46,Retained SAD,’17:SAD ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:SAD
+58,Lopoke,ਲੋਪੋਕੇ,2017,604,INC,53,293,240,55,4,563,BJP,63,224,287,15,688,SAD,94,171,200,294,4,550,SAD,78,150,73,228,48,Retained SAD,’17:INC ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:SAD
+59,Lopoke,ਲੋਪੋਕੇ,2017,580,SAD,12,261,273,28,2,420,INC,97,234,137,5,350,INC,0,133,66,133,3,304,SAD,21,96,46,117,18,Flipped (INC → SAD),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:SAD
+60,Lopoke,ਲੋਪੋਕੇ,2017,694,INC,40,343,303,21,0,400,INC,194,272,78,19,679,SAD,226,156,108,382,6,526,SAD,142,129,52,271,46,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+61,Lopoke,ਲੋਪੋਕੇ,2017,260,SAD,16,117,133,2,2,632,INC,243,427,184,6,642,SAD,255,132,101,387,1,531,SAD,89,146,51,235,50,Retained SAD,’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+62,Preet Nagar,ਪ੍ਰੀਤ ਨਗਰ,2017,658,INC,40,327,287,34,1,416,INC,98,244,146,6,405,SAD,31,115,100,146,10,394,INC,12,123,90,111,33,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+63,Veroke,ਵੇਰੋਕੇ,2017,466,SAD,161,123,284,30,4,517,INC,49,270,221,4,573,INC,70,238,168,147,1,483,BJP,73,70,118,43,191,Flipped (INC → BJP),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:BJP
+64,Bhilaowal Kakeji,ਭਿਲੋਵਾਲ ਕਾਕੇ ਜੀ,2017,481,SAD,34,211,245,15,2,470,INC,30,225,195,17,696,SAD,35,206,203,241,10,606,AAP,14,177,191,146,27,Flipped (SAD → AAP),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+65,Bhagupur Utarh,ਭਾਗੂਪੁਰ ਉਤਾੜ,2017,463,SAD,98,163,261,20,1,470,INC,77,259,182,12,508,INC,34,205,116,171,2,450,AAP,15,173,188,34,5,Flipped (INC → AAP),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+66,Bhillowal Pakka,ਭਿਲੋਵਾਲ ਪੱਕਾ,2017,466,SAD,176,132,308,5,1,382,INC,47,210,163,9,601,SAD,132,148,149,281,6,551,INC,47,205,158,141,20,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+67,Mudh,ਮੁੱਢ,2017,675,INC,16,313,297,53,1,450,INC,54,237,183,7,676,SAD,140,221,81,361,5,495,INC,115,196,73,81,52,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+68,Chuchakwal,ਚੂਚਕਵਾਲ,2017,768,SAD,114,280,394,79,2,391,INC,6,181,175,5,492,INC,2,176,103,174,8,407,AAP,156,50,206,47,39,Flipped (INC → AAP),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+69,Awan Lakha Singh,ਅਵਾਨ ਲੱਖਾ ਸਿੰਘ,2017,392,INC,25,181,156,33,3,571,INC,61,298,237,7,426,SAD,4,176,56,180,10,376,BJP,6,93,98,63,104,Flipped (SAD → BJP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:BJP
+70,Waryah,ਵੜਿਆਹ,2017,460,INC,68,232,164,32,3,691,INC,148,406,258,9,521,INC,95,264,67,169,8,523,INC,154,279,125,77,21,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+71,Khusupura,ਖੁਸੂਪੁਰਾ,2017,712,INC,90,374,284,33,1,419,INC,142,274,132,0,449,AAP,30,143,173,119,3,457,BJP,9,67,122,98,131,Flipped (AAP → BJP),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:BJP
+72,Tareen,ਤਰੀਨ,2017,657,SAD,34,275,309,41,0,428,INC,35,224,189,6,653,SAD,51,169,201,252,0,598,INC,57,206,149,118,45,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+73,Saurhiyan,ਸੌੜੀਆਂ,2017,673,INC,33,291,258,94,7,577,INC,98,321,223,4,758,INC,26,295,174,269,2,659,INC,106,304,74,198,28,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+74,Tallah,ਤੱਲਾ,2017,855,INC,141,451,310,51,7,627,INC,123,355,232,8,429,INC,42,188,79,146,3,404,SAD,2,141,102,143,3,Flipped (INC → SAD),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:SAD
+75,Kot Sidhu,ਕੋਟ ਸਿੱਧੂ,2017,888,AAP,180,141,261,441,13,559,INC,170,349,179,7,430,SAD,73,116,79,189,9,431,AAP,55,106,161,97,29,Flipped (SAD → AAP),’17:AAP ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+76,Karyal,ਕਰਿਆਲ,2017,779,SAD,29,335,364,52,5,693,INC,108,353,245,10,681,INC,74,271,197,185,9,543,INC,86,232,146,84,21,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+77,Karyal,ਕਰਿਆਲ,2017,393,SAD,58,156,214,18,1,732,INC,403,534,131,25,676,INC,203,357,140,154,3,504,INC,130,264,134,35,26,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+78,Miadi Kalan,ਮਿਆਦੀ ਕਲਾਂ,2017,682,SAD,43,278,321,62,6,658,INC,157,401,244,3,660,AAP,151,171,322,143,3,594,AAP,126,187,313,47,23,Retained AAP,’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+79,Jastarwal,ਜੱਸੜਵਾਲ,2017,467,SAD,94,166,260,33,1,358,INC,78,212,134,0,872,INC,21,307,286,236,9,727,INC,19,219,200,99,152,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+80,Chhina Karam Singh,ਛੀਨਾ ਕਰਮ ਸਿੰਘ,2017,468,INC,29,223,194,25,7,568,INC,190,359,169,8,848,INC,103,389,286,146,3,703,AAP,55,195,250,77,104,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+81,Nepal,ਨੇਪਾਲ,2017,446,INC,72,212,140,91,0,398,INC,149,257,108,6,772,INC,244,438,108,194,8,710,INC,217,358,141,139,35,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+82,Kotli Korotana,ਕੋਟਲੀ ਕੋਰੋਟਾਣਾ,2017,565,INC,140,290,150,115,0,454,INC,176,304,128,3,400,AAP,26,105,154,128,2,374,AAP,60,58,149,89,4,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+83,Bohlian,ਬੋਹਲੀਆ,2017,808,INC,246,469,223,99,3,410,INC,58,199,141,4,691,INC,131,317,186,153,21,586,INC,4,197,193,58,80,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+84,Bohlian,ਬੋਹਲੀਆ,2017,1021,SAD,214,334,548,36,9,616,INC,285,435,150,4,465,AAP,26,166,192,78,1,385,INC,16,141,125,21,33,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+85,Isapur,ਈਸਾਪੁਰ,2017,849,INC,3,342,339,136,8,655,INC,259,436,177,15,512,AAP,8,132,182,174,13,441,INC,37,148,111,79,78,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+86,Raipur Khurd,ਰਾਏਪੁਰ ਖੁਰਦ,2017,599,INC,190,333,143,105,1,804,INC,109,404,295,8,442,AAP,77,106,183,91,5,363,INC,25,133,108,39,17,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+87,Matiya,ਮਤੀਆ,2017,625,INC,107,303,196,104,2,706,INC,69,354,285,15,640,INC,82,285,128,203,7,561,AAP,295,36,359,50,64,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+88,Mohar,ਮੋਹਰ,2017,725,INC,160,348,188,147,8,439,INC,85,241,156,6,763,AAP,133,238,371,113,5,712,AAP,73,231,304,81,23,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+89,Umarpura,ਉਮਰਪੁਰਾ,2017,685,INC,209,406,197,60,2,529,INC,235,372,137,3,540,INC,14,192,122,178,15,497,AAP,16,123,139,68,122,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+90,Umarpura,ਉਮਰਪੁਰਾ,2017,495,INC,98,235,137,111,2,577,INC,144,321,177,5,470,SAD,2,145,133,147,9,398,AAP,33,102,135,77,58,Flipped (SAD → AAP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+91,Jauns,ਜੌਂਸ,2017,805,INC,47,376,329,63,3,601,INC,265,403,138,14,882,SAD,77,142,279,356,22,643,INC,98,229,131,125,65,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+92,Othian,ਓਠੀਆਂ,2017,474,SAD,51,161,212,90,1,422,INC,180,286,106,8,574,SAD,8,143,191,199,7,450,AAP,22,148,170,85,14,Flipped (SAD → AAP),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+93,Othian,ਓਠੀਆਂ,2017,401,INC,175,274,99,23,1,713,INC,131,402,271,8,663,AAP,19,184,231,212,7,514,AAP,74,139,213,78,33,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+94,Othian,ਓਠੀਆਂ,2017,737,INC,83,329,246,139,3,435,BJP,27,194,221,8,760,SAD,12,186,222,234,26,661,AAP,92,157,249,130,69,Flipped (SAD → AAP),’17:INC ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:AAP
+95,Dharamkot,ਧਰਮਕੋਟ,2017,677,INC,185,372,187,87,7,409,INC,336,367,31,1,666,AAP,109,176,285,163,7,577,INC,154,264,110,88,11,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+96,Chakk Kamal Khan,ਚੱਕ ਕਮਾਲ ਖ਼ਾਨ,2017,558,INC,86,288,202,62,2,580,INC,251,392,141,15,472,SAD,2,161,135,163,4,400,AAP,39,112,151,49,33,Flipped (SAD → AAP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+97,Kotli Sakka,ਕੋਟਲੀ ਸੱਕਾ,2017,350,INC,70,189,119,30,2,551,INC,314,410,96,7,740,SAD,127,203,174,330,6,664,SAD,7,121,200,207,50,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+98,Mehmadpura,ਮਹਿਮਦਪੁਰਾ,2017,873,INC,194,481,287,72,7,463,INC,130,289,159,3,467,SAD,69,140,110,209,0,399,SAD,54,53,127,181,3,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+99,Jajje,ਜੱਜੇ,2017,590,INC,22,258,236,80,6,353,INC,39,183,144,2,429,INC,169,253,81,84,0,364,INC,39,170,131,16,12,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+100,Chakk Mishri Khan,ਚੱਕ ਮਿਸ਼ਰੀ ਖ਼ਾਨ,2017,686,SAD,161,222,383,61,6,614,INC,227,405,178,5,723,SAD,14,251,179,265,8,632,INC,58,225,131,167,53,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+101,Chakk Mishri Khan,ਚੱਕ ਮਿਸ਼ਰੀ ਖ਼ਾਨ,2017,695,SAD,37,281,318,73,4,453,INC,140,281,141,8,648,AAP,52,198,250,176,4,541,INC,44,199,155,96,39,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+102,Maure,ਮੌੜੇ,2017,732,SAD,20,312,332,75,2,585,BJP,57,244,301,6,537,INC,45,220,126,175,2,414,AAP,74,90,164,52,33,Flipped (INC → AAP),’17:SAD ➔ ’19:BJP ➔ ’22:INC ➔ ’24:AAP
+103,Maure,ਮੌੜੇ,2017,432,INC,41,196,155,67,0,631,INC,92,338,246,8,386,INC,7,151,86,144,0,344,SAD,21,70,94,115,45,Flipped (INC → SAD),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:SAD
+104,Manawala,ਮਾਨਾਵਾਲਾ,2017,605,INC,14,286,272,28,2,657,INC,123,373,250,9,815,INC,98,374,126,276,17,613,INC,12,164,152,89,124,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+105,Manawala,ਮਾਨਾਵਾਲਾ,2017,797,INC,33,351,318,106,2,373,INC,104,223,119,12,567,INC,107,260,119,153,5,446,AAP,26,94,138,112,11,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+106,Chogawan,ਚੋਗਾਵਾਂ,2017,697,INC,179,369,190,99,8,481,INC,136,293,157,2,774,SAD,178,114,222,400,12,666,SAD,136,177,70,313,80,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+107,Chogawan,ਚੋਗਾਵਾਂ,2017,703,INC,26,306,280,92,8,661,INC,102,358,256,12,723,SAD,101,176,214,315,2,602,SAD,91,168,111,259,14,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+108,Chogawan,ਚੋਗਾਵਾਂ,2017,677,INC,32,318,286,55,5,409,INC,164,262,98,10,757,SAD,120,205,203,325,6,625,SAD,52,211,65,263,47,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+109,Chogawan,ਚੋਗਾਵਾਂ,2017,862,INC,162,416,254,106,9,482,INC,36,241,205,13,439,SAD,31,90,154,185,3,404,SAD,78,107,64,185,32,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+110,Chogawan,ਚੋਗਾਵਾਂ,2017,491,INC,63,261,198,8,3,489,INC,139,301,162,3,566,SAD,13,244,49,257,5,473,SAD,57,168,17,225,44,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+111,Chogawan,ਚੋਗਾਵਾਂ,2017,779,SAD,10,333,343,73,11,685,INC,133,266,133,5,775,SAD,111,214,212,325,6,655,SAD,112,205,62,317,50,Retained SAD,’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+112,Bhullar,ਭੁੱਲਰ,2017,1009,INC,252,611,359,23,2,471,INC,236,339,103,0,671,INC,88,296,208,143,1,553,INC,126,237,65,101,111,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+113,Bhullar,ਭੁੱਲਰ,2017,977,SAD,34,421,455,44,7,658,INC,56,328,272,4,693,AAP,30,210,240,195,10,563,SAD,27,137,116,164,82,Flipped (AAP → SAD),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:SAD
+114,Bhullar,ਭੁੱਲਰ,2017,737,SAD,40,331,371,22,2,825,INC,206,466,260,8,672,AAP,30,140,265,235,11,520,SAD,20,135,141,161,36,Flipped (AAP → SAD),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:SAD
+115,Tapiala,ਤਪਿਆਲਾ,2017,788,INC,19,321,302,136,4,938,INC,211,546,335,10,494,SAD,66,156,88,222,4,407,INC,27,176,37,149,22,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+116,Tapiala,ਤਪਿਆਲਾ,2017,704,INC,132,323,191,160,4,667,INC,110,380,270,2,451,INC,23,180,84,157,3,367,INC,114,203,34,89,20,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+117,Thathi,ਠੱਠੀ,2017,680,INC,120,345,225,91,4,595,INC,49,281,232,20,510,SAD,70,179,62,249,0,439,SAD,80,134,57,214,8,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+118,Thatha,ਠੱਠਾ,2017,906,SAD,116,377,493,25,2,488,INC,3,211,208,9,740,INC,12,246,227,234,5,669,INC,84,234,123,87,150,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+119,Bhangwan,ਭੰਗਵਾਂ,2017,513,SAD,72,154,226,120,4,593,INC,83,313,230,16,931,SAD,14,362,149,376,4,801,INC,84,307,223,142,62,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+120,Odar,ਓਦੜ,2017,523,INC,130,299,169,24,9,698,INC,148,405,257,16,779,INC,19,265,211,246,8,625,SAD,54,142,154,208,61,Flipped (INC → SAD),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:SAD
+121,Joeke,ਜੋਏਕੇ,2017,465,INC,8,191,183,67,6,451,BJP,21,196,217,14,279,INC,46,146,23,100,3,264,INC,65,145,22,80,3,Retained INC,’17:INC ➔ ’19:BJP ➔ ’22:INC ➔ ’24:INC
+122,Kamaska,ਕਮਾਸਕਾ,2017,616,SAD,142,208,350,43,2,406,BJP,2,180,182,4,744,SAD,181,183,182,364,5,668,AAP,64,191,255,140,15,Flipped (SAD → AAP),’17:SAD ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:AAP
+123,Bachiwind,ਬਾਚੀਵਿੰਡ,2017,656,SAD,41,285,326,36,2,444,INC,136,267,131,5,833,AAP,101,237,338,215,1,678,INC,18,195,148,177,56,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+124,Bachiwind,ਬਾਚੀਵਿੰਡ,2017,776,INC,59,352,293,91,6,550,INC,49,280,231,15,706,AAP,9,212,230,221,8,569,INC,4,160,115,90,156,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+125,Bachiwind,ਬਾਚੀਵਿੰਡ,2017,747,INC,0,346,346,34,4,526,INC,58,268,210,24,712,SAD,24,184,238,262,4,587,INC,68,236,106,168,21,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+126,Dala,ਡਾਲਾ,2017,330,SAD,32,141,173,10,3,665,INC,191,403,212,18,379,INC,98,193,95,80,2,331,INC,39,155,116,25,2,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+127,Kiralgarh,ਕਿਰਲਗੜ੍ਹ,2017,818,INC,31,405,374,25,6,650,INC,156,392,236,6,574,AAP,15,183,198,180,3,465,INC,72,209,137,87,11,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+128,Shahura,ਸ਼ਾਹੂਰਾ,2017,669,INC,2,306,304,27,2,304,INC,84,185,101,4,515,AAP,27,172,199,105,4,402,AAP,70,107,177,54,4,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+129,Shahura,ਸ਼ਾਹੂਰਾ,2017,478,SAD,47,194,241,30,2,585,INC,112,334,222,7,554,INC,189,308,119,84,6,486,INC,21,172,151,33,51,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+130,Shahura,ਸ਼ਾਹੂਰਾ,2017,482,INC,38,245,207,21,2,486,INC,157,308,151,9,490,AAP,30,123,174,144,3,383,INC,15,120,105,86,18,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+131,Dalleki,ਡੱਲੇਕੇ,2017,760,INC,113,416,303,18,0,381,INC,108,234,126,2,580,SAD,141,130,139,280,5,526,AAP,2,122,165,163,10,Flipped (SAD → AAP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+132,Beharwal,ਬਹਿੜਵਾਲ,2017,812,INC,19,337,318,134,4,394,INC,122,255,133,4,634,AAP,25,151,239,214,5,499,BJP,85,92,84,78,177,Flipped (AAP → BJP),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:BJP
+133,Vaineke,ਵੈਣੇਕੇ,2017,853,INC,137,438,301,89,5,591,INC,116,320,204,11,761,AAP,52,245,297,179,3,691,INC,156,300,144,81,102,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+134,Vaineke,ਵੈਣੇਕੇ,2017,646,SAD,66,260,326,46,2,705,INC,179,412,233,11,681,SAD,2,208,225,227,4,615,INC,98,237,139,125,59,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+135,Cheleki,ਚੇਲੇਕੇ,2017,666,SAD,72,251,323,72,8,785,INC,192,471,279,8,331,INC,40,157,46,117,7,320,AAP,41,104,145,51,8,Flipped (INC → AAP),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+136,Kohala,ਕੋਹਾਲਾ,2017,630,INC,10,267,257,75,2,533,INC,242,379,137,8,764,INC,56,301,182,245,6,657,SAD,18,167,131,185,124,Flipped (INC → SAD),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:SAD
+137,Kohala,ਕੋਹਾਲਾ,2017,589,INC,86,313,227,32,2,580,INC,52,279,227,14,639,INC,6,212,206,187,2,494,INC,32,168,92,136,59,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+138,Chawinda Kalan,ਛਵਿੰਡਾ ਕਲਾਂ,2017,534,SAD,3,231,234,46,2,564,INC,35,255,220,16,461,AAP,133,102,235,101,2,390,AAP,66,91,157,85,12,Retained AAP,’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+139,Chawinda Kalan,ਛਵਿੰਡਾ ਕਲਾਂ,2017,575,INC,60,278,218,42,4,508,INC,236,360,124,4,474,INC,67,218,151,70,3,385,AAP,17,125,142,41,50,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+140,Chawinda Khurd,ਛਵਿੰਡਾ ਖੁਰਦ,2017,573,SAD,70,222,292,41,2,435,INC,92,252,160,7,756,SAD,46,203,235,281,11,535,INC,32,166,59,129,134,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+141,Padhari,ਪੱਧਰੀ,2017,779,INC,41,343,302,116,3,428,INC,176,285,109,8,876,SAD,15,310,200,325,8,697,AAP,29,145,203,174,76,Flipped (SAD → AAP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+142,Padhari,ਪੱਧਰੀ,2017,693,SAD,43,270,313,87,8,459,INC,120,264,144,6,778,INC,41,309,172,268,5,594,INC,58,202,126,144,61,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+143,Lanven,ਲਾਂਵੇ,2017,621,INC,90,314,224,62,9,662,INC,131,367,236,14,210,SAD,50,52,50,102,1,193,INC,30,91,33,61,3,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+144,Nurpur,ਨੂਰਪੁਰ,2017,764,INC,178,447,269,31,4,498,BJP,29,201,230,28,612,SAD,38,142,198,236,6,507,INC,29,168,139,112,21,Flipped (SAD → INC),’17:INC ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:INC
+145,Chhidan,ਛਿੱਦਣ,2017,751,INC,106,370,264,80,7,437,INC,129,263,134,13,642,INC,45,241,176,196,9,492,INC,41,173,132,116,37,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+146,Chhidan,ਛਿੱਦਣ,2017,711,INC,156,387,231,61,4,700,INC,220,442,222,4,635,INC,35,233,198,164,3,498,INC,25,164,139,110,24,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+147,Bopa Rai Kalan,ਬੋਪਾਰਾਏ ਕਲਾਂ,2017,764,INC,54,364,310,45,3,524,INC,49,219,170,5,581,INC,95,272,113,177,4,474,INC,159,257,98,74,14,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+148,Bopa Rai Kalan,ਬੋਪਾਰਾਏ ਕਲਾਂ,2017,906,INC,22,307,273,285,6,491,INC,95,261,166,7,524,INC,138,268,103,130,4,404,INC,33,156,123,47,40,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+149,Bopa Rai Khurd,ਬੋਪਾਰਾਏ ਖੁਰਦ,2017,672,INC,14,319,305,28,3,541,INC,122,282,160,5,607,INC,88,292,93,204,2,517,SAD,34,122,140,174,41,Flipped (INC → SAD),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:SAD
+150,Bopa Rai Khurd,ਬੋਪਾਰਾਏ ਖੁਰਦ,2017,624,INC,157,344,187,66,7,473,INC,152,296,144,13,568,SAD,47,183,137,230,6,437,INC,10,126,116,106,17,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+151,Kolowal,ਕੋਲੋਵਾਲ,2017,895,INC,84,443,359,63,4,395,INC,205,289,84,5,787,SAD,120,170,228,348,6,720,AAP,134,102,289,106,19,Flipped (SAD → AAP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+152,Brar,ਬਰਾੜ,2017,958,INC,115,482,367,89,5,608,INC,47,299,252,2,699,INC,27,240,213,210,9,592,SAD-A,17,101,155,77,40,Flipped (INC → SAD-A),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:SAD-A
+153,Brar,ਬਰਾੜ,2017,630,INC,167,366,199,33,2,331,BJP,55,128,183,12,665,INC,81,272,191,171,11,626,AAP,83,77,206,72,123,Flipped (INC → AAP),’17:INC ➔ ’19:BJP ➔ ’22:INC ➔ ’24:AAP
+154,Madhoke,ਮੱਧੋਕੇ,2017,510,INC,132,287,155,31,5,313,INC,170,232,62,4,726,INC,169,365,196,142,4,608,INC,180,315,69,135,51,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+155,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,2017,912,INC,169,443,274,154,2,750,INC,226,451,225,14,817,INC,97,339,199,242,10,677,INC,53,228,69,144,175,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+156,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,2017,525,SAD,74,192,266,46,2,542,INC,19,265,246,10,680,AAP,45,154,269,224,1,519,INC,47,189,142,127,7,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+157,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,2017,640,SAD,45,222,267,126,3,438,INC,75,236,161,11,772,AAP,73,178,309,236,7,593,SAD,3,184,147,187,8,Flipped (AAP → SAD),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:SAD
+158,Bopa Rai Baj Singh,ਬੋਪਾਰਾਏ ਬਾਜ ਸਿੰਘ,2017,786,INC,88,360,272,107,10,540,INC,17,243,226,15,547,INC,182,309,88,127,6,479,AAP,83,154,237,54,10,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+159,Bopa Rai Baj Singh,ਬੋਪਾਰਾਏ ਬਾਜ ਸਿੰਘ,2017,431,INC,80,217,137,62,5,585,INC,181,362,181,9,432,INC,93,232,50,139,0,379,INC,120,197,77,77,8,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+160,Kaler,ਕਲੇਰ,2017,670,INC,68,323,255,68,5,455,BJP,109,163,272,5,730,INC,148,348,151,200,7,590,AAP,106,166,272,107,12,Flipped (INC → AAP),’17:INC ➔ ’19:BJP ➔ ’22:INC ➔ ’24:AAP
+161,Kaler,ਕਲੇਰ,2017,654,INC,232,390,158,76,6,533,BJP,32,234,266,9,381,SAD,21,116,118,139,0,298,AAP,45,70,119,74,11,Flipped (SAD → AAP),’17:INC ➔ ’19:BJP ➔ ’22:SAD ➔ ’24:AAP
+162,Baba Mike Shah Colony,ਬਾਬਾ ਮਾਈਕ ਸ਼ਾਹ ਕਾਲੋਨੀ,2017,843,INC,110,417,307,94,5,639,INC,16,280,264,20,459,INC,141,244,92,103,7,402,INC,14,168,154,24,36,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+163,Khiala Kalan,ਖਿਆਲਾ ਕਲਾਂ,2017,439,SAD,7,194,201,31,0,376,INC,2,178,176,6,829,SAD,4,279,240,283,4,748,INC,61,295,234,128,27,Flipped (SAD → INC),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+164,Kohali,ਕੋਹਾਲੀ,2017,559,INC,178,319,141,69,5,570,INC,394,467,73,3,758,AAP,84,218,302,205,4,524,INC,131,228,75,97,29,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+165,Kohali,ਕੋਹਾਲੀ,2017,615,INC,103,317,214,69,0,577,INC,444,506,62,2,654,AAP,65,211,276,128,6,458,INC,192,254,49,62,34,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+166,Kohali,ਕੋਹਾਲੀ,2017,358,SAD,3,125,128,94,1,756,INC,217,455,238,23,771,AAP,100,222,322,183,13,529,INC,164,255,67,91,30,Flipped (AAP → INC),’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+167,Kohali,ਕੋਹਾਲੀ,2017,652,INC,146,319,173,148,2,369,INC,65,202,137,22,852,AAP,156,237,393,174,14,565,INC,136,246,110,71,11,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+168,Bhittewad,ਭਿੱਟੇਵੱਡ,2017,492,INC,31,204,173,96,4,387,INC,151,237,86,18,549,SAD,6,221,77,227,10,505,SAD,80,139,57,219,44,Retained SAD,’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:SAD
+169,Bhittewad,ਭਿੱਟੇਵੱਡ,2017,480,INC,9,182,173,113,4,393,INC,179,278,99,6,614,INC,75,273,123,198,3,563,INC,7,211,85,204,20,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+170,Bhittewad,ਭਿੱਟੇਵੱਡ,2017,669,SAD,51,236,287,120,5,254,INC,134,190,56,0,811,INC,208,442,85,234,9,687,INC,35,245,96,210,68,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+171,Bagga Khurd,ਬੱਗਾ ਖੁਰਦ,2017,461,SAD,13,161,174,115,1,620,INC,257,413,156,18,422,AAP,33,100,163,130,4,336,AAP,2,102,104,77,8,Retained AAP,’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+172,Bagga Kalan,ਬੱਗਾ ਕਲਾਂ,2017,599,INC,78,284,206,75,6,406,INC,237,306,69,6,677,INC,92,304,124,212,12,548,AAP,164,41,285,121,19,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+173,Bagga Kalan,ਬੱਗਾ ਕਲਾਂ,2017,657,INC,41,286,245,89,5,368,INC,294,321,27,4,662,INC,183,333,119,150,27,486,AAP,110,70,198,88,68,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+174,Dhariwal,ਧਾਰੀਵਾਲ,2017,804,SAD,171,277,448,51,3,532,INC,121,315,194,8,906,INC,76,341,222,265,39,755,AAP,91,196,287,170,47,Flipped (INC → AAP),’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+175,Lalla Afgana,ਲੱਲਾ ਅਫ਼ਗ਼ਾਨਾ,2017,546,INC,59,281,222,25,1,348,INC,47,187,140,5,436,AAP,51,107,185,134,4,325,AAP,71,45,155,84,10,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+176,Harsha Chhina (Abadi Ucha Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਉੱਚਾ ਕਿਲ੍ਹਾ),2017,568,SAD,78,216,294,49,2,558,INC,83,299,216,3,526,AAP,10,168,178,151,9,452,AAP,90,102,192,89,46,Retained AAP,’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+177,Harsha Chhina (Abadi Ucha Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਉੱਚਾ ਕਿਲ੍ਹਾ),2017,727,SAD,162,228,390,98,4,609,INC,112,334,222,12,537,SAD,7,167,158,174,11,457,AAP,52,90,159,107,68,Flipped (SAD → AAP),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+178,Harsha Chhina (Abadi Vichla Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਵਿਚਲਾ ਕਿਲ੍ਹਾ),2017,946,INC,264,571,307,51,3,746,INC,122,410,288,15,341,INC,33,134,101,93,2,300,AAP,44,112,156,16,9,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+179,Harsha Chhina (Abadi Vichla Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਵਿਚਲਾ ਕਿਲ੍ਹਾ),2017,539,INC,240,368,128,33,1,481,INC,207,326,119,5,723,AAP,88,212,300,174,6,480,AAP,62,182,244,10,8,Retained AAP,’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+180,Harsha Chhina (Abadi Vichla Qila),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਵਿਚਲਾ ਕਿਲ੍ਹਾ),2017,504,INC,106,266,160,48,3,534,INC,92,287,195,11,527,INC,82,232,127,150,3,417,AAP,22,172,194,6,16,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+181,Harsha Chhina (Abadi Kukkranwala),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਕੁੱਕੜਾਂਵਾਲਾ),2017,603,SAD,5,284,289,13,4,673,INC,284,460,176,14,477,INC,138,252,89,114,4,620,INC,195,326,131,59,64,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+182,Harsha Chhina (Abadi Sabajpur),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਸਬਾਜਪੁਰ),2017,740,SAD,17,315,332,79,3,883,INC,600,741,141,0,631,SAD,58,191,173,249,3,513,AAP,67,173,240,66,14,Flipped (SAD → AAP),’17:SAD ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+183,Harsha Chhina (Abadi Sabajpur),ਹਰਸ਼ਾ ਛੀਨਾ (ਅਬਾਦੀ ਸਬਾਜਪੁਰ),2017,454,INC,116,261,145,30,7,470,INC,89,269,180,1,432,INC,3,184,48,181,1,355,INC,25,139,114,71,18,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+184,Nangal Tola,ਨੰਗਲ ਤੋਲਾ,2017,519,INC,86,276,190,26,8,499,INC,59,269,210,1,686,INC,98,303,150,205,4,567,AAP,61,148,217,156,11,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+185,Nangal Tola,ਨੰਗਲ ਤੋਲਾ,2017,607,INC,153,347,194,44,3,570,INC,68,304,236,3,757,INC,94,310,200,216,9,602,INC,4,180,176,176,9,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+186,Jhanjoti,ਝੰਜੋਟੀ,2017,503,INC,135,286,151,54,1,661,INC,164,396,232,8,810,SAD,23,313,130,336,4,672,INC,3,260,92,257,10,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+187,Jhanjoti,ਝੰਜੋਟੀ,2017,487,INC,109,240,131,103,4,390,INC,46,191,145,12,532,INC,151,283,102,132,6,427,INC,49,191,50,142,12,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+188,Jhanjoti,ਝੰਜੋਟੀ,2017,522,INC,66,215,149,147,0,445,INC,64,229,165,5,558,INC,127,278,110,151,8,465,INC,33,170,89,137,36,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+189,Chainpur,ਚੈਨਪੁਰ,2017,542,INC,126,296,170,66,3,514,INC,58,256,198,14,801,SAD,17,295,179,312,1,690,INC,217,354,129,137,10,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+190,Balagan,ਬਲਾਗਣ,2017,568,INC,68,255,187,116,1,410,INC,72,226,154,7,723,INC,203,382,117,179,31,613,INC,65,302,237,32,17,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+191,Balagan Sidhu,ਬਲਾਗਣ ਸਿੱਧੂ,2017,599,INC,220,355,135,90,7,418,INC,71,230,159,11,316,INC,183,233,31,50,1,354,INC,36,185,149,2,0,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+192,Kotla Doom,ਕੋਟਲਾ ਡੂਮ,2017,403,INC,117,217,78,100,3,396,BJP,93,131,224,13,561,INC,200,355,35,155,7,524,AAP,256,92,348,51,15,Flipped (INC → AAP),’17:INC ➔ ’19:BJP ➔ ’22:INC ➔ ’24:AAP
+193,Kotla Doom,ਕੋਟਲਾ ਡੂਮ,2017,584,INC,15,254,239,71,7,507,INC,46,257,211,25,525,INC,25,255,32,230,0,523,AAP,193,72,309,116,9,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+194,Saidpur,ਸੈਦਪੁਰ,2017,245,INC,42,131,89,16,0,495,INC,16,238,222,15,594,SAD,14,223,98,237,18,539,INC,72,200,128,71,116,Flipped (SAD → INC),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:INC
+195,Radala,ਰਡਾਲਾ,2017,532,INC,115,283,168,67,2,600,INC,308,431,123,22,792,INC,88,315,226,227,9,769,INC,29,226,176,197,107,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+196,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,398,INC,20,177,157,43,8,338,INC,85,194,109,17,434,INC,85,193,73,108,34,412,INC,81,173,84,23,92,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+197,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,535,SAD,248,127,375,22,5,481,BJP,69,168,237,13,560,INC,125,263,112,138,21,480,INC,45,175,130,39,91,Retained INC,’17:SAD ➔ ’19:BJP ➔ ’22:INC ➔ ’24:INC
+198,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,591,SAD,4,269,273,28,1,218,INC,60,130,70,3,600,INC,33,213,180,141,27,505,INC,91,190,99,85,90,Retained INC,’17:SAD ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+199,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,232,INC,2,111,109,9,2,508,INC,123,298,175,12,447,INC,43,178,135,96,23,396,INC,123,205,70,27,82,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+200,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,638,SAD,53,90,292,239,2,352,INC,186,259,73,6,524,AAP,176,105,281,95,33,421,AAP,6,109,115,81,69,Retained AAP,’17:SAD ➔ ’19:INC ➔ ’22:AAP ➔ ’24:AAP
+201,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,756,AAP,2,266,198,268,7,431,BJP,68,175,243,5,549,AAP,87,89,248,161,29,448,BJP,43,88,120,33,163,Flipped (AAP → BJP),’17:AAP ➔ ’19:BJP ➔ ’22:AAP ➔ ’24:BJP
+202,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,630,INC,10,225,215,178,1,527,INC,279,387,108,4,576,AAP,64,118,241,177,25,499,SAD,36,131,98,167,76,Flipped (AAP → SAD),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:SAD
+203,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,655,INC,46,244,198,182,7,208,BJP,10,96,106,1,657,AAP,66,95,282,216,39,523,SAD,23,111,112,137,114,Flipped (AAP → SAD),’17:INC ➔ ’19:BJP ➔ ’22:AAP ➔ ’24:SAD
+204,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,749,SAD,68,211,279,112,9,512,INC,131,252,121,113,685,BJP,111,93,221,19,332,531,BJP,179,110,86,20,289,Retained BJP,’17:SAD ➔ ’19:INC ➔ ’22:BJP ➔ ’24:BJP
+205,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,645,INC,23,229,206,169,2,599,INC,110,318,61,208,400,AAP,69,116,185,43,45,368,INC,58,156,78,23,98,Flipped (AAP → INC),’17:INC ➔ ’19:INC ➔ ’22:AAP ➔ ’24:INC
+206,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,771,INC,145,396,251,76,8,494,INC,149,273,77,124,564,INC,24,197,173,91,81,488,AAP,80,93,217,8,137,Flipped (INC → AAP),’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:AAP
+207,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,859,INC,40,386,346,98,4,570,INC,117,273,110,156,253,INC,32,114,82,37,15,247,INC,51,112,61,21,39,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+208,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,685,INC,64,318,254,82,1,636,INC,75,234,159,42,513,INC,24,180,156,140,27,468,INC,129,222,93,56,66,Retained INC,’17:INC ➔ ’19:INC ➔ ’22:INC ➔ ’24:INC
+209,Raja Sansi,ਰਾਜਾ ਸਾਂਸੀ,2017,724,INC,10,307,297,83,2,508,INC,57,216,159,42,385,SAD,21,82,128,149,16,410,AAP,68,122,190,12,58,Flipped (SAD → AAP),’17:INC ➔ ’19:INC ➔ ’22:SAD ➔ ’24:AAP
+210,Ladeh,ਲੱਧੇਹ,2019,-,-,-,-,-,-,-,596,INC,268,374,106,11,464,SAD,225,91,46,316,3,438,SAD,291,53,20,344,14,Retained SAD,’19:INC ➔ ’22:SAD ➔ ’24:SAD
+211,Ranewali,ਰਾਣੇਵਾਲੀ,2019,-,-,-,-,-,-,-,585,INC,87,294,207,10,613,INC,72,254,94,182,66,549,INC,73,189,114,103,116,Retained INC,’19:INC ➔ ’22:INC ➔ ’24:INC
+212,Muglani Kot,ਮੁਗਲਾਨੀ ਕੋਟ,2019,-,-,-,-,-,-,-,562,INC,63,265,202,6,237,INC,34,100,66,65,1,213,AAP,1,56,57,47,32,Flipped (INC → AAP),’19:INC ➔ ’22:INC ➔ ’24:AAP
+213,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,2019,-,-,-,-,-,-,-,680,INC,429,528,99,3,648,AAP,59,158,261,202,6,491,AAP,222,33,314,92,11,Retained AAP,’19:INC ➔ ’22:AAP ➔ ’24:AAP
+214,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,776,AAP,85,257,342,149,3,648,AAP,405,56,473,68,12,Retained AAP,’22:AAP ➔ ’24:AAP
+215,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,587,AAP,59,174,233,146,8,494,AAP,246,62,314,68,13,Retained AAP,’22:AAP ➔ ’24:AAP
+216,Jagdev Kalan,ਜਗਦੇਵ ਕਲਾਂ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,676,INC,73,293,220,124,24,563,AAP,233,88,321,81,27,Flipped (INC → AAP),’22:INC ➔ ’24:AAP
+217,Mallu Nangal,ਮੱਲੂ ਨੰਗਲ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,772,AAP,81,151,238,157,7,692,INC,207,346,139,99,30,Flipped (AAP → INC),’22:AAP ➔ ’24:INC
+218,Mallu Nangal,ਮੱਲੂ ਨੰਗਲ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,650,AAP,198,79,344,146,2,495,INC,15,168,153,109,14,Flipped (AAP → INC),’22:AAP ➔ ’24:INC
+219,Adli Wala,ਅਦਲੀ ਵਾਲਾ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,803,AAP,29,282,311,162,5,649,AAP,15,228,243,90,16,Retained AAP,’22:AAP ➔ ’24:AAP
+220,Adli Wala,ਅਦਲੀ ਵਾਲਾ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,738,AAP,63,198,270,207,35,581,AAP,27,132,196,169,25,Retained AAP,’22:AAP ➔ ’24:AAP
+221,Adli Wala,ਅਦਲੀ ਵਾਲਾ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,752,AAP,103,179,323,220,9,706,AAP,85,135,263,178,30,Retained AAP,’22:AAP ➔ ’24:AAP
+222,Bua Nangali,ਬੂਆ ਨੰਗਲੀ,2022,-,-,-,-,-,-,-,-,-,-,-,-,-,735,INC,149,343,161,194,5,616,INC,114,269,155,145,8,Retained INC,’22:INC ➔ ’24:INC
