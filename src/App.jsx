@@ -75,21 +75,24 @@ export default function App() {
   const partyStats = useMemo(() => {
     const calcParty = (pCode) => {
       const pKey = pCode.toLowerCase();
-      const sorted = [...booths].sort((a, b) => (b.data_2024[pKey] || 0) - (a.data_2024[pKey] || 0));
+      const sorted = [...booths].sort((a, b) => 
+        ((b.data_2024?.[pKey] ?? b.data_2024?.[`${pKey}_votes`] ?? 0) - 
+         (a.data_2024?.[pKey] ?? a.data_2024?.[`${pKey}_votes`] ?? 0))
+      );
       
-      let v22 = summary?.votes_2022?.[pKey];
-      let sh22 = summary?.votes_2022?.[`${pKey}_pct`];
-      let v24 = summary?.votes_2024?.[pKey];
+      let v22 = summary?.votes_2022?.[pKey] ?? summary?.party_votes_2022?.[pCode] ?? summary?.party_votes_2022?.[pKey];
+      let sh22 = summary?.votes_2022?.[`${pKey}_pct`] ?? summary?.party_shares_2022?.[pCode];
+      let v24 = summary?.votes_2024?.[pKey] ?? summary?.party_votes_2024?.[pCode] ?? summary?.party_votes_2024?.[pKey];
       let sh24 = summary?.votes_2024?.[`${pKey}_pct`];
 
       if (v22 === undefined) {
-        v22 = booths.reduce((acc, b) => acc + (b.data_2022[pKey] || 0), 0);
-        const tot22 = summary?.total_votes_2022 || booths.reduce((acc, b) => acc + (b.data_2022.total || 0), 0);
+        v22 = booths.reduce((acc, b) => acc + (b.data_2022?.[pKey] ?? b.data_2022?.[`${pKey}_votes`] ?? 0), 0);
+        const tot22 = summary?.total_votes_2022 || booths.reduce((acc, b) => acc + (b.data_2022?.total || 0), 0);
         sh22 = tot22 > 0 ? Number(((v22 / tot22) * 100).toFixed(2)) : 0;
       }
       if (v24 === undefined) {
-        v24 = booths.reduce((acc, b) => acc + (b.data_2024[pKey] || 0), 0);
-        const tot24 = summary?.total_votes_2024 || booths.reduce((acc, b) => acc + (b.data_2024.total || 0), 0);
+        v24 = booths.reduce((acc, b) => acc + (b.data_2024?.[pKey] ?? b.data_2024?.[`${pKey}_votes`] ?? 0), 0);
+        const tot24 = summary?.total_votes_2024 || booths.reduce((acc, b) => acc + (b.data_2024?.total || 0), 0);
         sh24 = tot24 > 0 ? Number(((v24 / tot24) * 100).toFixed(2)) : 0;
       }
 
@@ -97,9 +100,9 @@ export default function App() {
 
       let won_both = 0, gained = 0, lost_24 = 0, weak = 0, lost_both = 0;
       booths.forEach(b => {
-        const w22 = b.data_2022.winner_party;
-        const w24 = b.data_2024.winner_party;
-        const pct24 = b.data_2024[`${pKey}_pct`] || 0;
+        const w22 = b.data_2022?.winner_party || b.data_2022?.winner;
+        const w24 = b.data_2024?.winner_party || b.data_2024?.winner;
+        const pct24 = b.data_2024?.[`${pKey}_pct`] ?? (b.data_2024?.total > 0 ? (((b.data_2024?.[pKey] ?? b.data_2024?.[`${pKey}_votes`] ?? 0) / b.data_2024.total) * 100) : 0);
         if (w22 === pCode && w24 === pCode) won_both++;
         else if (w22 !== pCode && w24 === pCode) gained++;
         else if (w22 === pCode && w24 !== pCode) lost_24++;
@@ -112,34 +115,35 @@ export default function App() {
 
       const won_in_2_count = booths.filter(b => {
         let c = 0;
-        if (b.data_2017?.winner_party === pCode) c++;
-        if (b.data_2019?.winner_party === pCode) c++;
-        if (b.data_2022?.winner_party === pCode) c++;
-        if (b.data_2024?.winner_party === pCode) c++;
+        if ((b.data_2017?.winner_party || b.data_2017?.winner) === pCode) c++;
+        if ((b.data_2019?.winner_party || b.data_2019?.winner) === pCode) c++;
+        if ((b.data_2022?.winner_party || b.data_2022?.winner) === pCode) c++;
+        if ((b.data_2024?.winner_party || b.data_2024?.winner) === pCode) c++;
         return c === 2;
       }).length;
 
       const won_in_3_count = booths.filter(b => {
         let c = 0;
-        if (b.data_2017?.winner_party === pCode) c++;
-        if (b.data_2019?.winner_party === pCode) c++;
-        if (b.data_2022?.winner_party === pCode) c++;
-        if (b.data_2024?.winner_party === pCode) c++;
+        if ((b.data_2017?.winner_party || b.data_2017?.winner) === pCode) c++;
+        if ((b.data_2019?.winner_party || b.data_2019?.winner) === pCode) c++;
+        if ((b.data_2022?.winner_party || b.data_2022?.winner) === pCode) c++;
+        if ((b.data_2024?.winner_party || b.data_2024?.winner) === pCode) c++;
         return c >= 3;
       }).length;
 
       const won_all_count = booths.filter(b => {
         let c = 0;
-        if (b.data_2017?.winner_party === pCode) c++;
-        if (b.data_2019?.winner_party === pCode) c++;
-        if (b.data_2022?.winner_party === pCode) c++;
-        if (b.data_2024?.winner_party === pCode) c++;
+        if ((b.data_2017?.winner_party || b.data_2017?.winner) === pCode) c++;
+        if ((b.data_2019?.winner_party || b.data_2019?.winner) === pCode) c++;
+        if ((b.data_2022?.winner_party || b.data_2022?.winner) === pCode) c++;
+        if ((b.data_2024?.winner_party || b.data_2024?.winner) === pCode) c++;
         const tot = b.data_2017 ? 4 : 2;
         return c === tot;
       }).length;
 
-      const booths_won_17 = booths.filter(b => b.data_2017?.winner_party === pCode).length;
-      const booths_won_19 = booths.filter(b => b.data_2019?.winner_party === pCode).length;
+      const booths_won_17 = booths.filter(b => (b.data_2017?.winner_party || b.data_2017?.winner) === pCode).length;
+      const booths_won_19 = booths.filter(b => (b.data_2019?.winner_party || b.data_2019?.winner) === pCode).length;
+
 
       return {
         votes_2022: v22,
@@ -448,7 +452,7 @@ export default function App() {
           <img src="./dsidein_logo_transparent.png" alt="Dsidein" className="watermark-logo-img" />
           <div className="watermark-brand-name">DSIDEIN</div>
           <div className="watermark-sub-name">{currentConst.name_en} BOOTH INTELLIGENCE</div>
-          <div className="watermark-url">https://dsidein.com/{isRajaSansi ? 'raja-sansi' : 'qadian'}-2022-2024</div>
+          <div className="watermark-url">https://dsidein.com/{currentConst.id.toLowerCase().replace('_', '-')}-election-dashboard</div>
         </div>
 
         {/* Print Master Report Header */}
@@ -467,7 +471,7 @@ export default function App() {
             </div>
             <div style={{ textAlign: 'right', fontSize: '8.5pt', color: '#334155' }}>
               <span style={{ fontWeight: 800, color: '#002b49' }}>DSIDEIN COMMAND CENTER</span><br />
-              <span>https://dsidein.com/{isRajaSansi ? 'raja-sansi' : 'qadian'}-2022-2024</span>
+              <span>https://dsidein.com/{currentConst.id.toLowerCase().replace('_', '-')}-election-dashboard</span>
             </div>
           </div>
         </div>
@@ -536,7 +540,10 @@ export default function App() {
             onFilterByYearParty={handleFilterByYearParty}
             selectedParty={selectedParty}
             activeFilter={partyFilter}
+            partyStats={partyStats}
+            booths={booths}
           />
+
 
           {/* Master Booth Registry Card */}
           <section id="booth-performance-registry" className="dsidein-registry-card">

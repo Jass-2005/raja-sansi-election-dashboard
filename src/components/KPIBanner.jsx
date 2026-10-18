@@ -1,37 +1,131 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Compass, Activity, BarChart3, CheckCircle2 } from 'lucide-react';
 import { CONSTITUENCIES } from '../data/constituencies';
 import { t } from '../utils/translations';
 
-export default function KPIBanner({ summary, constituencyId, language, onFilterByYearParty, selectedParty, activeFilter }) {
+export default function KPIBanner({ 
+  summary, 
+  constituencyId, 
+  language, 
+  onFilterByYearParty, 
+  selectedParty, 
+  activeFilter,
+  partyStats,
+  booths = []
+}) {
   const currentConst = CONSTITUENCIES[constituencyId] || CONSTITUENCIES.RAJA_SANSI;
-  const isRajaSansi = constituencyId === 'RAJA_SANSI';
+  const cand = currentConst.candidates || {};
 
-  const totalBooths = currentConst.total_booths || (isRajaSansi ? 222 : 223);
-  const tot24 = summary?.total_votes_2024?.toLocaleString() || (isRajaSansi ? '113,833' : '118,991');
-  const turnoutPct = isRajaSansi ? '70.1%' : '72.1%';
-  const turnoutShift = isRajaSansi ? '-14.6%' : '-9.5%';
+  const totalBooths = booths.length || currentConst.total_booths;
+  
+  // Total votes 2024
+  const totVotes2024Num = summary?.total_votes_2024 || booths.reduce((acc, b) => acc + (b.data_2024?.total || 0), 0);
+  const tot24 = totVotes2024Num.toLocaleString();
+  
+  // Turnout comparison
+  const turnoutShift = summary?.turnout_pct 
+    ? `${summary.turnout_pct > 0 ? '+' : ''}${summary.turnout_pct}%` 
+    : (summary?.turnout_diff ? `${summary.turnout_diff > 0 ? '+' : ''}${summary.turnout_diff.toLocaleString()}` : '');
 
-  // INC Stats
-  const incVotes = isRajaSansi ? '42,408' : '41,806';
-  const incWins = isRajaSansi ? 112 : 111;
-  const incShare = isRajaSansi ? '37.3%' : '35.1%';
-  const incLead = isRajaSansi ? '+4,543' : '+3,152';
+  // Determine top 2 parties in 2024 for this constituency
+  const partyOrder = ['INC', 'AAP', 'SAD', 'BJP'];
+  const sortedParties = useMemo(() => {
+    return [...partyOrder].sort((a, b) => {
+      const vA = partyStats?.[a]?.votes_2024 || 0;
+      const vB = partyStats?.[b]?.votes_2024 || 0;
+      return vB - vA;
+    });
+  }, [partyStats]);
 
-  // AAP Stats
-  const aapCandidate = isRajaSansi 
-    ? (language === 'pa' ? 'ਆਪ (ਧਾਲੀਵਾਲ)' : 'AAP (DHALIWAL)')
-    : (language === 'pa' ? 'ਆਪ (ਕਲਸੀ)' : 'AAP (KALSI)');
-  const aapVotes = isRajaSansi ? '37,865' : '38,654';
-  const aapWins = isRajaSansi ? 69 : 81;
-  const aapShare = isRajaSansi ? '33.3%' : '32.5%';
-  const aapGains = isRajaSansi ? '+11' : '+63';
+  const p1 = sortedParties[0] || 'INC';
+  const p2 = sortedParties[1] || 'AAP';
+
+  const p1Stats = partyStats?.[p1] || {};
+  const p2Stats = partyStats?.[p2] || {};
+
+  const p1Cand24 = cand?.['2024']?.[p1];
+  const p2Cand24 = cand?.['2024']?.[p2];
+
+  const p1Label = p1Cand24 
+    ? (language === 'pa' ? p1Cand24.short_pa : p1Cand24.short_en) 
+    : `${p1} (Winner)`;
+  const p2Label = p2Cand24 
+    ? (language === 'pa' ? p2Cand24.short_pa : p2Cand24.short_en) 
+    : `${p2} (Runner-Up)`;
+
+  const p1Votes = (p1Stats.votes_2024 || 0).toLocaleString();
+  const p1Wins = p1Stats.booths_won_24 ?? 0;
+  const p1Share = p1Stats.share_2024 ? `${p1Stats.share_2024}%` : '';
+  const leadDiff = Math.max(0, (p1Stats.votes_2024 || 0) - (p2Stats.votes_2024 || 0));
+
+  const p2Votes = (p2Stats.votes_2024 || 0).toLocaleString();
+  const p2Wins = p2Stats.booths_won_24 ?? 0;
+  const p2Share = p2Stats.share_2024 ? `${p2Stats.share_2024}%` : '';
 
   const handlePartyClick = (year, party) => {
     if (onFilterByYearParty) {
       onFilterByYearParty(year, party);
     }
   };
+
+  // Compute longitudinal timeline metrics for all election years present
+  const timelineYears = useMemo(() => {
+    const allYears = [2017, 2019, 2022, 2024];
+    const result = [];
+
+    allYears.forEach(yr => {
+      const yrBooths = booths.filter(b => {
+        const dy = b[`data_${yr}`];
+        return dy && (dy.total > 0 || dy.winner_party || dy.winner);
+      });
+
+      if (yrBooths.length === 0) return;
+
+      const pData = {
+        INC: { votes: 0, wins: 0 },
+        AAP: { votes: 0, wins: 0 },
+        SAD: { votes: 0, wins: 0 },
+        BJP: { votes: 0, wins: 0 }
+      };
+
+      let totalVotes = 0;
+      yrBooths.forEach(b => {
+        const dy = b[`data_${yr}`];
+        const wp = dy.winner_party || dy.winner;
+        ['inc', 'aap', 'sad', 'bjp'].forEach(pk => {
+          const v = dy[pk] || dy[`${pk}_votes`] || 0;
+          const P = pk.toUpperCase();
+          pData[P].votes += v;
+          totalVotes += v;
+        });
+        if (wp && pData[wp]) {
+          pData[wp].wins += 1;
+        }
+      });
+
+      const sorted = Object.entries(pData).sort((a, b) => b[1].votes - a[1].votes);
+      const winner = sorted[0];
+      const runnerUp = sorted[1];
+      const lead = winner[1].votes - (runnerUp ? runnerUp[1].votes : 0);
+
+      const yearType = yr === 2019 || yr === 2024 ? 'LS' : 'VS';
+
+      result.push({
+        year: yr,
+        type: yearType,
+        tag: `${yr} ${yearType}`,
+        boothsCount: yrBooths.length,
+        totalVotes,
+        parties: sorted.filter(p => p[1].votes > 0),
+        winnerParty: winner[0],
+        leadVotes: lead,
+        winnerWins: winner[1].wins,
+        partiesDict: pData
+      });
+    });
+
+    return result;
+  }, [booths]);
 
   return (
     <section className="dsidein-kpi-grid" aria-label="Election Highlights and Summary Metrics">
@@ -65,58 +159,66 @@ export default function KPIBanner({ summary, constituencyId, language, onFilterB
         </div>
         <div className="kpi-value">{tot24}</div>
         <div className="kpi-sub-pill text-orange">
-          ● {turnoutPct} {language === 'pa' ? 'ਪੋਲਿੰਗ' : 'Valid Polled'} ({turnoutShift} {language === 'pa' ? 'ਬਨਾਮ ’22' : 'vs ’22'})
+          ● {language === 'pa' ? 'ਲੋਕ ਸਭਾ ਚੋਣ 2024' : 'Lok Sabha 2024'} {turnoutShift ? `(${turnoutShift} vs ’22)` : ''}
         </div>
       </div>
 
-      {/* KPI 3: Congress (INC) - Clickable Telemetry */}
+      {/* KPI 3: #1 Leading Party in 2024 (Winner) */}
       <div 
-        className={`dsidein-kpi-card inc-kpi clickable-kpi ${selectedParty === 'INC' ? 'active-kpi' : ''}`}
-        onClick={() => handlePartyClick(2024, 'INC')}
-        title="Click to view all 112 booths won by INC in 2024"
+        className={`dsidein-kpi-card ${p1.toLowerCase()}-kpi clickable-kpi ${selectedParty === p1 ? 'active-kpi' : ''}`}
+        onClick={() => handlePartyClick(2024, p1)}
+        title={`Click to view all ${p1Wins} booths won by ${p1} in 2024`}
         style={{ cursor: 'pointer' }}
       >
         <div className="kpi-top-row">
-          <div className="kpi-icon-pill icon-orange">
+          <div className={`kpi-icon-pill icon-${p1.toLowerCase() === 'inc' ? 'orange' : p1.toLowerCase() === 'aap' ? 'blue' : 'purple'}`}>
             <BarChart3 size={18} />
           </div>
-          <span className="click-to-filter-hint hide-mobile">Click to filter</span>
+          <span className="click-to-filter-hint hide-mobile">
+            {language === 'pa' ? 'ਫਿਲਟਰ ਲਈ ਕਲਿੱਕ ਕਰੋ' : 'Click to filter'}
+          </span>
         </div>
-        <div className="kpi-label">
-          {language === 'pa' ? 'ਕਾਂਗਰਸ (INC)' : 'CONGRESS (INC)'}
+        <div className="kpi-label">{p1Label}</div>
+        <div className={`kpi-value text-${p1.toLowerCase() === 'inc' ? 'orange' : p1.toLowerCase() === 'aap' ? 'blue' : 'purple'}`}>
+          {p1Votes}
         </div>
-        <div className="kpi-value text-orange">{incVotes}</div>
-        <div className="kpi-sub-pill text-orange">
-          ● {incWins} {language === 'pa' ? 'ਜਿੱਤਾਂ' : 'Wins'} ({incShare} | {incLead} {language === 'pa' ? 'ਲੀਡ' : 'Lead'})
+        <div className="kpi-sub-pill">
+          ● {p1Wins} {language === 'pa' ? 'ਜਿੱਤਾਂ' : 'Wins'} ({p1Share} | +{leadDiff.toLocaleString()} {language === 'pa' ? 'ਲੀਡ' : 'Lead'})
         </div>
       </div>
 
-      {/* KPI 4: AAP - Clickable Telemetry */}
+      {/* KPI 4: #2 Runner-Up Party in 2024 */}
       <div 
-        className={`dsidein-kpi-card aap-kpi clickable-kpi ${selectedParty === 'AAP' ? 'active-kpi' : ''}`}
-        onClick={() => handlePartyClick(2024, 'AAP')}
-        title="Click to view all 69 booths won by AAP in 2024"
+        className={`dsidein-kpi-card ${p2.toLowerCase()}-kpi clickable-kpi ${selectedParty === p2 ? 'active-kpi' : ''}`}
+        onClick={() => handlePartyClick(2024, p2)}
+        title={`Click to view all ${p2Wins} booths won by ${p2} in 2024`}
         style={{ cursor: 'pointer' }}
       >
         <div className="kpi-top-row">
-          <div className="kpi-icon-pill icon-blue">
+          <div className={`kpi-icon-pill icon-${p2.toLowerCase() === 'aap' ? 'blue' : p2.toLowerCase() === 'inc' ? 'orange' : 'teal'}`}>
             <CheckCircle2 size={18} />
           </div>
-          <span className="click-to-filter-hint hide-mobile">Click to filter</span>
+          <span className="click-to-filter-hint hide-mobile">
+            {language === 'pa' ? 'ਫਿਲਟਰ ਲਈ ਕਲਿੱਕ ਕਰੋ' : 'Click to filter'}
+          </span>
         </div>
-        <div className="kpi-label">{aapCandidate}</div>
-        <div className="kpi-value text-blue">{aapVotes}</div>
-        <div className="kpi-sub-pill text-blue">
-          ● {aapWins} {language === 'pa' ? 'ਜਿੱਤਾਂ' : 'Wins'} ({aapShare} | {aapGains} {language === 'pa' ? 'ਲਾਭ' : 'Gains'})
+        <div className="kpi-label">{p2Label}</div>
+        <div className={`kpi-value text-${p2.toLowerCase() === 'aap' ? 'blue' : p2.toLowerCase() === 'inc' ? 'orange' : 'teal'}`}>
+          {p2Votes}
+        </div>
+        <div className="kpi-sub-pill">
+          ● {p2Wins} {language === 'pa' ? 'ਜਿੱਤਾਂ' : 'Wins'} ({p2Share})
         </div>
       </div>
 
-      {/* 4-Election Historical Comparative Telemetry Strip */}
-      {isRajaSansi && summary?.votes_2017 && summary?.votes_2019 && (
+      {/* Multi-Election Historical Comparative Telemetry Strip */}
+      {timelineYears.length > 1 && (
         <div className="four-year-timeline-wrap" style={{ gridColumn: '1 / -1', marginTop: '4px' }}>
           <div className="timeline-strip-header">
             <span className="timeline-strip-badge">
-              {language === 'pa' ? '4 ਚੋਣਾਂ ਦਾ ਇਤਿਹਾਸਕ ਪ੍ਰਦਰਸ਼ਨ (2017 – 2024)' : '4-Election Longitudinal Telemetry (2017 – 2024)'}
+              {language === 'pa' 
+                ? `${timelineYears.length} ਚੋਣਾਂ ਦਾ ਇਤਿਹਾਸਕ ਪ੍ਰਦਰਸ਼ਨ (${timelineYears[0].year} – ${timelineYears[timelineYears.length - 1].year})` 
+                : `${timelineYears.length}-Election Longitudinal Telemetry (${timelineYears[0].year} – ${timelineYears[timelineYears.length - 1].year})`}
             </span>
             <span className="timeline-strip-note">
               {language === 'pa' 
@@ -125,130 +227,56 @@ export default function KPIBanner({ summary, constituencyId, language, onFilterB
             </span>
           </div>
           
-          <div className="timeline-strip-grid">
-            {/* 2017 Vidhan Sabha */}
-            <div className="timeline-year-card">
-              <div className="ty-header">
-                <span className="ty-tag">2017 VS</span>
-                <span className="ty-winner inc">INC Win</span>
-              </div>
-              <div className="ty-booths">209 {language === 'pa' ? 'ਬੂਥ' : 'Booths'} • 131,895 {language === 'pa' ? 'ਵੋਟਾਂ' : 'Votes'}</div>
-              <div className="ty-parties">
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2017, 'INC')} title="Filter 2017 INC Wins (132 booths)">
-                  <span className="party-name inc">INC (Sarkaria)</span>
-                  <strong>59,586</strong> (45.2%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2017, 'SAD')} title="Filter 2017 SAD Wins">
-                  <span className="party-name sad">SAD (Lopoke)</span>
-                  <strong>53,869</strong> (40.8%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2017, 'AAP')} title="Filter 2017 AAP Wins">
-                  <span className="party-name aap">AAP (Dhillon)</span>
-                  <strong>13,177</strong> (10.0%)
-                </div>
-              </div>
-              <div 
-                className="ty-lead inc clickable-lead" 
-                onClick={() => handlePartyClick(2017, 'INC')}
-                title="Click to filter 132 booths won by INC in 2017"
-              >
-                INC Lead: +5,717 (132 Booths Won)
-              </div>
-            </div>
+          <div className="timeline-strip-grid" style={{ gridTemplateColumns: `repeat(${timelineYears.length}, minmax(0, 1fr))` }}>
+            {timelineYears.map(item => {
+              const yrCand = cand?.[item.year.toString()] || {};
+              const isLatest = item.year === 2024;
 
-            {/* 2019 Lok Sabha */}
-            <div className="timeline-year-card">
-              <div className="ty-header">
-                <span className="ty-tag">2019 LS</span>
-                <span className="ty-winner inc">INC Win</span>
-              </div>
-              <div className="ty-booths">213 {language === 'pa' ? 'ਬੂਥ (+4)' : 'Booths (+4)'} • 110,814 {language === 'pa' ? 'ਵੋਟਾਂ' : 'Votes'}</div>
-              <div className="ty-parties">
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2019, 'INC')} title="Filter 2019 INC Wins (190 booths)">
-                  <span className="party-name inc">INC (Aujla)</span>
-                  <strong>62,496</strong> (56.4%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2019, 'BJP')} title="Filter 2019 BJP Wins">
-                  <span className="party-name bjp">BJP/NDA (Puri)</span>
-                  <strong>37,948</strong> (34.2%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2019, 'AAP')} title="Filter 2019 AAP Wins">
-                  <span className="party-name aap">AAP (Dhaliwal)</span>
-                  <strong>2,541</strong> (2.3%)
-                </div>
-              </div>
-              <div 
-                className="ty-lead inc clickable-lead" 
-                onClick={() => handlePartyClick(2019, 'INC')}
-                title="Click to filter 190 booths won by INC in 2019"
-              >
-                INC Lead: +24,548 (190 Booths Won)
-              </div>
-            </div>
+              return (
+                <div key={item.year} className={`timeline-year-card ${isLatest ? 'active' : ''}`}>
+                  <div className="ty-header">
+                    <span className="ty-tag">{item.tag}</span>
+                    <span className={`ty-winner ${item.winnerParty.toLowerCase()}`}>
+                      {item.winnerParty} {item.type === 'LS' ? 'Lead' : 'Win'}
+                    </span>
+                  </div>
 
-            {/* 2022 Vidhan Sabha */}
-            <div className="timeline-year-card">
-              <div className="ty-header">
-                <span className="ty-tag">2022 VS</span>
-                <span className="ty-winner inc">INC Win</span>
-              </div>
-              <div className="ty-booths">222 {language === 'pa' ? 'ਬੂਥ (+9)' : 'Booths (+9)'} • 133,259 {language === 'pa' ? 'ਵੋਟਾਂ' : 'Votes'}</div>
-              <div className="ty-parties">
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2022, 'INC')} title="Filter 2022 INC Wins (98 booths)">
-                  <span className="party-name inc">INC (Sarkaria)</span>
-                  <strong>46,802</strong> (35.1%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2022, 'SAD')} title="Filter 2022 SAD Wins (65 booths)">
-                  <span className="party-name sad">SAD (Lopoke)</span>
-                  <strong>41,333</strong> (31.0%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2022, 'AAP')} title="Filter 2022 AAP Wins (58 booths)">
-                  <span className="party-name aap">AAP (Miadian)</span>
-                  <strong>37,264</strong> (28.0%)
-                </div>
-              </div>
-              <div 
-                className="ty-lead inc clickable-lead" 
-                onClick={() => handlePartyClick(2022, 'INC')}
-                title="Click to filter 98 booths won by INC in 2022"
-              >
-                INC Lead: +5,469 (98 vs SAD 65 vs AAP 58)
-              </div>
-            </div>
+                  <div className="ty-booths">
+                    {item.boothsCount} {language === 'pa' ? 'ਬੂਥ' : 'Booths'} • {item.totalVotes.toLocaleString()} {language === 'pa' ? 'ਵੋਟਾਂ' : 'Votes'}
+                  </div>
 
-            {/* 2024 Lok Sabha */}
-            <div className="timeline-year-card active">
-              <div className="ty-header">
-                <span className="ty-tag">2024 LS</span>
-                <span className="ty-winner inc">INC Lead</span>
-              </div>
-              <div className="ty-booths">222 {language === 'pa' ? 'ਬੂਥ (ਸਥਿਰ)' : 'Booths (Identical)'} • 113,833 {language === 'pa' ? 'ਵੋਟਾਂ' : 'Votes'}</div>
-              <div className="ty-parties">
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2024, 'INC')} title="Filter 2024 INC Wins (112 booths)">
-                  <span className="party-name inc">INC (Aujla)</span>
-                  <strong>36,285</strong> (31.9%)
+                  <div className="ty-parties">
+                    {item.parties.map(([pCode, pInfo]) => {
+                      const cObj = yrCand[pCode];
+                      const candLabel = cObj 
+                        ? (language === 'pa' ? cObj.short_pa : cObj.short_en) 
+                        : pCode;
+                      const pct = item.totalVotes > 0 ? ((pInfo.votes / item.totalVotes) * 100).toFixed(1) : 0;
+
+                      return (
+                        <div 
+                          key={pCode} 
+                          className="ty-party-row clickable" 
+                          onClick={() => handlePartyClick(item.year, pCode)}
+                          title={`Filter ${item.year} ${pCode} Wins (${pInfo.wins} booths)`}
+                        >
+                          <span className={`party-name ${pCode.toLowerCase()}`}>{candLabel}</span>
+                          <strong>{pInfo.votes.toLocaleString()}</strong> ({pct}%)
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div 
+                    className={`ty-lead ${item.winnerParty.toLowerCase()} clickable-lead`}
+                    onClick={() => handlePartyClick(item.year, item.winnerParty)}
+                    title={`Click to filter ${item.winnerWins} booths won by ${item.winnerParty} in ${item.year}`}
+                  >
+                    {item.winnerParty} Lead: +{item.leadVotes.toLocaleString()} ({item.winnerWins} {language === 'pa' ? 'ਬੂਥ ਜਿੱਤੇ' : 'Booths Won'})
+                  </div>
                 </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2024, 'AAP')} title="Filter 2024 AAP Wins (69 booths)">
-                  <span className="party-name aap">AAP (Dhaliwal)</span>
-                  <strong>31,742</strong> (27.9%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2024, 'SAD')} title="Filter 2024 SAD Wins (29 booths)">
-                  <span className="party-name sad">SAD (Joshi)</span>
-                  <strong>22,942</strong> (20.2%)
-                </div>
-                <div className="ty-party-row clickable" onClick={() => handlePartyClick(2024, 'BJP')} title="Filter 2024 BJP Wins (11 booths)">
-                  <span className="party-name bjp">BJP (Sandhu)</span>
-                  <strong>11,680</strong> (10.3%)
-                </div>
-              </div>
-              <div 
-                className="ty-lead inc clickable-lead" 
-                onClick={() => handlePartyClick(2024, 'INC')}
-                title="Click to filter 112 booths won by INC in 2024"
-              >
-                INC Lead: +4,543 (112 vs AAP 69 vs SAD 29 vs BJP 11)
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       )}
