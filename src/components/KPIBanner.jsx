@@ -227,7 +227,7 @@ export default function KPIBanner({
             </span>
           </div>
           
-          <div className="timeline-strip-grid" style={{ gridTemplateColumns: `repeat(${timelineYears.length}, minmax(0, 1fr))` }}>
+          <div className="timeline-strip-grid" style={{ '--timeline-cols': timelineYears.length }}>
             {timelineYears.map(item => {
               const yrCand = cand?.[item.year.toString()] || {};
               const isLatest = item.year === 2024;

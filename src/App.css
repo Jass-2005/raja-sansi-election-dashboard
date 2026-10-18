@@ -106,6 +106,33 @@
   justify-content: center;
 }
 
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 6px;
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.sidebar-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  flex-shrink: 0;
+}
+
+.sidebar-footer-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 .sidebar-avatar {
   width: 38px;
   height: 38px;
@@ -1269,7 +1296,7 @@
 
 .timeline-strip-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--timeline-cols, 4), minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -2690,6 +2717,28 @@
   border-color: var(--border-medium);
 }
 
+.btn-print-dossier {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-md, 8px);
+  background: var(--bg-surface-elevated, #f1f5f9);
+  border: 1px solid var(--border-medium, #cbd5e1);
+  color: var(--text-primary, #0f172a);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  line-height: 1.2;
+}
+
+.btn-print-dossier:hover {
+  background: var(--bg-surface-hover, #e2e8f0);
+  border-color: var(--border-strong, #94a3b8);
+}
+
 /* Brand / Status Badges in Modal */
 .brand-badge {
   font-size: 0.75rem;
@@ -3275,7 +3324,7 @@
 
 .timeline-strip-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--timeline-cols, 4), minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -3521,11 +3570,109 @@
 
 @media (max-width: 768px) {
   .header-container {
-    padding: 8px 14px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .header-left {
+    flex: 1;
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .header-section-label {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .constituency-dropdown-wrap {
+    width: 100%;
+    max-width: 215px;
+  }
+
+  .constituency-dropdown-trigger {
+    width: 100%;
+    padding: 6px 8px;
+    gap: 6px;
+  }
+
+  .constituency-name-label {
+    max-width: 105px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8125rem;
+  }
+
+  .constituency-booth-pill {
+    padding: 2px 5px;
+    font-size: 0.65rem;
+    white-space: nowrap;
+  }
+
+  /* Full-width native sheet style for constituency dropdown on mobile */
+  .constituency-dropdown-menu {
+    position: fixed !important;
+    top: 56px !important;
+    left: 8px !important;
+    right: 8px !important;
+    width: auto !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    max-height: calc(100vh - 72px) !important;
+    z-index: 9999 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35) !important;
+    padding: 10px !important;
+  }
+
+  .constituency-search-row {
+    margin: 4px 0 8px 0 !important;
+    padding: 8px 10px !important;
+  }
+
+  .constituency-search-input {
+    font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+  }
+
+  .constituency-items-scroll {
+    max-height: calc(100vh - 165px) !important;
+  }
+
+  .constituency-menu-item {
+    padding: 11px 12px !important;
+    border-radius: 10px !important;
+  }
+
+  .constituency-item-title {
+    font-size: 0.875rem !important;
+    white-space: nowrap !important;
+  }
+
+  .constituency-item-sub {
+    font-size: 0.72rem !important;
   }
 
   .header-center-search {
     display: none;
+  }
+
+  .header-right {
+    gap: 6px;
+  }
+
+  .btn-header-download {
+    display: none !important; /* Save space on mobile since Master Excel is prominent in body */
+  }
+
+  .language-toggle-pill {
+    padding: 3px 6px;
+    gap: 4px;
+  }
+
+  .lang-btn {
+    font-size: 0.6875rem;
+    padding: 2px 4px;
   }
 
   .custom-domain-chip {
@@ -3541,7 +3688,7 @@
   }
 
   .dashboard-title-bar {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     gap: 10px;
   }
 
@@ -3574,7 +3721,7 @@
 
   .pill-action-btn {
     flex-shrink: 0;
-    padding: 7px 14px;
+    padding: 8px 14px;
     font-size: 0.75rem;
     white-space: nowrap;
   }
@@ -3583,31 +3730,12 @@
   .dsidein-kpi-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .dsidein-kpi-card {
     padding: 10px 12px;
     border-radius: 12px;
-  }
-
-  /* 4-Election timeline strip on mobile (Rule 5: mobile only) */
-  .timeline-strip-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .timeline-year-card {
-    padding: 12px;
-  }
-
-  /* Active Telemetry Filter Notice on Mobile */
-  .active-filter-banner {
-    margin: 0 12px 10px 12px !important;
-    padding: 8px 10px !important;
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 8px;
   }
 
   .kpi-top-row {
@@ -3622,6 +3750,7 @@
 
   .kpi-value {
     font-size: 1.25rem;
+    line-height: 1.2;
     margin: 2px 0 4px 0;
   }
 
@@ -3633,9 +3762,77 @@
   .kpi-sub-pill {
     font-size: 0.625rem;
     padding: 2px 6px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  /* Longitudinal Timeline Strip on Mobile: Swipeable Carousel with zero text collision */
+  .timeline-strip-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 8px 10px;
+  }
+
+  .timeline-strip-badge {
+    font-size: 0.72rem;
+  }
+
+  .timeline-strip-note {
+    font-size: 0.6875rem;
+  }
+
+  .timeline-strip-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px !important;
+    padding: 4px 2px 10px 2px !important;
+    scrollbar-width: none !important;
+  }
+
+  .timeline-strip-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .timeline-year-card {
+    flex: 0 0 84% !important;
+    min-width: 270px !important;
+    max-width: 320px !important;
+    scroll-snap-align: start;
+    padding: 14px !important;
+    border-radius: 12px;
+  }
+
+  .ty-header {
+    margin-bottom: 6px;
+  }
+
+  .ty-booths {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  .ty-party-row {
+    padding: 6px 4px;
+    font-size: 0.8125rem;
+  }
+
+  .ty-lead {
+    margin-top: 10px;
+    padding: 6px 8px;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  /* Active Telemetry Filter Notice on Mobile */
+  .active-filter-banner {
+    margin: 0 12px 10px 12px !important;
+    padding: 8px 10px !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 8px;
   }
 
   /* Registry Card mobile refinements */
@@ -3698,7 +3895,7 @@
     flex-shrink: 0;
     text-align: center;
     justify-content: center;
-    padding: 7px 12px;
+    padding: 8px 12px;
     font-size: 0.75rem;
     white-space: nowrap;
   }
@@ -3711,7 +3908,7 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     flex-wrap: nowrap;
-    padding: 6px 14px;
+    padding: 6px 12px;
     gap: 10px;
   }
 
@@ -3753,8 +3950,75 @@
   .cat-pill-btn {
     flex-shrink: 0;
     white-space: nowrap;
-    padding: 6px 12px;
+    padding: 7px 12px;
     font-size: 0.75rem;
+  }
+
+  /* Multi-Year Trajectory on Mobile */
+  .multi-year-trajectory-box {
+    padding: 12px;
+    margin: 8px 0 12px 0;
+    border-radius: 12px;
+  }
+
+  .trajectory-title-wrap {
+    gap: 4px;
+  }
+
+  .trajectory-badge {
+    font-size: 0.65rem;
+  }
+
+  .trajectory-title {
+    font-size: 0.8125rem;
+  }
+
+  .trajectory-hint {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .year-builder-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .year-toggle-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    width: 100%;
+  }
+
+  .year-toggle-btn {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+    min-height: 38px;
+    justify-content: center;
+  }
+
+  .quick-combos-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .quick-combos-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .quick-combo-btn {
+    font-size: 0.72rem;
+    padding: 6px 10px;
+    min-height: 34px;
+    border-radius: 8px;
   }
 
   /* Registry toolbar */
@@ -3770,9 +4034,8 @@
     max-width: 100%;
   }
 
-  /* Prevent auto-zoom in iOS Safari */
   .toolbar-search-input {
-    font-size: 16px;
+    font-size: 16px; /* Prevents auto-zoom in iOS Safari */
     padding: 8px 12px 8px 34px;
   }
 
@@ -3852,8 +4115,27 @@
 
   .clean-table th, 
   .clean-table td {
-    padding: 8px 10px;
+    padding: 8px 8px;
     font-size: 0.75rem;
+  }
+
+  .table-village-name {
+    font-size: 0.8125rem;
+    max-width: 170px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .table-village-sub {
+    font-size: 0.72rem;
+    max-width: 170px;
+    white-space: normal;
+  }
+
+  .dual-stat-pill {
+    padding: 4px 6px;
+    min-width: 48px;
+    font-size: 0.7rem;
   }
 
   .booth-avatar-badge {
@@ -3863,89 +4145,85 @@
   }
 
   .btn-table-pdf {
-    padding: 3px 6px;
+    padding: 4px 7px;
     font-size: 0.6875rem;
   }
 
   .btn-table-view {
-    padding: 3px 7px;
+    padding: 4px 8px;
     font-size: 0.6875rem;
   }
 
-  /* Grid cards layout on mobile — handled by standalone breakpoints above */
+  /* Grid cards layout on mobile */
   .grid-cards-layout {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
-    padding: 10px 12px;
-  }
-
-  .booth-card {
-    padding: 12px 14px;
-    border-radius: 12px;
-  }
-
-  /* Modal on Mobile */
-  .modal-overlay {
     padding: 8px;
   }
 
+  .booth-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* Modal on Mobile: Native Slide-up Bottom Sheet */
+  .modal-overlay {
+    padding: 0 !important;
+    align-items: flex-end !important;
+    background: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(4px) !important;
+  }
+
   .modal-content {
-    width: 100%;
-    max-width: 100%;
-    max-height: 94vh;
-    padding: 16px 14px;
-    border-radius: 16px;
-    margin: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 92vh !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    padding: 16px 14px 28px 14px !important;
+    margin: 0 !important;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.35) !important;
     -webkit-overflow-scrolling: touch;
   }
 
-  .modal-header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-bottom: 12px;
-    padding-right: 44px; /* Space for pinned close button */
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius-full);
-    background: var(--bg-surface-elevated);
-    border: 1px solid var(--border-subtle);
-    color: var(--text-primary);
-  }
-
-  .modal-header-right {
-    width: 100%;
-  }
-
-  .btn-print-modal {
-    width: 100%;
-    justify-content: center;
-    padding: 8px 16px;
-    font-size: 0.8125rem;
+  .modal-years-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 
   .modal-village-title {
-    font-size: 1.25rem !important;
-    line-height: 1.25;
+    font-size: 1.15rem !important;
+    line-height: 1.3 !important;
   }
 
   .modal-village-sub {
-    font-size: 0.95rem !important;
+    font-size: 0.8125rem !important;
   }
 
-  .compare-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .swings-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .modal-header {
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .btn-print-dossier {
+    padding: 5px 8px;
+    font-size: 0.6875rem;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .modal-close-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
   }
 
   .hide-mobile {

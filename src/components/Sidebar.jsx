@@ -126,7 +126,7 @@ export default function Sidebar({
         {/* Sidebar Footer */}
         <div className="sidebar-footer">
           <div className="sidebar-status-dot" title="Live Database Synchronized" />
-          <span className="sidebar-footer-text">
+          <span className="sidebar-footer-text hide-desktop">
             {language === 'pa' ? currentConst.name_pa : currentConst.name_en}
           </span>
         </div>
